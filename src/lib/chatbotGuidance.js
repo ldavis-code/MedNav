@@ -369,7 +369,7 @@ export const getRelevantResources = (insuranceType, organs = []) => {
 
   // Support groups
   resources.push({
-    name: 'TRIO - medication Recipients International',
+    name: 'TRIO - patients International',
     url: 'https://www.trioweb.org/',
     description: 'Peer support and advocacy',
     category: 'Support',

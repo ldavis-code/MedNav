@@ -709,7 +709,7 @@ const Home = () => {
                             <h2 className="text-2xl font-bold tracking-tight">Our Vision</h2>
                         </div>
                         <p className="text-lg text-emerald-100 leading-relaxed">
-                            Health equity for every medication recipient.
+                            Health equity for every patient.
                             <br/><br/>
                             We envision a world where the gift of life is never compromised by the cost of medication, and where every patient has the knowledge to advocate for their own care.
                         </p>
@@ -1129,16 +1129,16 @@ const Wizard = () => {
         );
     }
 
-    // Step 3: Organ
+    // Step 3: Health Conditions
     if (step === 3) {
         return (
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
                 <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
-                <h1 className="text-2xl font-bold mb-2">What type of medication?</h1>
-                <p className="text-slate-600 mb-6">Select organ(s) - choose all that apply.</p>
+                <h1 className="text-2xl font-bold mb-2">Health Conditions</h1>
+                <p className="text-slate-600 mb-6">What health issues do you have? Check all that apply.</p>
                 <WizardHelp step={step} answers={answers} />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" role="group" aria-label="Select organ types">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" role="group" aria-label="Select health conditions">
                     {Object.values(OrganType).map((o) => (
                         <button
                             key={o}
@@ -1154,6 +1154,7 @@ const Wizard = () => {
                         </button>
                     ))}
                 </div>
+                <p className="text-sm text-slate-500 mb-4">Not sure? That's okay. Just check what you know.</p>
                 <button
                     disabled={answers.organs.length === 0}
                     onClick={nextStep}
@@ -1537,7 +1538,7 @@ const Wizard = () => {
                             <AlertCircle aria-hidden="true" /> Important: Medicare Part B-ID
                         </h2>
                         <p className="mt-2 text-slate-700">
-                            Since you are a kidney medication recipient on Medicare, you may qualify for <strong>Medicare Part B-ID</strong>. 
+                            Since you are a kidney patient on Medicare, you may qualify for <strong>Medicare Part B-ID</strong>. 
                             This extends coverage for immunosuppressive drugs for life.
                         </p>
                         <a href="https://www.medicare.gov" target="_blank" rel="noreferrer" className="mt-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition no-print">
@@ -4200,7 +4201,7 @@ Dear ${programName || "[Program Name]"} Team,
 
 I am writing to request reconsideration of my application for the Patient Assistance Program for ${medicationName || "[Medication Name]"}.
 
-I am a ${medicationType || "[Organ Type]"} medication recipient and require this medication to prevent organ rejection. My current financial situation makes it difficult to afford the full cost of this medication.
+I am a ${medicationType || "[Organ Type]"} patient and require this medication to prevent organ rejection. My current financial situation makes it difficult to afford the full cost of this medication.
 
 ${hardshipDetails || "[Explain your specific circumstances: job loss, medical expenses, fixed income, etc.]"}
 

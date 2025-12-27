@@ -114,7 +114,7 @@ const ForEmployers = () => {
             <section className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-8">
                 <h2 className="text-xl font-bold text-slate-900 mb-4">Real Impact for medication Employees</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                    medication recipients typically take 3-5 medications daily for life. Immunosuppressants like tacrolimus and mycophenolate can cost hundreds to thousands per month. Even with good insurance, copays add up.
+                    patients typically take 3-5 medications daily for life. Immunosuppressants like tacrolimus and mycophenolate can cost hundreds to thousands per month. Even with good insurance, copays add up.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
                     By connecting employees to manufacturer copay cards and Patient Assistance Programs, you help them save money while potentially reducing high-cost claims. It's a win-win for employees and your benefits program.

@@ -9,21 +9,24 @@ export const Role = {
     SOCIAL_WORKER: 'Social Worker / Coordinator',
 };
 
-// medication status
-export const medicationStatus = {
-    PRE_EVAL: 'Pre-medication (Evaluation/Waitlist)',
-    POST_ACUTE: 'Post-medication (Within 1st year)',
-    POST_STABLE: 'Post-medication (1+ years)',
+// Treatment status
+export const TreatmentStatus = {
+    NOT_STARTED: 'Not yet started',
+    JUST_STARTED: 'Just started (less than 3 months)',
+    ONGOING: 'Ongoing (more than 3 months)',
 };
 
-// Organ types
-export const OrganType = {
-    KIDNEY: 'Kidney',
-    LIVER: 'Liver',
-    HEART: 'Heart',
-    LUNG: 'Lung',
-    PANCREAS: 'Pancreas',
-    MULTI: 'Multi-organ',
+// Health conditions
+export const HealthCondition = {
+    AUTOIMMUNE: 'Autoimmune disease (lupus, RA, MS)',
+    CANCER: 'Cancer',
+    DIABETES: 'Diabetes',
+    HEART: 'Heart disease or heart failure',
+    HIGH_BP: 'High blood pressure',
+    KIDNEY: 'Kidney disease',
+    LIVER: 'Liver disease',
+    LUNG: 'Lung disease (COPD, asthma)',
+    MENTAL_HEALTH: 'Mental health (depression, anxiety)',
     OTHER: 'Other',
 };
 
@@ -46,9 +49,11 @@ export const FinancialStatus = {
     CRISIS: 'Crisis',
 };
 
-// medication stage
+// For backward compatibility
+export const OrganType = HealthCondition;
+export const medicationStatus = TreatmentStatus;
 export const medicationStage = {
-    PRE: 'Pre-medication',
-    POST: 'Post-medication',
-    BOTH: 'Both (Pre & Post)',
+    PRE: 'Not yet started',
+    POST: 'Currently taking',
+    BOTH: 'Both',
 };

@@ -33,7 +33,7 @@ export default function SurveyLanding() {
               </h2>
             </div>
             <p className="text-slate-600 mb-4">
-              For medication recipients navigating immunosuppressants, specialty pharmacies, and insurance challenges.
+              For patients navigating immunosuppressants, specialty pharmacies, and insurance challenges.
             </p>
             <p className="text-sm text-slate-500 mb-6">
               8 topic areas - complete only the ones relevant to you
@@ -83,7 +83,7 @@ export default function SurveyLanding() {
             to fix a broken system."
           </blockquote>
           <p className="text-sm text-slate-500">
-            — Lorrinda, TRIO President & Liver medication Recipient
+            — Lorrinda, TRIO President & Liver patient
           </p>
         </div>
 
