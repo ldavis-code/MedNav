@@ -1,0 +1,143 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# WWW to non-WWW redirect (301 permanent) - must come first
+# This ensures all traffic goes to the canonical non-www domain
+[[redirects]]
+  from = "https://www.transplantmedicationnavigator.com/*"
+  to = "https://transplantmedicationnavigator.com/:splat"
+  status = 301
+  force = true
+
+# API routes - redirect to Netlify Functions (force=true ensures these take priority)
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+  force = true
+
+# Admin API routes (specific routes before generic /api/*)
+[[redirects]]
+  from = "/api/admin-auth/*"
+  to = "/.netlify/functions/admin-auth/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/admin-api/*"
+  to = "/.netlify/functions/admin-api/:splat"
+  status = 200
+  force = true
+
+# Generic API route (must come AFTER specific routes)
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+# Outbound redirect routes for tracking program clicks
+[[redirects]]
+  from = "/out/copay/*"
+  to = "/.netlify/functions/out-redirect"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/out/foundation/*"
+  to = "/.netlify/functions/out-redirect"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/out/pap/*"
+  to = "/.netlify/functions/out-redirect"
+  status = 200
+  force = true
+
+# SPA fallback - must come AFTER API routes
+# NOTE: Do NOT use force=true here, or it will override static files!
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache static assets aggressively (1 year) - Vite adds content hashes to filenames
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache JavaScript chunks (1 year) - content-hashed
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache CSS files (1 year) - content-hashed
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache fonts (1 year)
+[[headers]]
+  for = "*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images (1 year)
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files - short cache, must revalidate
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Security headers for all responses
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
