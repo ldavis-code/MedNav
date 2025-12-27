@@ -8,7 +8,7 @@
   {
     "name": "American medication Foundation",
     "url": "https://www.americanmedicationfoundation.org/",
-    "description": "Provides patient assistance grants, mentorship programs connecting patients with medication mentors, and educational resources for medication recipients and living donors.",
+    "description": "Provides patient assistance grants, mentorship programs connecting patients with medication mentors, and educational resources for patients and living donors.",
     "category": "Foundation"
   },
   {
@@ -20,7 +20,7 @@
   {
     "name": "Donate Life America",
     "url": "https://www.donatelife.net/patient-services/",
-    "description": "Connects medication recipients with local resources, events, and community support programs across the United States.",
+    "description": "Connects patients with local resources, events, and community support programs across the United States.",
     "category": "Support Group"
   },
   {
@@ -98,7 +98,7 @@
   {
     "name": "TRIO (Medication Navigator Organization)",
     "url": "https://www.trioweb.org/",
-    "description": "The nation's largest organization of medication recipients, living donors, donor families, and candidates. Offers local chapters, peer mentoring, and educational resources.",
+    "description": "The nation's largest organization of patients, living donors, donor families, and candidates. Offers local chapters, peer mentoring, and educational resources.",
     "category": "Support Group"
   }
 ]

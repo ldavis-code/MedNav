@@ -450,7 +450,7 @@ const Layout = ({ children }) => {
                     <Link to="/" className="flex items-center gap-2 text-emerald-700 hover:text-emerald-800 transition" aria-label="Medication Navigator™ home">
                         <HeartHandshake size={28} aria-hidden="true" />
                         <span className="font-bold text-lg md:text-xl leading-tight">
-                            medication Med<br className="md:hidden"/> Navigator<sup className="text-xs">™</sup>
+                            Medication<br className="md:hidden"/> Navigator<sup className="text-xs">™</sup>
                         </span>
                     </Link>
 
@@ -709,7 +709,7 @@ const Home = () => {
                             <h2 className="text-2xl font-bold tracking-tight">Our Vision</h2>
                         </div>
                         <p className="text-lg text-emerald-100 leading-relaxed">
-                            Health equity for every medication recipient.
+                            Health equity for every patient.
                             <br/><br/>
                             We envision a world where the gift of life is never compromised by the cost of medication, and where every patient has the knowledge to advocate for their own care.
                         </p>
@@ -841,7 +841,7 @@ const WizardHelp = ({ step, answers }) => {
         },
         6: {
             title: "Specialty Pharmacy",
-            content: "**Why this matters:**\n\nCommercial insurance often requires medication meds be filled at a designated specialty pharmacy (not your local CVS/Walgreens).\n\n**If you use the wrong pharmacy:**\n• Insurance won't cover it\n• You'll pay full price ($1000s)\n\n**What to do:**\nCall your insurance and ask: 'Which specialty pharmacy must I use for my medications?'\n\nCommon ones: Accredo, CVS Specialty, Walgreens Specialty, Optum"
+            content: "**Why this matters:**\n\nCommercial insurance often requires medications be filled at a designated specialty pharmacy (not your local CVS/Walgreens).\n\n**If you use the wrong pharmacy:**\n• Insurance won't cover it\n• You'll pay full price ($1000s)\n\n**What to do:**\nCall your insurance and ask: 'Which specialty pharmacy must I use for my medications?'\n\nCommon ones: Accredo, CVS Specialty, Walgreens Specialty, Optum"
         },
         7: {
             title: "Financial Status",
@@ -1129,16 +1129,16 @@ const Wizard = () => {
         );
     }
 
-    // Step 3: Organ
+    // Step 3: Health Conditions
     if (step === 3) {
         return (
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
                 <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
-                <h1 className="text-2xl font-bold mb-2">What type of medication?</h1>
-                <p className="text-slate-600 mb-6">Select organ(s) - choose all that apply.</p>
+                <h1 className="text-2xl font-bold mb-2">Health Conditions</h1>
+                <p className="text-slate-600 mb-6">What health issues do you have? Check all that apply.</p>
                 <WizardHelp step={step} answers={answers} />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" role="group" aria-label="Select organ types">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" role="group" aria-label="Select health conditions">
                     {Object.values(OrganType).map((o) => (
                         <button
                             key={o}
@@ -1154,6 +1154,7 @@ const Wizard = () => {
                         </button>
                     ))}
                 </div>
+                <p className="text-sm text-slate-500 mb-4">Not sure? That's okay. Just check what you know.</p>
                 <button
                     disabled={answers.organs.length === 0}
                     onClick={nextStep}
@@ -1537,7 +1538,7 @@ const Wizard = () => {
                             <AlertCircle aria-hidden="true" /> Important: Medicare Part B-ID
                         </h2>
                         <p className="mt-2 text-slate-700">
-                            Since you are a kidney medication recipient on Medicare, you may qualify for <strong>Medicare Part B-ID</strong>. 
+                            Since you are a kidney patient on Medicare, you may qualify for <strong>Medicare Part B-ID</strong>. 
                             This extends coverage for immunosuppressive drugs for life.
                         </p>
                         <a href="https://www.medicare.gov" target="_blank" rel="noreferrer" className="mt-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition no-print">
@@ -2001,7 +2002,7 @@ const MedicationSearch = () => {
                         <AlertTriangle className="text-red-600 flex-shrink-0 mt-0.5" size={20} aria-hidden="true" />
                         <div>
                             <p className="font-bold text-red-800 mb-1">Important Safety Note for medication Patients</p>
-                            <p className="text-red-700 text-sm">Never switch from brand name to generic (or between different generic manufacturers) without your medication team's approval. In medication medicine, slight variations in bioavailability can cause organ rejection. <strong>"Cheaper" isn't always "safe"</strong> if the manufacturer changes.</p>
+                            <p className="text-red-700 text-sm">Never switch from brand name to generic (or between different generic manufacturers) without your care team's approval. In medication, slight variations in bioavailability can cause organ rejection. <strong>"Cheaper" isn't always "safe"</strong> if the manufacturer changes.</p>
                         </div>
                     </div>
                 </div>
@@ -3006,7 +3007,7 @@ const MedicationCard = ({ med, onRemove, onPriceReportSubmit }) => {
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <span className="w-4 h-4 border border-slate-400 rounded inline-block flex-shrink-0"></span>
-                                    Ask medication team about generic alternatives
+                                    Ask care team about generic alternatives
                                 </li>
                             </ul>
                         </div>
@@ -3551,7 +3552,7 @@ const Education = () => {
 
                                     <div className="bg-white p-5 rounded-lg shadow-sm border border-slate-200">
                                         <h3 className="font-bold text-lg text-blue-800 mb-2">Specialty Medication</h3>
-                                        <p className="text-slate-700 text-sm">Expensive medicines that need special handling or monitoring. Most medication medicines are specialty medications. They often cost $600+ per month.</p>
+                                        <p className="text-slate-700 text-sm">Expensive medicines that need special handling or monitoring. Most medications are specialty medications. They often cost $600+ per month.</p>
                                     </div>
 
                                     <div className="bg-white p-5 rounded-lg shadow-sm border border-slate-200">
@@ -3621,7 +3622,7 @@ const Education = () => {
                                     <ul className="text-yellow-900 space-y-2 ml-6 list-disc">
                                         <li>Know what you'll pay</li>
                                         <li>Find help when costs are too high</li>
-                                        <li>Talk to your medication team about options</li>
+                                        <li>Talk to your care team about options</li>
                                         <li>Apply for assistance programs</li>
                                     </ul>
                                 </div>
@@ -3629,7 +3630,7 @@ const Education = () => {
                                 <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-6">
                                     <h3 className="font-bold text-emerald-900 text-lg mb-3">Questions to Ask</h3>
                                     <ul className="text-emerald-900 space-y-2 ml-6 list-disc">
-                                        <li>What tier are my medication medicines?</li>
+                                        <li>What tier are my medications?</li>
                                         <li>How much is my deductible?</li>
                                         <li>When do I reach my out-of-pocket maximum?</li>
                                         <li>Are my medicines on the formulary?</li>
@@ -3959,7 +3960,7 @@ const Education = () => {
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">4</div>
-                                    <p className="text-slate-800 pt-1"><span className="font-bold">Talk to your medication team.</span> They can connect you with financial counselors who understand these programs and can help you navigate the system.</p>
+                                    <p className="text-slate-800 pt-1"><span className="font-bold">Talk to your care team.</span> They can connect you with financial counselors who understand these programs and can help you navigate the system.</p>
                                 </li>
                             </ul>
                         </section>
@@ -4039,7 +4040,7 @@ const Education = () => {
                                 <ul className="space-y-2 text-sm text-slate-700">
                                     <li className="flex items-start gap-2">
                                         <CheckCircle size={16} className="text-emerald-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                                        <span>Ask your medication team about counseling services</span>
+                                        <span>Ask your care team about counseling services</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <CheckCircle size={16} className="text-emerald-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
@@ -4200,7 +4201,7 @@ Dear ${programName || "[Program Name]"} Team,
 
 I am writing to request reconsideration of my application for the Patient Assistance Program for ${medicationName || "[Medication Name]"}.
 
-I am a ${medicationType || "[Organ Type]"} medication recipient and require this medication to prevent organ rejection. My current financial situation makes it difficult to afford the full cost of this medication.
+I am a ${medicationType || "[Organ Type]"} patient and require this medication to prevent organ rejection. My current financial situation makes it difficult to afford the full cost of this medication.
 
 ${hardshipDetails || "[Explain your specific circumstances: job loss, medical expenses, fixed income, etc.]"}
 

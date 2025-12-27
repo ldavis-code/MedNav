@@ -10,7 +10,7 @@ import {
   ChevronLeft
 } from 'lucide-react';
 
-// medication Medication Journey Survey
+// Medication Journey Survey
 // Captures medication-specific failure points in medication access
 // HIPAA-free: All user self-reported, no PHI collected
 
@@ -95,7 +95,7 @@ export default function MedicationSurvey() {
       title: "medication Center Support",
       shortTitle: "Center Support",
       icon: Building2,
-      description: "Support from your medication team",
+      description: "Support from your care team",
       questions: [
         { id: 'center_has_pharmacy', label: 'Does your healthcare provider have an in-house or affiliated pharmacy?', type: 'select',
           options: ['Yes, and I use it', 'Yes, but I don\'t use it', 'No', 'Not sure'] },
@@ -266,7 +266,7 @@ export default function MedicationSurvey() {
       <div className="bg-white/80 backdrop-blur-sm border-b border-emerald-100">
         <div className="max-w-4xl mx-auto px-6 py-6">
           <h1 className="text-2xl font-bold text-slate-800 mb-2">
-            medication Medication Journey Survey
+            Medication Journey Survey
           </h1>
           <p className="text-slate-600">
             Choose the topics that matter most to you. Each section can be submitted independently.

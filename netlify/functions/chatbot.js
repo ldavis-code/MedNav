@@ -78,7 +78,7 @@ const generateKeyMessages = (insuranceType, organs = [], financialStatus) => {
             messages.push({
                 type: 'warning',
                 title: 'Specialty Pharmacy Required',
-                message: 'Most commercial plans require medication meds be filled at a designated specialty pharmacy.',
+                message: 'Most commercial plans require medications be filled at a designated specialty pharmacy.',
             });
             break;
 

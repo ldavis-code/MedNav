@@ -210,7 +210,7 @@ export const generateGuidanceSummary = (answers, medications) => {
       summary.keyMessages.push({
         type: 'warning',
         title: 'Specialty Pharmacy Required',
-        message: 'Most commercial plans require medication meds be filled at a designated specialty pharmacy. Using the wrong pharmacy = full price!',
+        message: 'Most commercial plans require medications be filled at a designated specialty pharmacy. Using the wrong pharmacy = full price!',
       });
       break;
 
@@ -369,7 +369,7 @@ export const getRelevantResources = (insuranceType, organs = []) => {
 
   // Support groups
   resources.push({
-    name: 'TRIO - medication Recipients International',
+    name: 'TRIO - patients International',
     url: 'https://www.trioweb.org/',
     description: 'Peer support and advocacy',
     category: 'Support',

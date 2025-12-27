@@ -166,7 +166,7 @@ const Pilot = () => {
             {/* About Section */}
             <section className="text-center py-4">
                 <p className="text-slate-600 text-sm">
-                    Medication Navigator™ was built by a medication recipient to help patients find medication assistance with free educational resources.
+                    Medication Navigator™ was built by a patient to help patients find medication assistance with free educational resources.
                 </p>
                 <Link to="/" className="text-emerald-700 font-medium hover:underline text-sm mt-2 inline-block">
                     Learn more about us
