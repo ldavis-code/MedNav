@@ -161,7 +161,7 @@ const getAssistantResponse = (userMessage, context = {}) => {
     return "I'm here to help! Here are some things I can assist with:\n\n• **Insurance questions** - Medicare, Medicaid, commercial coverage\n• **Patient Assistance Programs (PAPs)** - How to get free medication\n• **Copay foundations** - Organizations that help pay for medications\n• **Application help** - Step-by-step guidance\n• **Medication information** - Pricing and assistance programs\n\nTry asking about any of these topics, or use the Quick Actions below!";
 };
 
-// Smart medication suggestions based on context
+// Smart medication suggestions based on health conditions
 const getMedicationSuggestions = (answers) => {
     const suggestions = [];
 
@@ -169,65 +169,88 @@ const getMedicationSuggestions = (answers) => {
         return suggestions;
     }
 
-    const isPremedication = answers.status === medicationStatus.PRE_EVAL;
-    const isKidney = answers.organs.includes(OrganType.KIDNEY);
-    const isLiver = answers.organs.includes(OrganType.LIVER);
-    const isHeart = answers.organs.includes(OrganType.HEART);
-    const isLung = answers.organs.includes(OrganType.LUNG);
+    const conditions = answers.organs;
+    const HealthCondition = OrganType; // Using the alias
 
-    // Pre-medication suggestions
-    if (isPremedication) {
-        if (isKidney) {
-            suggestions.push({
-                category: 'ESRD Support',
-                medications: ['procrit', 'renvela', 'sensipar'],
-                reason: 'Common for kidney patients on dialysis'
-            });
-        }
-        if (isLiver) {
-            suggestions.push({
-                category: 'Liver Support',
-                medications: ['xifaxan', 'lactulose'],
-                reason: 'Help manage liver disease symptoms'
-            });
-        }
-        if (isHeart || isLung) {
-            suggestions.push({
-                category: 'Pulmonary Hypertension',
-                medications: ['revatio', 'tracleer'],
-                reason: 'Common for heart/lung candidates'
-            });
-        }
+    // Diabetes medications
+    if (conditions.includes(HealthCondition.DIABETES)) {
+        suggestions.push({
+            category: 'Diabetes Medications',
+            medications: ['metformin', 'januvia', 'jardiance', 'ozempic', 'trulicity'],
+            reason: 'Common medications for managing blood sugar'
+        });
     }
 
-    // Post-medication suggestions
-    if (!isPremedication) {
-        // Universal post-medication
+    // Heart disease medications
+    if (conditions.includes(HealthCondition.HEART)) {
         suggestions.push({
-            category: 'Immunosuppressants',
-            medications: ['tacrolimus', 'mycophenolate', 'prednisone'],
-            reason: 'Core anti-rejection medications for all medications'
+            category: 'Heart Medications',
+            medications: ['eliquis', 'xarelto', 'entresto', 'lipitor', 'plavix'],
+            reason: 'Common medications for heart conditions'
         });
+    }
 
+    // High blood pressure medications
+    if (conditions.includes(HealthCondition.HIGH_BP)) {
         suggestions.push({
-            category: 'Anti-viral Prophylaxis',
-            medications: ['valcyte'],
-            reason: 'Prevent CMV and other viral infections'
+            category: 'Blood Pressure Medications',
+            medications: ['lisinopril', 'amlodipine', 'losartan', 'metoprolol'],
+            reason: 'Common medications for managing blood pressure'
         });
+    }
 
+    // Kidney disease medications
+    if (conditions.includes(HealthCondition.KIDNEY)) {
         suggestions.push({
-            category: 'Antibiotic Prophylaxis',
-            medications: ['bactrim'],
-            reason: 'Prevent PCP (pneumocystis) infection'
+            category: 'Kidney Disease Medications',
+            medications: ['renvela', 'sensipar', 'procrit', 'epogen'],
+            reason: 'Common medications for kidney disease management'
         });
+    }
 
-        if (isLiver) {
-            suggestions.push({
-                category: 'Hepatitis Management',
-                medications: ['baraclude', 'vemlidy'],
-                reason: 'May be needed for liver patients'
-            });
-        }
+    // Liver disease medications
+    if (conditions.includes(HealthCondition.LIVER)) {
+        suggestions.push({
+            category: 'Liver Disease Medications',
+            medications: ['xifaxan', 'lactulose', 'harvoni', 'epclusa'],
+            reason: 'Common medications for liver conditions'
+        });
+    }
+
+    // Lung disease medications
+    if (conditions.includes(HealthCondition.LUNG)) {
+        suggestions.push({
+            category: 'Lung Disease Medications',
+            medications: ['advair', 'symbicort', 'spiriva', 'trelegy'],
+            reason: 'Common medications for respiratory conditions'
+        });
+    }
+
+    // Autoimmune disease medications
+    if (conditions.includes(HealthCondition.AUTOIMMUNE)) {
+        suggestions.push({
+            category: 'Autoimmune Medications',
+            medications: ['humira', 'enbrel', 'stelara', 'cosentyx', 'rinvoq'],
+            reason: 'Common medications for autoimmune conditions'
+        });
+    }
+
+    // Cancer medications
+    if (conditions.includes(HealthCondition.CANCER)) {
+        suggestions.push({
+            category: 'Cancer Support Medications',
+            medications: ['neulasta', 'zofran', 'procrit'],
+            reason: 'Common supportive medications during cancer treatment'
+        });
+    }
+
+    // Mental health medications
+    if (conditions.includes(HealthCondition.MENTAL_HEALTH)) {
+        suggestions.push({
+            category: 'Mental Health Medications',
+            medications: ['lexapro', 'zoloft', 'wellbutrin', 'abilify', 'lamictal'],
+            reason: 'Common medications for mental health conditions'
+        });
     }
 
     return suggestions;
@@ -945,11 +968,15 @@ const Wizard = () => {
     const MEDICATIONS = useMedicationsList();
 
     const [step, setStep] = useState(1);
+    const [insuranceSubStep, setInsuranceSubStep] = useState('A'); // A, B, or C
     const [answers, setAnswers] = useState({
         role: null,
         status: null,
         organs: [],
-        insurance: null,
+        hasInsurance: null,
+        insuranceSource: null,
+        hasDrugPlan: null,
+        insurance: null, // legacy - will be derived from insuranceSource
         medications: [],
         specialtyPharmacyAware: null,
         financialStatus: null,
@@ -1079,7 +1106,8 @@ const Wizard = () => {
         return (
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
-                <h1 className="text-2xl font-bold mb-6">Who am I helping today?</h1>
+                <h1 className="text-2xl font-bold mb-2">Who am I helping today?</h1>
+                <p className="text-slate-600 mb-6">Choose one:</p>
                 <WizardHelp step={step} answers={answers} />
                 <div className="space-y-3" role="radiogroup" aria-label="Select your role">
                     {Object.values(Role).map((r) => (
@@ -1107,7 +1135,8 @@ const Wizard = () => {
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
                 <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
-                <h1 className="text-2xl font-bold mb-6">Where are you in the medication process?</h1>
+                <h1 className="text-2xl font-bold mb-2">Your Medicine Journey</h1>
+                <p className="text-slate-600 mb-6">Have you started taking this medicine yet? Choose one:</p>
                 <WizardHelp step={step} answers={answers} />
                 <div className="space-y-3" role="radiogroup" aria-label="Select your medication status">
                     {Object.values(medicationStatus).map((s) => (
@@ -1167,85 +1196,143 @@ const Wizard = () => {
         );
     }
 
-    // Step 4: Insurance
+    // Step 4: Insurance (with sub-steps A, B, C)
     if (step === 4) {
-        const insuranceOptions = [
-            {
-                value: InsuranceType.COMMERCIAL,
-                label: 'Commercial / Employer',
-                highlight: 'Copay cards available!',
-                description: 'Private insurance through work or marketplace'
-            },
-            {
-                value: InsuranceType.MEDICARE,
-                label: 'Medicare',
-                highlight: 'Foundations & PAPs available',
-                description: 'Federal program (65+ or disability)'
-            },
-            {
-                value: InsuranceType.MEDICAID,
-                label: 'Medicaid',
-                highlight: 'Usually well covered',
-                description: 'State program based on income'
-            },
-            {
-                value: InsuranceType.TRICARE_VA,
-                label: 'TRICARE / VA',
-                highlight: null,
-                description: 'Military or veterans benefits'
-            },
-            {
-                value: InsuranceType.IHS,
-                label: 'Indian Health Service',
-                highlight: null,
-                description: 'Tribal health programs'
-            },
-            {
-                value: InsuranceType.UNINSURED,
-                label: 'Uninsured / Self-pay',
-                highlight: 'PAPs can provide FREE meds',
-                description: 'No current insurance'
-            },
-            {
-                value: InsuranceType.OTHER,
-                label: 'Other / Not Sure',
-                highlight: null,
-                description: "We'll show all available options"
-            }
+        const insuranceSourceOptions = [
+            { value: 'employer', label: 'My job or my spouse\'s job' },
+            { value: 'medicare', label: 'Medicare (the program for people 65+ or with disabilities)' },
+            { value: 'medicaid', label: 'Medicaid (state program for people with lower income)' },
+            { value: 'marketplace', label: 'I bought it myself (from Healthcare.gov or an insurance company)' },
+            { value: 'military', label: 'Military or VA (Veterans)' },
+            { value: 'not_sure', label: 'I\'m not sure' },
         ];
 
-        return (
-            <div className="max-w-2xl mx-auto">
-                {renderProgress()}
-                <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
-                <h1 className="text-2xl font-bold mb-6">What's your insurance type?</h1>
-                <WizardHelp step={step} answers={answers} />
-                <div className="space-y-3" role="radiogroup" aria-label="Select your insurance type">
-                    {insuranceOptions.map((option) => (
-                        <button
-                            key={option.value}
-                            onClick={() => { handleSingleSelect('insurance', option.value); handleNextFromInsurance(); }}
-                            className={`w-full p-4 text-left rounded-xl border-2 transition ${
-                                answers.insurance === option.value ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 hover:border-emerald-200'
-                            }`}
-                            role="radio"
-                            aria-checked={answers.insurance === option.value}
-                        >
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <div className="font-bold text-lg text-slate-900">{option.label}</div>
-                                    {option.highlight && (
-                                        <div className="text-emerald-600 font-medium text-sm mt-1">{option.highlight}</div>
-                                    )}
-                                    <div className="text-slate-500 text-sm mt-1">{option.description}</div>
-                                </div>
-                                {answers.insurance === option.value && <CheckCircle className="text-emerald-600 flex-shrink-0" aria-hidden="true" />}
-                            </div>
-                        </button>
-                    ))}
+        const handleInsuranceBack = () => {
+            if (insuranceSubStep === 'A') {
+                prevStep();
+            } else if (insuranceSubStep === 'B') {
+                setInsuranceSubStep('A');
+            } else if (insuranceSubStep === 'C') {
+                setInsuranceSubStep('B');
+            }
+        };
+
+        const handleHasInsurance = (value) => {
+            handleSingleSelect('hasInsurance', value);
+            if (value === 'Yes') {
+                setInsuranceSubStep('B');
+            } else {
+                // No insurance or not sure - set legacy insurance value and go to next step
+                handleSingleSelect('insurance', InsuranceType.UNINSURED);
+                nextStep();
+            }
+        };
+
+        const handleInsuranceSource = (value) => {
+            handleSingleSelect('insuranceSource', value);
+            // Map to legacy insurance type
+            const sourceToType = {
+                'employer': InsuranceType.COMMERCIAL,
+                'medicare': InsuranceType.MEDICARE,
+                'medicaid': InsuranceType.MEDICAID,
+                'marketplace': InsuranceType.COMMERCIAL,
+                'military': InsuranceType.TRICARE_VA,
+                'not_sure': InsuranceType.OTHER,
+            };
+            handleSingleSelect('insurance', sourceToType[value] || InsuranceType.OTHER);
+            setInsuranceSubStep('C');
+        };
+
+        const handleDrugPlan = (value) => {
+            handleSingleSelect('hasDrugPlan', value);
+            nextStep();
+        };
+
+        // Step 4A: Do you have health insurance?
+        if (insuranceSubStep === 'A') {
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {renderProgress()}
+                    <button onClick={handleInsuranceBack} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
+                    <h1 className="text-2xl font-bold mb-2">Your Insurance</h1>
+                    <p className="text-slate-600 mb-6">Step A: Do you have health insurance?</p>
+                    <WizardHelp step={step} answers={answers} />
+                    <div className="space-y-3" role="radiogroup" aria-label="Do you have health insurance">
+                        {['Yes', 'No', 'I\'m not sure'].map((option) => (
+                            <button
+                                key={option}
+                                onClick={() => handleHasInsurance(option)}
+                                className={`w-full p-4 text-left rounded-xl border-2 transition flex justify-between items-center ${
+                                    answers.hasInsurance === option ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 hover:border-emerald-200'
+                                }`}
+                                role="radio"
+                                aria-checked={answers.hasInsurance === option}
+                            >
+                                <span className="font-medium text-lg">{option}</span>
+                                {answers.hasInsurance === option && <CheckCircle className="text-emerald-600" aria-hidden="true" />}
+                            </button>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
+
+        // Step 4B: Where does your insurance come from?
+        if (insuranceSubStep === 'B') {
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {renderProgress()}
+                    <button onClick={handleInsuranceBack} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
+                    <h1 className="text-2xl font-bold mb-2">Your Insurance</h1>
+                    <p className="text-slate-600 mb-6">Step B: Where does your insurance come from? Choose one:</p>
+                    <div className="space-y-3" role="radiogroup" aria-label="Where does your insurance come from">
+                        {insuranceSourceOptions.map((option) => (
+                            <button
+                                key={option.value}
+                                onClick={() => handleInsuranceSource(option.value)}
+                                className={`w-full p-4 text-left rounded-xl border-2 transition flex justify-between items-center ${
+                                    answers.insuranceSource === option.value ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 hover:border-emerald-200'
+                                }`}
+                                role="radio"
+                                aria-checked={answers.insuranceSource === option.value}
+                            >
+                                <span className="font-medium">{option.label}</span>
+                                {answers.insuranceSource === option.value && <CheckCircle className="text-emerald-600" aria-hidden="true" />}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        // Step 4C: Do you have a prescription drug plan?
+        if (insuranceSubStep === 'C') {
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {renderProgress()}
+                    <button onClick={handleInsuranceBack} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
+                    <h1 className="text-2xl font-bold mb-2">Your Insurance</h1>
+                    <p className="text-slate-600 mb-2">Step C: Do you have a prescription drug plan?</p>
+                    <p className="text-slate-500 text-sm mb-6">This helps pay for medicine. It might be part of your insurance or a separate card.</p>
+                    <div className="space-y-3" role="radiogroup" aria-label="Do you have a prescription drug plan">
+                        {['Yes', 'No', 'I\'m not sure'].map((option) => (
+                            <button
+                                key={option}
+                                onClick={() => handleDrugPlan(option)}
+                                className={`w-full p-4 text-left rounded-xl border-2 transition flex justify-between items-center ${
+                                    answers.hasDrugPlan === option ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 hover:border-emerald-200'
+                                }`}
+                                role="radio"
+                                aria-checked={answers.hasDrugPlan === option}
+                            >
+                                <span className="font-medium text-lg">{option}</span>
+                                {answers.hasDrugPlan === option && <CheckCircle className="text-emerald-600" aria-hidden="true" />}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
     }
 
     // Step 5: Meds
