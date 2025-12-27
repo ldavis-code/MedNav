@@ -9,8 +9,8 @@
 # WWW to non-WWW redirect (301 permanent) - must come first
 # This ensures all traffic goes to the canonical non-www domain
 [[redirects]]
-  from = "https://www.transplantmedicationnavigator.com/*"
-  to = "https://transplantmedicationnavigator.com/:splat"
+  from = "https://www.medicationnavigator.com/*"
+  to = "https://medicationnavigator.com/:splat"
   status = 301
   force = true
 
