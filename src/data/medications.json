@@ -1,0 +1,3009 @@
+[
+  {
+    "id": "tacrolimus",
+    "brandName": "Prograf / Envarsus XR / Astagraf XL",
+    "genericName": "Tacrolimus",
+    "rxcui": "42316",
+    "category": "Immunosuppressant",
+    "manufacturer": "Astellas / Veloxis",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.astellaspharmasupportsolutions.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "astellas-pap"
+  },
+  {
+    "id": "cyclosporine",
+    "brandName": "Neoral / Sandimmune / Gengraf",
+    "genericName": "Cyclosporine",
+    "rxcui": "3008",
+    "category": "Immunosuppressant",
+    "manufacturer": "Novartis",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Heart",
+      "Liver",
+      "Lung"
+    ],
+    "papUrl": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "novartis-pap"
+  },
+  {
+    "id": "mycophenolate",
+    "brandName": "CellCept",
+    "genericName": "Mycophenolate Mofetil",
+    "rxcui": "68149",
+    "category": "Immunosuppressant",
+    "manufacturer": "Genentech",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.genentech-access.com/patient.html",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "genentech-pap"
+  },
+  {
+    "id": "myfortic",
+    "brandName": "Myfortic",
+    "genericName": "Mycophenolic Acid",
+    "rxcui": "327361",
+    "category": "Immunosuppressant",
+    "manufacturer": "Novartis",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "novartis-pap"
+  },
+  {
+    "id": "imuran",
+    "brandName": "Imuran",
+    "genericName": "Azathioprine",
+    "rxcui": "1256",
+    "category": "Immunosuppressant",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "sirolimus",
+    "brandName": "Rapamune",
+    "genericName": "Sirolimus",
+    "rxcui": "35302",
+    "category": "Immunosuppressant",
+    "manufacturer": "Pfizer",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Lung",
+      "Liver"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 3,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "everolimus",
+    "brandName": "Zortress",
+    "genericName": "Everolimus",
+    "rxcui": "141704",
+    "category": "Immunosuppressant",
+    "manufacturer": "Novartis",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "papUrl": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "novartis-pap"
+  },
+  {
+    "id": "belatacept",
+    "brandName": "Nulojix",
+    "genericName": "Belatacept",
+    "rxcui": "1091444",
+    "category": "Immunosuppressant",
+    "manufacturer": "Bristol Myers Squibb",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.bmsaccesssupport.bmscustomerconnect.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "bms-pap"
+  },
+  {
+    "id": "simulect",
+    "brandName": "Simulect",
+    "genericName": "Basiliximab",
+    "rxcui": "114169",
+    "category": "Induction",
+    "manufacturer": "Novartis",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "papUrl": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "novartis-pap"
+  },
+  {
+    "id": "thymoglobulin",
+    "brandName": "Thymoglobulin",
+    "genericName": "Anti-thymocyte globulin (Rabbit)",
+    "rxcui": "89125",
+    "category": "Induction",
+    "manufacturer": "Sanofi",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Heart",
+      "Lung",
+      "Liver"
+    ],
+    "papUrl": "https://www.sanofipatientconnection.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "sanofi-pap"
+  },
+  {
+    "id": "atgam",
+    "brandName": "ATGAM",
+    "genericName": "Anti-thymocyte globulin (Equine)",
+    "rxcui": "1011",
+    "category": "Induction",
+    "manufacturer": "Pfizer",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "prednisone",
+    "brandName": "Deltasone",
+    "genericName": "Prednisone",
+    "rxcui": "8640",
+    "category": "Steroid",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "solumedrol",
+    "brandName": "Solu-Medrol",
+    "genericName": "Methylprednisolone",
+    "rxcui": "6902",
+    "category": "Steroid",
+    "manufacturer": "Pfizer",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "valcyte",
+    "brandName": "Valcyte",
+    "genericName": "Valganciclovir",
+    "rxcui": "284635",
+    "category": "Anti-viral",
+    "manufacturer": "Genentech",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.genentech-access.com/patient.html",
+    "supportUrl": "https://www.gene.com/patients/patient-support-services",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 3,
+    "papProgramId": "genentech-pap"
+  },
+  {
+    "id": "cytovene",
+    "brandName": "Cytovene",
+    "genericName": "Ganciclovir",
+    "rxcui": "4629",
+    "category": "Anti-viral",
+    "manufacturer": "Genentech",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "papUrl": "https://www.genentech-access.com/patient.html",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 3,
+    "papProgramId": "genentech-pap"
+  },
+  {
+    "id": "zovirax",
+    "brandName": "Zovirax",
+    "genericName": "Acyclovir",
+    "rxcui": "281",
+    "category": "Anti-viral",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "valtrex",
+    "brandName": "Valtrex",
+    "genericName": "Valacyclovir",
+    "rxcui": "10998",
+    "category": "Anti-viral",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "prevymis",
+    "brandName": "Prevymis",
+    "genericName": "Letermovir",
+    "rxcui": "1943541",
+    "category": "Anti-viral",
+    "manufacturer": "Merck",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Heart"
+    ],
+    "papUrl": "https://www.merckhelps.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "merck-pap"
+  },
+  {
+    "id": "livtencity",
+    "brandName": "Livtencity",
+    "genericName": "Maribavir",
+    "category": "Anti-viral",
+    "manufacturer": "Takeda",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Heart",
+      "Lung"
+    ],
+    "papUrl": "https://www.takeda.com/en-us/what-we-do/patient-services/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "takeda-pap"
+  },
+  {
+    "id": "bactrim",
+    "brandName": "Bactrim / Septra",
+    "genericName": "Trimethoprim-Sulfamethoxazole",
+    "rxcui": "10831",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "diflucan",
+    "brandName": "Diflucan",
+    "genericName": "Fluconazole",
+    "rxcui": "4450",
+    "category": "Anti-fungal",
+    "manufacturer": "Pfizer",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "nystatin",
+    "brandName": "Bio-Statin / Nystop",
+    "genericName": "Nystatin",
+    "rxcui": "7597",
+    "category": "Anti-fungal",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "noxafil",
+    "brandName": "Noxafil",
+    "genericName": "Posaconazole",
+    "rxcui": "282077",
+    "category": "Anti-fungal",
+    "manufacturer": "Merck",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.merckhelps.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 3,
+    "papProgramId": "merck-pap"
+  },
+  {
+    "id": "vfend",
+    "brandName": "Vfend",
+    "genericName": "Voriconazole",
+    "rxcui": "121243",
+    "category": "Anti-fungal",
+    "manufacturer": "Pfizer",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 3,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "cresemba",
+    "brandName": "Cresemba",
+    "genericName": "Isavuconazonium",
+    "rxcui": "1656657",
+    "category": "Anti-fungal",
+    "manufacturer": "Astellas",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.astellaspharmasupportsolutions.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "astellas-pap"
+  },
+  {
+    "id": "baraclude",
+    "brandName": "Baraclude",
+    "genericName": "Entecavir",
+    "rxcui": "404879",
+    "category": "Hepatitis B",
+    "manufacturer": "Bristol Myers Squibb",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "papUrl": "https://www.bmsaccesssupport.bmscustomerconnect.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "bms-pap"
+  },
+  {
+    "id": "vemlidy",
+    "brandName": "Vemlidy",
+    "genericName": "Tenofovir Alafenamide",
+    "category": "Hepatitis B",
+    "manufacturer": "Gilead",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver",
+      "Kidney"
+    ],
+    "papUrl": "https://www.gileadadvancingaccess.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "gilead-pap"
+  },
+  {
+    "id": "viread",
+    "brandName": "Viread",
+    "genericName": "Tenofovir Disoproxil",
+    "rxcui": "318473",
+    "category": "Hepatitis B",
+    "manufacturer": "Gilead",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver",
+      "Kidney"
+    ],
+    "papUrl": "https://www.gileadadvancingaccess.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "gilead-pap"
+  },
+  {
+    "id": "hbig",
+    "brandName": "HepaGam B / HyperHEP B",
+    "genericName": "Hepatitis B Immune Globulin",
+    "category": "Hepatitis B",
+    "manufacturer": "Saol / Grifols",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "papUrl": "https://www.grifolspatientcare.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "grifols-pap"
+  },
+  {
+    "id": "epclusa",
+    "brandName": "Epclusa",
+    "genericName": "Sofosbuvir/Velpatasvir",
+    "rxcui": "1716964",
+    "category": "Hepatitis C",
+    "manufacturer": "Gilead",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver",
+      "Kidney"
+    ],
+    "papUrl": "https://www.gileadadvancingaccess.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "gilead-pap"
+  },
+  {
+    "id": "mavyret",
+    "brandName": "Mavyret",
+    "genericName": "Glecaprevir/Pibrentasvir",
+    "rxcui": "1939261",
+    "category": "Hepatitis C",
+    "manufacturer": "AbbVie",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver",
+      "Kidney"
+    ],
+    "papUrl": "https://www.abbvie.com/patients/patient-assistance.html",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "abbvie-pap"
+  },
+  {
+    "id": "xifaxan",
+    "brandName": "Xifaxan",
+    "genericName": "Rifaximin",
+    "category": "Liver Support",
+    "manufacturer": "Bausch Health",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "copayUrl": "https://xifaxan.copaysavingsprogram.com/",
+    "papUrl": "https://www.bauschhealthpap.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "bausch-pap",
+    "copayProgramId": "xifaxan-copay"
+  },
+  {
+    "id": "lactulose",
+    "brandName": "Kristalose / Generlac",
+    "genericName": "Lactulose",
+    "category": "Liver Support",
+    "manufacturer": "Generic",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "ursodiol",
+    "brandName": "Urso / Actigall",
+    "genericName": "Ursodiol",
+    "rxcui": "10904",
+    "category": "Liver Support",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "creon",
+    "brandName": "Creon / Zenpep",
+    "genericName": "Pancrelipase",
+    "category": "Enzymes",
+    "manufacturer": "AbbVie / Nestle",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Pancreas",
+      "Lung"
+    ],
+    "papUrl": "https://www.creoninfo.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "abbvie-creon-pap"
+  },
+  {
+    "id": "entresto",
+    "brandName": "Entresto",
+    "genericName": "Sacubitril/Valsartan",
+    "category": "Heart Failure",
+    "manufacturer": "Novartis",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "papUrl": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "novartis-pap"
+  },
+  {
+    "id": "jardiance",
+    "brandName": "Jardiance",
+    "genericName": "Empagliflozin",
+    "category": "Heart/Kidney Support",
+    "manufacturer": "Boehringer Ingelheim",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "papUrl": "https://www.boehringer-ingelheim.com/us/patient-assistance",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "boehringer-ingelheim-pap"
+  },
+  {
+    "id": "farxiga",
+    "brandName": "Farxiga",
+    "genericName": "Dapagliflozin",
+    "category": "Heart/Kidney Support",
+    "manufacturer": "AstraZeneca",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "papUrl": "https://www.azandmeapp.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "astrazeneca-pap"
+  },
+  {
+    "id": "renvela",
+    "brandName": "Renvela",
+    "genericName": "Sevelamer",
+    "category": "Kidney Support",
+    "manufacturer": "Sanofi",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.sanofipatientconnection.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "sanofi-pap"
+  },
+  {
+    "id": "lasix",
+    "brandName": "Lasix",
+    "genericName": "Furosemide",
+    "rxcui": "4603",
+    "category": "Diuretic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Heart",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "aldactone",
+    "brandName": "Aldactone",
+    "genericName": "Spironolactone",
+    "category": "Diuretic",
+    "manufacturer": "Pfizer",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Liver"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "inderal",
+    "brandName": "Inderal",
+    "genericName": "Propranolol",
+    "category": "Beta Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "coreg",
+    "brandName": "Coreg",
+    "genericName": "Carvedilol",
+    "rxcui": "20352",
+    "category": "Beta Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "lopressor",
+    "brandName": "Lopressor / Toprol XL",
+    "genericName": "Metoprolol",
+    "rxcui": "6918",
+    "category": "Beta Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "protonix",
+    "brandName": "Protonix",
+    "genericName": "Pantoprazole",
+    "rxcui": "40790",
+    "category": "Stomach Protection",
+    "manufacturer": "Generic",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "revatio",
+    "brandName": "Revatio / Viagra",
+    "genericName": "Sildenafil",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "Pfizer",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "tracleer",
+    "brandName": "Tracleer",
+    "genericName": "Bosentan",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "Actelion/Janssen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.jnjwithme.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 4,
+    "papProgramId": "janssen-pap"
+  },
+  {
+    "id": "letairis",
+    "brandName": "Letairis",
+    "genericName": "Ambrisentan",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "Gilead",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.gileadadvancingaccess.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": 4,
+    "papProgramId": "gilead-pap"
+  },
+  {
+    "id": "opsumit",
+    "brandName": "Opsumit",
+    "genericName": "Macitentan",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "Actelion/Janssen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.jnjwithme.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "janssen-pap"
+  },
+  {
+    "id": "adempas",
+    "brandName": "Adempas",
+    "genericName": "Riociguat",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "Bayer",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.adempas-us.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "bayer-adempas-pap"
+  },
+  {
+    "id": "uptravi",
+    "brandName": "Uptravi",
+    "genericName": "Selexipag",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "Actelion/Janssen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.jnjwithme.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "janssen-pap"
+  },
+  {
+    "id": "flolan",
+    "brandName": "Flolan",
+    "genericName": "Epoprostenol",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "remodulin",
+    "brandName": "Remodulin",
+    "genericName": "Treprostinil",
+    "category": "Pulmonary Hypertension",
+    "manufacturer": "United Therapeutics",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "papUrl": "https://unitedtherapeuticscares.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "united-therapeutics-pap"
+  },
+  {
+    "id": "procrit",
+    "brandName": "Procrit / Epogen",
+    "genericName": "Epoetin Alfa",
+    "category": "Anemia (ESRD)",
+    "manufacturer": "Janssen / Amgen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.jnjwithme.com/",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "janssen-pap"
+  },
+  {
+    "id": "aranesp",
+    "brandName": "Aranesp",
+    "genericName": "Darbepoetin Alfa",
+    "category": "Anemia (ESRD)",
+    "manufacturer": "Amgen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.amgensupportplus.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "amgen-pap"
+  },
+  {
+    "id": "mircera",
+    "brandName": "Mircera",
+    "genericName": "Methoxy Polyethylene Glycol-Epoetin Beta",
+    "category": "Anemia (ESRD)",
+    "manufacturer": "Vifor Pharma",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.cslvifor.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "vifor-pap"
+  },
+  {
+    "id": "venofer",
+    "brandName": "Venofer",
+    "genericName": "Iron Sucrose",
+    "category": "Iron Supplement (ESRD)",
+    "manufacturer": "American Regent",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.venofer.com/venaccess",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 3,
+    "papProgramId": "american-regent-venofer-pap"
+  },
+  {
+    "id": "feraheme",
+    "brandName": "Feraheme",
+    "genericName": "Ferumoxytol",
+    "category": "Iron Supplement (ESRD)",
+    "manufacturer": "AMAG",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.feraheme.com/support",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "amag-feraheme-pap"
+  },
+  {
+    "id": "injectafer",
+    "brandName": "Injectafer",
+    "genericName": "Ferric Carboxymaltose",
+    "category": "Iron Supplement (ESRD)",
+    "manufacturer": "American Regent",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.dsiaccesscentral.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "dsi-pap"
+  },
+  {
+    "id": "calcitriol",
+    "brandName": "Rocaltrol / Calcijex",
+    "genericName": "Calcitriol",
+    "category": "Vitamin D (ESRD)",
+    "manufacturer": "Generic",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "zemplar",
+    "brandName": "Zemplar",
+    "genericName": "Paricalcitol",
+    "category": "Vitamin D (ESRD)",
+    "manufacturer": "AbbVie",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.abbvie.com/patients/patient-assistance.html",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "abbvie-pap"
+  },
+  {
+    "id": "hectorol",
+    "brandName": "Hectorol",
+    "genericName": "Doxercalciferol",
+    "category": "Vitamin D (ESRD)",
+    "manufacturer": "Sanofi",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.sanofipatientconnection.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "sanofi-pap"
+  },
+  {
+    "id": "sensipar",
+    "brandName": "Sensipar",
+    "genericName": "Cinacalcet",
+    "category": "Hyperparathyroidism (ESRD)",
+    "manufacturer": "Amgen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.amgensupportplus.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "amgen-pap"
+  },
+  {
+    "id": "parsabiv",
+    "brandName": "Parsabiv",
+    "genericName": "Etelcalcetide",
+    "category": "Hyperparathyroidism (ESRD)",
+    "manufacturer": "Amgen",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.amgensupportplus.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "amgen-pap"
+  },
+  {
+    "id": "auryxia",
+    "brandName": "Auryxia",
+    "genericName": "Ferric Citrate",
+    "category": "Phosphate Binder (ESRD)",
+    "manufacturer": "Akebia",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://www.akebiacares.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "akebia-auryxia-pap"
+  },
+  {
+    "id": "phoslo",
+    "brandName": "PhosLo",
+    "genericName": "Calcium Acetate",
+    "category": "Phosphate Binder (ESRD)",
+    "manufacturer": "Generic",
+    "stage": "Pre-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "campath",
+    "brandName": "Campath / Lemtrada",
+    "genericName": "Alemtuzumab",
+    "category": "Acute Rejection",
+    "manufacturer": "Sanofi",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "papUrl": "https://www.sanofipatientconnection.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "sanofi-pap"
+  },
+  {
+    "id": "rituxan",
+    "brandName": "Rituxan",
+    "genericName": "Rituximab",
+    "category": "Acute Rejection",
+    "manufacturer": "Genentech",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "papUrl": "https://www.genentech-access.com/patient.html",
+    "cost_tier": "high",
+    "generic_available": true,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "genentech-pap"
+  },
+  {
+    "id": "ivig",
+    "brandName": "Gammagard / Privigen / Octagam",
+    "genericName": "Intravenous Immunoglobulin (IVIG)",
+    "category": "Acute Rejection",
+    "manufacturer": "Various",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "papUrl": "https://www.gammagard.com/primary-immunodeficiency/copay-support",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "takeda-gammagard-pap"
+  },
+  {
+    "id": "soliris",
+    "brandName": "Soliris",
+    "genericName": "Eculizumab",
+    "category": "Antibody-Mediated Rejection",
+    "manufacturer": "Alexion",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://alexion.com/our-patients",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "alexion-pap"
+  },
+  {
+    "id": "ultomiris",
+    "brandName": "Ultomiris",
+    "genericName": "Ravulizumab",
+    "category": "Antibody-Mediated Rejection",
+    "manufacturer": "Alexion",
+    "stage": "Post-medication",
+    "commonOrgans": [
+      "Kidney"
+    ],
+    "papUrl": "https://alexion.com/our-patients",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "alexion-pap"
+  },
+  {
+    "id": "lisinopril",
+    "brandName": "Prinivil / Zestril",
+    "genericName": "Lisinopril",
+    "rxcui": "29046",
+    "category": "ACE Inhibitor",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "enalapril",
+    "brandName": "Vasotec",
+    "genericName": "Enalapril",
+    "category": "ACE Inhibitor",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "ramipril",
+    "brandName": "Altace",
+    "genericName": "Ramipril",
+    "category": "ACE Inhibitor",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "losartan",
+    "brandName": "Cozaar",
+    "genericName": "Losartan",
+    "category": "ARB",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "valsartan",
+    "brandName": "Diovan",
+    "genericName": "Valsartan",
+    "category": "ARB",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "olmesartan",
+    "brandName": "Benicar",
+    "genericName": "Olmesartan",
+    "category": "ARB",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "irbesartan",
+    "brandName": "Avapro",
+    "genericName": "Irbesartan",
+    "category": "ARB",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "amlodipine",
+    "brandName": "Norvasc",
+    "genericName": "Amlodipine",
+    "rxcui": "17767",
+    "category": "Calcium Channel Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "diltiazem",
+    "brandName": "Cardizem",
+    "genericName": "Diltiazem",
+    "category": "Calcium Channel Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "nifedipine",
+    "brandName": "Procardia / Adalat",
+    "genericName": "Nifedipine",
+    "category": "Calcium Channel Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "atenolol",
+    "brandName": "Tenormin",
+    "genericName": "Atenolol",
+    "category": "Beta Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "bisoprolol",
+    "brandName": "Zebeta",
+    "genericName": "Bisoprolol",
+    "category": "Beta Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "atorvastatin",
+    "brandName": "Lipitor",
+    "genericName": "Atorvastatin",
+    "rxcui": "83367",
+    "category": "Statin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Liver",
+      "Kidney",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "simvastatin",
+    "brandName": "Zocor",
+    "genericName": "Simvastatin",
+    "category": "Statin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Liver",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "rosuvastatin",
+    "brandName": "Crestor",
+    "genericName": "Rosuvastatin",
+    "category": "Statin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Liver",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "pravastatin",
+    "brandName": "Pravachol",
+    "genericName": "Pravastatin",
+    "rxcui": "42463",
+    "category": "Statin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "lovastatin",
+    "brandName": "Mevacor",
+    "genericName": "Lovastatin",
+    "category": "Statin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "hydrochlorothiazide",
+    "brandName": "Microzide",
+    "genericName": "Hydrochlorothiazide",
+    "category": "Diuretic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "chlorthalidone",
+    "brandName": "Thalitone",
+    "genericName": "Chlorthalidone",
+    "category": "Diuretic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "clopidogrel",
+    "brandName": "Plavix",
+    "genericName": "Clopidogrel",
+    "category": "Antiplatelet",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "aspirin",
+    "brandName": "Ecotrin / Bayer",
+    "genericName": "Aspirin",
+    "rxcui": "1191",
+    "category": "Antiplatelet",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney",
+      "Liver",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "warfarin",
+    "brandName": "Coumadin",
+    "genericName": "Warfarin",
+    "category": "Anticoagulant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Lung",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "apixaban",
+    "brandName": "Eliquis",
+    "genericName": "Apixaban",
+    "category": "Anticoagulant",
+    "manufacturer": "Bristol Myers Squibb",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "papUrl": "https://www.bmsaccesssupport.bmscustomerconnect.com/",
+    "copayUrl": "https://www.eliquis.bmscustomerconnect.com/afib/eliquis-free-trial-and-savings",
+    "copayProgramId": "eliquis-copay",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "bms-pap",
+    "medicare2026Negotiated": true,
+    "medicare2026Note": "Medicare negotiated price: $231/month (56% reduction from $521 list price) effective January 2026"
+  },
+  {
+    "id": "rivaroxaban",
+    "brandName": "Xarelto",
+    "genericName": "Rivaroxaban",
+    "category": "Anticoagulant",
+    "manufacturer": "Janssen",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney"
+    ],
+    "papUrl": "https://www.jnjwithme.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "janssen-pap"
+  },
+  {
+    "id": "digoxin",
+    "brandName": "Lanoxin",
+    "genericName": "Digoxin",
+    "category": "Cardiac Glycoside",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "metformin",
+    "brandName": "Glucophage",
+    "genericName": "Metformin",
+    "category": "Diabetes",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "glipizide",
+    "brandName": "Glucotrol",
+    "genericName": "Glipizide",
+    "category": "Diabetes",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "glyburide",
+    "brandName": "DiaBeta / Glynase",
+    "genericName": "Glyburide",
+    "category": "Diabetes",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "glimepiride",
+    "brandName": "Amaryl",
+    "genericName": "Glimepiride",
+    "category": "Diabetes",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "sitagliptin",
+    "brandName": "Januvia",
+    "genericName": "Sitagliptin",
+    "category": "Diabetes",
+    "manufacturer": "Merck",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.merckhelps.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "merck-pap",
+    "medicare2026Negotiated": true,
+    "medicare2026Note": "Medicare negotiated price: $113/month (79% reduction from $527 list price) effective January 2026"
+  },
+  {
+    "id": "insulin-glargine",
+    "brandName": "Lantus / Basaglar",
+    "genericName": "Insulin Glargine",
+    "category": "Insulin",
+    "manufacturer": "Sanofi / Lilly",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.sanofipatientconnection.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "sanofi-pap"
+  },
+  {
+    "id": "insulin-lispro",
+    "brandName": "Humalog",
+    "genericName": "Insulin Lispro",
+    "category": "Insulin",
+    "manufacturer": "Lilly",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.lillycares.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "lilly-pap"
+  },
+  {
+    "id": "insulin-aspart",
+    "brandName": "Novolog",
+    "genericName": "Insulin Aspart",
+    "category": "Insulin",
+    "manufacturer": "Novo Nordisk",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.novocare.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "novo-nordisk-pap"
+  },
+  {
+    "id": "semaglutide",
+    "brandName": "Ozempic / Wegovy",
+    "genericName": "Semaglutide",
+    "category": "Diabetes",
+    "manufacturer": "Novo Nordisk",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Heart",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.novocare.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "novo-nordisk-pap"
+  },
+  {
+    "id": "dulaglutide",
+    "brandName": "Trulicity",
+    "genericName": "Dulaglutide",
+    "category": "Diabetes",
+    "manufacturer": "Lilly",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Heart",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.lillycares.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 4,
+    "papProgramId": "lilly-pap"
+  },
+  {
+    "id": "levothyroxine",
+    "brandName": "Synthroid / Levoxyl",
+    "genericName": "Levothyroxine",
+    "category": "Thyroid",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney",
+      "Liver",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "liothyronine",
+    "brandName": "Cytomel",
+    "genericName": "Liothyronine",
+    "category": "Thyroid",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Heart",
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "albuterol",
+    "brandName": "ProAir / Ventolin / Proventil",
+    "genericName": "Albuterol",
+    "category": "Bronchodilator",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "fluticasone-salmeterol",
+    "brandName": "Advair",
+    "genericName": "Fluticasone/Salmeterol",
+    "category": "Respiratory",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "budesonide-formoterol",
+    "brandName": "Symbicort",
+    "genericName": "Budesonide/Formoterol",
+    "category": "Respiratory",
+    "manufacturer": "AstraZeneca",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.azandmeapp.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "astrazeneca-pap"
+  },
+  {
+    "id": "montelukast",
+    "brandName": "Singulair",
+    "genericName": "Montelukast",
+    "category": "Respiratory",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "tiotropium",
+    "brandName": "Spiriva",
+    "genericName": "Tiotropium",
+    "category": "Bronchodilator",
+    "manufacturer": "Boehringer Ingelheim",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.boehringer-ingelheim.com/us/patient-assistance",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "boehringer-ingelheim-pap"
+  },
+  {
+    "id": "levalbuterol",
+    "brandName": "Xopenex",
+    "genericName": "Levalbuterol",
+    "category": "Bronchodilator",
+    "manufacturer": "Sunovion",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.sunovion.com/patient-support",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "sunovion-pap"
+  },
+  {
+    "id": "ipratropium",
+    "brandName": "Atrovent",
+    "genericName": "Ipratropium",
+    "category": "Bronchodilator",
+    "manufacturer": "Boehringer Ingelheim",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.boehringer-ingelheim.com/us/patient-assistance",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "boehringer-ingelheim-pap"
+  },
+  {
+    "id": "ipratropium-albuterol",
+    "brandName": "Combivent / DuoNeb",
+    "genericName": "Ipratropium/Albuterol",
+    "category": "Bronchodilator",
+    "manufacturer": "Boehringer Ingelheim",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.boehringer-ingelheim.com/us/patient-assistance",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "boehringer-ingelheim-pap"
+  },
+  {
+    "id": "fluticasone",
+    "brandName": "Flovent",
+    "genericName": "Fluticasone",
+    "category": "Inhaled Corticosteroid",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "budesonide-inhaled",
+    "brandName": "Pulmicort",
+    "genericName": "Budesonide",
+    "category": "Inhaled Corticosteroid",
+    "manufacturer": "AstraZeneca",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.azandmeapp.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "astrazeneca-pap"
+  },
+  {
+    "id": "beclomethasone",
+    "brandName": "QVAR",
+    "genericName": "Beclomethasone",
+    "category": "Inhaled Corticosteroid",
+    "manufacturer": "Teva",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.tevausa.com/patient-resources/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "teva-pap"
+  },
+  {
+    "id": "mometasone-inhaled",
+    "brandName": "Asmanex",
+    "genericName": "Mometasone",
+    "category": "Inhaled Corticosteroid",
+    "manufacturer": "Organon",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.organonhelps.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "organon-pap"
+  },
+  {
+    "id": "ciclesonide",
+    "brandName": "Alvesco",
+    "genericName": "Ciclesonide",
+    "category": "Inhaled Corticosteroid",
+    "manufacturer": "Sunovion",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.sunovion.com/patient-support",
+    "cost_tier": "medium",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "sunovion-pap"
+  },
+  {
+    "id": "fluticasone-vilanterol",
+    "brandName": "Breo Ellipta",
+    "genericName": "Fluticasone/Vilanterol",
+    "category": "Respiratory",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "mometasone-formoterol",
+    "brandName": "Dulera",
+    "genericName": "Mometasone/Formoterol",
+    "category": "Respiratory",
+    "manufacturer": "Organon",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.organonhelps.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "organon-pap"
+  },
+  {
+    "id": "umeclidinium-vilanterol",
+    "brandName": "Anoro Ellipta",
+    "genericName": "Umeclidinium/Vilanterol",
+    "category": "Bronchodilator",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": 3,
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "omalizumab",
+    "brandName": "Xolair",
+    "genericName": "Omalizumab",
+    "category": "Asthma Biologic",
+    "manufacturer": "Genentech / Novartis",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.genentech-access.com/patient.html",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "genentech-pap"
+  },
+  {
+    "id": "mepolizumab",
+    "brandName": "Nucala",
+    "genericName": "Mepolizumab",
+    "category": "Asthma Biologic",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "benralizumab",
+    "brandName": "Fasenra",
+    "genericName": "Benralizumab",
+    "category": "Asthma Biologic",
+    "manufacturer": "AstraZeneca",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.azandmeapp.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "astrazeneca-pap"
+  },
+  {
+    "id": "dupilumab",
+    "brandName": "Dupixent",
+    "genericName": "Dupilumab",
+    "category": "Asthma Biologic / Allergy",
+    "manufacturer": "Regeneron / Sanofi",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.dupixent.com/support-savings/dupixent-my-way",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "sanofi-dupixent-pap"
+  },
+  {
+    "id": "tezepelumab",
+    "brandName": "Tezspire",
+    "genericName": "Tezepelumab",
+    "category": "Asthma Biologic",
+    "manufacturer": "AstraZeneca",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.azandmeapp.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "astrazeneca-pap"
+  },
+  {
+    "id": "zafirlukast",
+    "brandName": "Accolate",
+    "genericName": "Zafirlukast",
+    "category": "Leukotriene Modifier",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "zileuton",
+    "brandName": "Zyflo",
+    "genericName": "Zileuton",
+    "category": "Leukotriene Modifier",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2
+  },
+  {
+    "id": "cetirizine",
+    "brandName": "Zyrtec",
+    "genericName": "Cetirizine",
+    "category": "Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "loratadine",
+    "brandName": "Claritin",
+    "genericName": "Loratadine",
+    "category": "Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "fexofenadine",
+    "brandName": "Allegra",
+    "genericName": "Fexofenadine",
+    "category": "Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "levocetirizine",
+    "brandName": "Xyzal",
+    "genericName": "Levocetirizine",
+    "category": "Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "desloratadine",
+    "brandName": "Clarinex",
+    "genericName": "Desloratadine",
+    "category": "Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung",
+      "Kidney"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "fluticasone-nasal",
+    "brandName": "Flonase",
+    "genericName": "Fluticasone Nasal",
+    "category": "Nasal Corticosteroid",
+    "manufacturer": "GlaxoSmithKline",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.gskforyou.com/",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "gsk-pap"
+  },
+  {
+    "id": "mometasone-nasal",
+    "brandName": "Nasonex",
+    "genericName": "Mometasone Nasal",
+    "category": "Nasal Corticosteroid",
+    "manufacturer": "Organon",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "papUrl": "https://www.organonhelps.com/",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "organon-pap"
+  },
+  {
+    "id": "triamcinolone-nasal",
+    "brandName": "Nasacort",
+    "genericName": "Triamcinolone Nasal",
+    "category": "Nasal Corticosteroid",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "azelastine-nasal",
+    "brandName": "Astelin / Astepro",
+    "genericName": "Azelastine Nasal",
+    "category": "Nasal Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "olopatadine-nasal",
+    "brandName": "Patanase",
+    "genericName": "Olopatadine Nasal",
+    "category": "Nasal Antihistamine",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "cromolyn",
+    "brandName": "NasalCrom",
+    "genericName": "Cromolyn Sodium",
+    "category": "Mast Cell Stabilizer",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "omeprazole",
+    "brandName": "Prilosec",
+    "genericName": "Omeprazole",
+    "rxcui": "7646",
+    "category": "Proton Pump Inhibitor",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "esomeprazole",
+    "brandName": "Nexium",
+    "genericName": "Esomeprazole",
+    "category": "Proton Pump Inhibitor",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "lansoprazole",
+    "brandName": "Prevacid",
+    "genericName": "Lansoprazole",
+    "category": "Proton Pump Inhibitor",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "famotidine",
+    "brandName": "Pepcid",
+    "genericName": "Famotidine",
+    "category": "H2 Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "ranitidine",
+    "brandName": "Zantac",
+    "genericName": "Ranitidine",
+    "category": "H2 Blocker",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "tramadol",
+    "brandName": "Ultram",
+    "genericName": "Tramadol",
+    "category": "Pain Relief",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "hydrocodone-acetaminophen",
+    "brandName": "Norco / Vicodin",
+    "genericName": "Hydrocodone/Acetaminophen",
+    "category": "Pain Relief",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "oxycodone",
+    "brandName": "OxyContin / Roxicodone",
+    "genericName": "Oxycodone",
+    "category": "Pain Relief",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "gabapentin",
+    "brandName": "Neurontin",
+    "genericName": "Gabapentin",
+    "category": "Nerve Pain",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "pregabalin",
+    "brandName": "Lyrica",
+    "genericName": "Pregabalin",
+    "category": "Nerve Pain",
+    "manufacturer": "Pfizer",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "papUrl": "https://www.pfizerrxpathways.com/",
+    "cost_tier": "medium",
+    "generic_available": true,
+    "typical_copay_tier": 2,
+    "papProgramId": "pfizer-pap"
+  },
+  {
+    "id": "meloxicam",
+    "brandName": "Mobic",
+    "genericName": "Meloxicam",
+    "category": "NSAID",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "ibuprofen",
+    "brandName": "Motrin / Advil",
+    "genericName": "Ibuprofen",
+    "category": "NSAID",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "naproxen",
+    "brandName": "Naprosyn / Aleve",
+    "genericName": "Naproxen",
+    "category": "NSAID",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "sertraline",
+    "brandName": "Zoloft",
+    "genericName": "Sertraline",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "escitalopram",
+    "brandName": "Lexapro",
+    "genericName": "Escitalopram",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "fluoxetine",
+    "brandName": "Prozac",
+    "genericName": "Fluoxetine",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "citalopram",
+    "brandName": "Celexa",
+    "genericName": "Citalopram",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "duloxetine",
+    "brandName": "Cymbalta",
+    "genericName": "Duloxetine",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "venlafaxine",
+    "brandName": "Effexor",
+    "genericName": "Venlafaxine",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "bupropion",
+    "brandName": "Wellbutrin / Zyban",
+    "genericName": "Bupropion",
+    "category": "Antidepressant",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "trazodone",
+    "brandName": "Desyrel",
+    "genericName": "Trazodone",
+    "category": "Antidepressant/Sleep",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "alprazolam",
+    "brandName": "Xanax",
+    "genericName": "Alprazolam",
+    "category": "Anxiety",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "lorazepam",
+    "brandName": "Ativan",
+    "genericName": "Lorazepam",
+    "category": "Anxiety",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "clonazepam",
+    "brandName": "Klonopin",
+    "genericName": "Clonazepam",
+    "category": "Anxiety",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "buspirone",
+    "brandName": "BuSpar",
+    "genericName": "Buspirone",
+    "category": "Anxiety",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "zolpidem",
+    "brandName": "Ambien",
+    "genericName": "Zolpidem",
+    "category": "Sleep Aid",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "quetiapine",
+    "brandName": "Seroquel",
+    "genericName": "Quetiapine",
+    "category": "Antipsychotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "amoxicillin",
+    "brandName": "Amoxil",
+    "genericName": "Amoxicillin",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "azithromycin",
+    "brandName": "Zithromax / Z-Pak",
+    "genericName": "Azithromycin",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "ciprofloxacin",
+    "brandName": "Cipro",
+    "genericName": "Ciprofloxacin",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "levofloxacin",
+    "brandName": "Levaquin",
+    "genericName": "Levofloxacin",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "doxycycline",
+    "brandName": "Vibramycin",
+    "genericName": "Doxycycline",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Lung"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "cephalexin",
+    "brandName": "Keflex",
+    "genericName": "Cephalexin",
+    "category": "Antibiotic",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "vitamin-d",
+    "brandName": "Calciferol",
+    "genericName": "Vitamin D",
+    "category": "Vitamin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart",
+      "Pancreas"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "folic-acid",
+    "brandName": "Folate",
+    "genericName": "Folic Acid",
+    "category": "Vitamin",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Liver",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "allopurinol",
+    "brandName": "Zyloprim",
+    "genericName": "Allopurinol",
+    "category": "Gout",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "colchicine",
+    "brandName": "Colcrys",
+    "genericName": "Colchicine",
+    "category": "Gout",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Kidney",
+      "Heart"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "vitamin-e",
+    "brandName": "Aqua Gem-E / d-Alpha-Tocopherol",
+    "genericName": "Vitamin E",
+    "category": "Fatty Liver Disease (NASH)",
+    "manufacturer": "Generic",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1
+  },
+  {
+    "id": "pioglitazone",
+    "brandName": "Actos",
+    "genericName": "Pioglitazone",
+    "category": "Fatty Liver Disease (NASH)",
+    "manufacturer": "Takeda",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver",
+      "Kidney",
+      "Pancreas"
+    ],
+    "papUrl": "https://www.takeda.com/en-us/what-we-do/patient-services/",
+    "cost_tier": "low",
+    "generic_available": true,
+    "typical_copay_tier": 1,
+    "papProgramId": "takeda-pap"
+  },
+  {
+    "id": "resmetirom",
+    "brandName": "Rezdiffra",
+    "genericName": "Resmetirom",
+    "category": "Fatty Liver Disease (NASH)",
+    "manufacturer": "Madrigal",
+    "stage": "Both (Pre & Post)",
+    "commonOrgans": [
+      "Liver"
+    ],
+    "papUrl": "https://madrigalpatientsupport.com/",
+    "cost_tier": "high",
+    "generic_available": false,
+    "typical_copay_tier": "Specialty",
+    "papProgramId": "madrigal-pap"
+  }
+]

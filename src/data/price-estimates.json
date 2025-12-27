@@ -1,0 +1,185 @@
+{
+  "categoryDefaults": {
+    "Immunosuppressant": {
+      "costplus": { "min": 15, "max": 40 },
+      "walmart": { "min": 35, "max": 90 },
+      "goodrx": { "min": 40, "max": 100 },
+      "singlecare": { "min": 35, "max": 95 }
+    },
+    "default": {
+      "costplus": { "min": 10, "max": 25 },
+      "walmart": { "min": 4, "max": 40 },
+      "goodrx": { "min": 20, "max": 50 },
+      "singlecare": { "min": 15, "max": 45 }
+    }
+  },
+  "medicationOverrides": {
+    "valcyte": {
+      "note": "Valganciclovir is an expensive antiviral - generic still costs $150-500+/month",
+      "costplus": { "min": 150, "max": 300 },
+      "walmart": { "min": 250, "max": 500 },
+      "goodrx": { "min": 150, "max": 450 },
+      "singlecare": { "min": 180, "max": 400 }
+    },
+    "cytovene": {
+      "note": "Ganciclovir IV - specialty medication",
+      "costplus": { "min": 200, "max": 400 },
+      "walmart": { "min": 300, "max": 600 },
+      "goodrx": { "min": 200, "max": 550 },
+      "singlecare": { "min": 220, "max": 480 }
+    },
+    "prevymis": {
+      "note": "Letermovir - newer CMV prophylaxis, very expensive",
+      "costplus": { "min": 500, "max": 800 },
+      "walmart": { "min": 700, "max": 1200 },
+      "goodrx": { "min": 500, "max": 1100 },
+      "singlecare": { "min": 550, "max": 950 }
+    },
+    "livtencity": {
+      "note": "Maribavir - specialty antiviral for resistant CMV",
+      "costplus": { "min": 1500, "max": 2500 },
+      "walmart": { "min": 2500, "max": 4000 },
+      "goodrx": { "min": 1800, "max": 3800 },
+      "singlecare": { "min": 2000, "max": 3200 }
+    },
+    "noxafil": {
+      "note": "Posaconazole - expensive antifungal",
+      "costplus": { "min": 400, "max": 700 },
+      "walmart": { "min": 600, "max": 1100 },
+      "goodrx": { "min": 450, "max": 950 },
+      "singlecare": { "min": 480, "max": 850 }
+    },
+    "vfend": {
+      "note": "Voriconazole - expensive antifungal",
+      "costplus": { "min": 100, "max": 200 },
+      "walmart": { "min": 180, "max": 350 },
+      "goodrx": { "min": 120, "max": 320 },
+      "singlecare": { "min": 140, "max": 280 }
+    },
+    "cresemba": {
+      "note": "Isavuconazonium - newer expensive antifungal",
+      "costplus": { "min": 800, "max": 1200 },
+      "walmart": { "min": 1200, "max": 2200 },
+      "goodrx": { "min": 900, "max": 2000 },
+      "singlecare": { "min": 950, "max": 1700 }
+    },
+    "epclusa": {
+      "note": "Hepatitis C cure - extremely expensive",
+      "costplus": { "min": 8000, "max": 15000 },
+      "walmart": { "min": 12000, "max": 25000 },
+      "goodrx": { "min": 9000, "max": 22000 },
+      "singlecare": { "min": 9500, "max": 18000 }
+    },
+    "mavyret": {
+      "note": "Hepatitis C cure - expensive but sometimes cheaper than Epclusa",
+      "costplus": { "min": 6000, "max": 12000 },
+      "walmart": { "min": 10000, "max": 20000 },
+      "goodrx": { "min": 7000, "max": 18000 },
+      "singlecare": { "min": 7500, "max": 15000 }
+    },
+    "xifaxan": {
+      "note": "Rifaximin - expensive liver support medication",
+      "costplus": { "min": 400, "max": 700 },
+      "walmart": { "min": 600, "max": 1100 },
+      "goodrx": { "min": 450, "max": 950 },
+      "singlecare": { "min": 480, "max": 850 }
+    },
+    "entresto": {
+      "note": "Sacubitril/Valsartan - expensive heart failure medication. One of 10 drugs with Medicare negotiated prices for 2026",
+      "costplus": { "min": 150, "max": 250 },
+      "walmart": { "min": 250, "max": 450 },
+      "goodrx": { "min": 180, "max": 400 },
+      "singlecare": { "min": 200, "max": 380 },
+      "medicare2026Negotiated": true
+    },
+    "jardiance": {
+      "note": "Empagliflozin - brand name SGLT2 inhibitor for diabetes/heart/kidney. One of 10 drugs with Medicare negotiated prices for 2026",
+      "costplus": { "min": 150, "max": 250 },
+      "walmart": { "min": 250, "max": 450 },
+      "goodrx": { "min": 180, "max": 400 },
+      "singlecare": { "min": 200, "max": 380 },
+      "medicare2026Negotiated": true
+    },
+    "farxiga": {
+      "note": "Dapagliflozin - brand name SGLT2 inhibitor for diabetes/heart/kidney. One of 10 drugs with Medicare negotiated prices for 2026",
+      "costplus": { "min": 150, "max": 250 },
+      "walmart": { "min": 250, "max": 450 },
+      "goodrx": { "min": 180, "max": 400 },
+      "singlecare": { "min": 200, "max": 380 },
+      "medicare2026Negotiated": true
+    },
+    "creon": {
+      "note": "Pancrelipase - expensive enzyme replacement",
+      "costplus": { "min": 200, "max": 400 },
+      "walmart": { "min": 400, "max": 800 },
+      "goodrx": { "min": 250, "max": 700 },
+      "singlecare": { "min": 280, "max": 600 }
+    },
+    "eliquis": {
+      "note": "Apixaban - brand name anticoagulant. Medicare 2026 negotiated price: $231/month (down from $521 list price, 56% reduction)",
+      "costplus": { "min": 200, "max": 350 },
+      "walmart": { "min": 300, "max": 550 },
+      "goodrx": { "min": 220, "max": 500 },
+      "singlecare": { "min": 240, "max": 480 },
+      "medicare2026": { "negotiated": 231, "listPrice": 521, "reduction": "56%" }
+    },
+    "xarelto": {
+      "note": "Rivaroxaban - brand name anticoagulant",
+      "costplus": { "min": 200, "max": 350 },
+      "walmart": { "min": 300, "max": 550 },
+      "goodrx": { "min": 220, "max": 500 },
+      "singlecare": { "min": 240, "max": 480 }
+    },
+    "januvia": {
+      "note": "Sitagliptin - brand name DPP-4 inhibitor for diabetes. Medicare 2026 negotiated price: $113/month (down from $527 list price, 79% reduction)",
+      "costplus": { "min": 100, "max": 200 },
+      "walmart": { "min": 200, "max": 400 },
+      "goodrx": { "min": 120, "max": 350 },
+      "singlecare": { "min": 140, "max": 320 },
+      "medicare2026": { "negotiated": 113, "listPrice": 527, "reduction": "79%" }
+    },
+    "semaglutide": {
+      "note": "Ozempic/Wegovy - very expensive GLP-1 agonist",
+      "costplus": { "min": 300, "max": 500 },
+      "walmart": { "min": 500, "max": 900 },
+      "goodrx": { "min": 350, "max": 800 },
+      "singlecare": { "min": 380, "max": 720 }
+    },
+    "dulaglutide": {
+      "note": "Trulicity - expensive GLP-1 agonist",
+      "costplus": { "min": 300, "max": 500 },
+      "walmart": { "min": 500, "max": 900 },
+      "goodrx": { "min": 350, "max": 800 },
+      "singlecare": { "min": 380, "max": 720 }
+    },
+    "symbicort": {
+      "note": "Budesonide/Formoterol - brand name respiratory",
+      "costplus": { "min": 150, "max": 250 },
+      "walmart": { "min": 250, "max": 400 },
+      "goodrx": { "min": 180, "max": 380 },
+      "singlecare": { "min": 200, "max": 340 }
+    },
+    "advair": {
+      "note": "Fluticasone/Salmeterol - brand name respiratory",
+      "costplus": { "min": 150, "max": 250 },
+      "walmart": { "min": 250, "max": 400 },
+      "goodrx": { "min": 180, "max": 380 },
+      "singlecare": { "min": 200, "max": 340 }
+    },
+    "spiriva": {
+      "note": "Tiotropium - brand name COPD inhaler",
+      "costplus": { "min": 200, "max": 350 },
+      "walmart": { "min": 300, "max": 500 },
+      "goodrx": { "min": 220, "max": 480 },
+      "singlecare": { "min": 240, "max": 420 }
+    },
+    "lyrica": {
+      "note": "Pregabalin - brand name nerve pain medication",
+      "costplus": { "min": 20, "max": 50 },
+      "walmart": { "min": 25, "max": 70 },
+      "goodrx": { "min": 20, "max": 60 },
+      "singlecare": { "min": 25, "max": 65 }
+    }
+  },
+  "lastUpdated": "2025-12-25"
+}

@@ -1,0 +1,454 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS FOR medication PATIENTS
+   Priority: Vision changes from medications require higher contrast
+   ======================================== */
+
+/* Base font size - minimum 16px for readability */
+html {
+    font-size: 16px;
+}
+
+/* Ensure body text is readable */
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Minimum tap target size for touch devices (44x44px) - WCAG 2.1 AAA */
+@layer components {
+    .tap-target {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Accessible button base - applies minimum tap target */
+    .btn-accessible {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Enhanced focus indicators for keyboard navigation */
+@layer base {
+    /* Global focus styles - high contrast ring with increased visibility */
+    *:focus-visible {
+        outline: 3px solid #047857 !important; /* emerald-700 for better contrast */
+        outline-offset: 3px !important;
+    }
+
+    /* Remove default outline since we use focus-visible */
+    *:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    /* Enhanced focus for interactive elements - larger, more visible */
+    button:focus-visible,
+    a:focus-visible,
+    [role="button"]:focus-visible,
+    [role="tab"]:focus-visible,
+    [role="checkbox"]:focus-visible,
+    [role="radio"]:focus-visible,
+    [role="option"]:focus-visible,
+    [role="link"]:focus-visible,
+    [role="menuitem"]:focus-visible,
+    [tabindex]:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+        outline: 3px solid #047857 !important; /* emerald-700 */
+        outline-offset: 3px !important;
+        box-shadow: 0 0 0 6px rgba(4, 120, 87, 0.25);
+    }
+
+    /* High contrast focus for dark backgrounds - white outline */
+    .bg-emerald-600 *:focus-visible,
+    .bg-emerald-700 *:focus-visible,
+    .bg-emerald-800 *:focus-visible,
+    .bg-emerald-900 *:focus-visible,
+    .bg-emerald-950 *:focus-visible,
+    .bg-slate-800 *:focus-visible,
+    .bg-slate-900 *:focus-visible,
+    .bg-indigo-600 *:focus-visible,
+    .bg-indigo-700 *:focus-visible,
+    .bg-indigo-800 *:focus-visible,
+    .bg-indigo-900 *:focus-visible {
+        outline-color: #fff !important;
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4);
+    }
+
+    /* Focus indicator for cards and larger clickable areas */
+    .group:focus-visible,
+    [role="listitem"]:focus-visible {
+        outline: 3px solid #047857 !important;
+        outline-offset: 2px !important;
+        border-radius: 0.5rem;
+    }
+}
+
+/* Skip link enhancement - more visible */
+.sr-only.focus\:not-sr-only:focus {
+    position: absolute !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 1rem 1.5rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: nowrap !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* ========================================
+   FONT SIZE OVERRIDES - Minimum 16px base
+   ======================================== */
+
+/* Override text-xs to be 14px minimum (0.875rem) */
+.text-xs {
+    font-size: 0.875rem !important; /* 14px - up from 12px */
+    line-height: 1.5 !important;
+}
+
+/* Override text-sm to be 15px minimum (0.9375rem) */
+.text-sm {
+    font-size: 0.9375rem !important; /* 15px - up from 14px */
+    line-height: 1.5 !important;
+}
+
+/* ========================================
+   COLOR CONTRAST OVERRIDES - WCAG AA Compliant
+   medication patients often have vision changes from medications
+   ======================================== */
+
+@layer utilities {
+    /* High contrast text utilities */
+    .text-accessible-muted {
+        color: #374151 !important; /* gray-700 - 7:1 contrast ratio */
+    }
+
+    .text-accessible-secondary {
+        color: #475569 !important; /* slate-600 - 5.5:1 contrast ratio */
+    }
+
+    /* Override low-contrast slate colors */
+    .text-slate-300 {
+        color: #cbd5e1 !important; /* Keep for dark backgrounds - passes on dark */
+    }
+
+    .text-slate-400 {
+        color: #94a3b8 !important; /* slate-400 - only use on dark backgrounds */
+    }
+
+    /* Footer text on dark backgrounds - ensure readability */
+    .bg-slate-900 .text-slate-300 {
+        color: #e2e8f0 !important; /* slate-200 for better contrast on dark */
+    }
+
+    .bg-slate-900 .text-slate-400 {
+        color: #cbd5e1 !important; /* slate-300 for better contrast on dark */
+    }
+
+    /* Emerald text on emerald backgrounds - ensure contrast */
+    .bg-emerald-800 .text-emerald-100,
+    .bg-emerald-900 .text-emerald-100,
+    .bg-emerald-950 .text-emerald-100 {
+        color: #d1fae5 !important; /* emerald-100 - good contrast */
+    }
+}
+
+/* ========================================
+   LINK AND BUTTON ACCESSIBILITY
+   ======================================== */
+
+/* Ensure all links have visible underlines or other indicators */
+@layer base {
+    /* Links in content areas should have underlines */
+    main a:not([class*="btn"]):not([class*="rounded"]):not([role="tab"]):not([role="button"]) {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+    }
+
+    main a:not([class*="btn"]):not([class*="rounded"]):not([role="tab"]):not([role="button"]):hover {
+        text-decoration-thickness: 2px;
+    }
+}
+
+/* Minimum touch target for inline interactive elements */
+@layer utilities {
+    .touch-target-inline {
+        position: relative;
+        padding: 0.5rem;
+        margin: -0.5rem;
+    }
+}
+
+/* ========================================
+   PRINT STYLESHEET
+   Optimized for printing medication and program information
+   ======================================== */
+
+@media print {
+    /* ---- Page Setup ---- */
+    @page {
+        size: letter;
+        margin: 0.75in;
+    }
+
+    /* ---- Base Styles ---- */
+    html, body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt !important;
+        line-height: 1.4 !important;
+    }
+
+    * {
+        color: black !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* ---- Hide Unnecessary UI Elements ---- */
+    header,
+    footer,
+    nav,
+    .no-print,
+    button.no-print,
+    [role="navigation"],
+    [role="banner"],
+    [role="contentinfo"],
+    /* Chat widget */
+    .fixed.bottom-4,
+    .fixed.bottom-6,
+    /* Mobile menu */
+    .md\\:hidden,
+    /* Action buttons */
+    button:not(.print-visible),
+    /* Tab navigation */
+    [role="tablist"],
+    /* Search inputs */
+    input[type="search"],
+    input[type="text"],
+    /* Share/copy buttons */
+    [aria-label*="Copy"],
+    [aria-label*="Share"],
+    /* External link icons in actions */
+    td.no-print,
+    th.no-print,
+    .no-print {
+        display: none !important;
+    }
+
+    /* ---- Main Content ---- */
+    main {
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    article {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* ---- Typography ---- */
+    h1 {
+        font-size: 18pt !important;
+        margin-bottom: 12pt !important;
+        page-break-after: avoid;
+    }
+
+    h2 {
+        font-size: 14pt !important;
+        margin-bottom: 8pt !important;
+        margin-top: 16pt !important;
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-size: 12pt !important;
+        margin-bottom: 6pt !important;
+        page-break-after: avoid;
+    }
+
+    p, li, td, th {
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+    }
+
+    /* ---- Links - Show URLs ---- */
+    a[href^="http"]:after,
+    a[href^="https"]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666 !important;
+        word-break: break-all;
+    }
+
+    /* Don't show URL for internal links or buttons styled as links */
+    a[href^="/"]:after,
+    a[href^="#"]:after,
+    a[role="button"]:after,
+    a[role="tab"]:after,
+    nav a:after {
+        content: none !important;
+    }
+
+    /* ---- Cards and Sections ---- */
+    .rounded-xl,
+    .rounded-lg,
+    .rounded-2xl {
+        border-radius: 0 !important;
+        border: 1px solid #ccc !important;
+        margin-bottom: 12pt !important;
+        padding: 12pt !important;
+    }
+
+    /* Remove colored backgrounds */
+    .bg-emerald-50,
+    .bg-emerald-100,
+    .bg-blue-50,
+    .bg-indigo-50,
+    .bg-purple-50,
+    .bg-rose-50,
+    .bg-slate-50,
+    .bg-slate-100,
+    .bg-white {
+        background: white !important;
+    }
+
+    /* ---- Tables ---- */
+    table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+        font-size: 10pt !important;
+    }
+
+    th, td {
+        border: 1px solid #999 !important;
+        padding: 6pt !important;
+        text-align: left !important;
+    }
+
+    thead {
+        background: #f0f0f0 !important;
+    }
+
+    thead th {
+        font-weight: bold !important;
+        background: #e0e0e0 !important;
+    }
+
+    /* ---- Medication Cards ---- */
+    .medication-card,
+    [class*="MedicationCard"] {
+        page-break-inside: avoid;
+        border: 1px solid #999 !important;
+        padding: 12pt !important;
+        margin-bottom: 12pt !important;
+    }
+
+    /* ---- Page Breaks ---- */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    table, figure, img {
+        page-break-inside: avoid;
+    }
+
+    /* Avoid orphans and widows */
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* ---- Badges and Tags ---- */
+    .rounded-full {
+        border-radius: 2pt !important;
+        border: 1px solid #999 !important;
+        padding: 2pt 6pt !important;
+    }
+
+    /* ---- Website URL Header ---- */
+    body::before {
+        content: "medication Medication Navigator™ - medicationMedNavigator.com";
+        display: block;
+        text-align: center;
+        font-size: 10pt;
+        color: #666 !important;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8pt;
+        margin-bottom: 16pt;
+    }
+
+    /* ---- Print Date Footer ---- */
+    body::after {
+        content: "Printed from medicationMedNavigator.com - Information may change. Always verify with your healthcare provider.";
+        display: block;
+        text-align: center;
+        font-size: 9pt;
+        color: #666 !important;
+        border-top: 1px solid #ccc;
+        padding-top: 8pt;
+        margin-top: 24pt;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* ---- Specific Component Adjustments ---- */
+
+    /* Price comparison table - keep visible columns */
+    .overflow-x-auto {
+        overflow: visible !important;
+    }
+
+    /* Assistance program info */
+    .prose {
+        max-width: 100% !important;
+    }
+
+    /* Remove gradients */
+    [class*="gradient"] {
+        background: white !important;
+    }
+
+    /* Icons - hide decorative, keep informational */
+    svg[aria-hidden="true"] {
+        display: none !important;
+    }
+
+    /* Keep checkmarks visible */
+    svg.text-emerald-500,
+    svg.text-green-500 {
+        display: inline !important;
+        width: 12pt !important;
+        height: 12pt !important;
+    }
+}
+
+/* Loading animation */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
