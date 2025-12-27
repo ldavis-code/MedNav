@@ -4,33 +4,56 @@ export const LAST_UPDATED = "December 27, 2025";
 
 // User roles
 export const Role = {
-    PATIENT: 'Patient',
-    CAREPARTNER: 'Carepartner / Family',
-    SOCIAL_WORKER: 'Social Worker / Coordinator',
+    PATIENT: 'Me — I take medicine myself',
+    CAREPARTNER: 'Someone I care for — I help a family member or friend with their medicine',
 };
 
 // Treatment status
 export const TreatmentStatus = {
-    NOT_STARTED: 'Not yet started',
-    JUST_STARTED: 'Just started (less than 3 months)',
-    ONGOING: 'Ongoing (more than 3 months)',
+    NOT_STARTED: 'Not yet — My doctor wants me to start soon',
+    JUST_STARTED: 'Yes, I just started — Less than 3 months ago',
+    ONGOING: 'Yes, I\'ve been taking it — More than 3 months',
 };
 
 // Health conditions
 export const HealthCondition = {
-    AUTOIMMUNE: 'Autoimmune disease (lupus, RA, MS)',
+    AUTOIMMUNE: 'Autoimmune disease (like lupus, rheumatoid arthritis, or MS)',
     CANCER: 'Cancer',
-    DIABETES: 'Diabetes',
+    DIABETES: 'Diabetes (high blood sugar)',
     HEART: 'Heart disease or heart failure',
     HIGH_BP: 'High blood pressure',
     KIDNEY: 'Kidney disease',
-    LIVER: 'Liver disease',
-    LUNG: 'Lung disease (COPD, asthma)',
-    MENTAL_HEALTH: 'Mental health (depression, anxiety)',
+    LIVER: 'Liver disease (including hepatitis, cirrhosis, or fatty liver)',
+    LUNG: 'Lung disease (COPD, asthma, pulmonary fibrosis)',
+    MENTAL_HEALTH: 'Mental health (depression, anxiety, bipolar)',
     OTHER: 'Other',
 };
 
-// Insurance types
+// Insurance - Do you have insurance?
+export const HasInsurance = {
+    YES: 'Yes',
+    NO: 'No',
+    NOT_SURE: 'I\'m not sure',
+};
+
+// Insurance source
+export const InsuranceSource = {
+    EMPLOYER: 'My job or my spouse\'s job',
+    MEDICARE: 'Medicare (the program for people 65+ or with disabilities)',
+    MEDICAID: 'Medicaid (state program for people with lower income)',
+    MARKETPLACE: 'I bought it myself (from Healthcare.gov or an insurance company)',
+    MILITARY: 'Military or VA (Veterans)',
+    NOT_SURE: 'I\'m not sure',
+};
+
+// Has prescription drug plan
+export const HasDrugPlan = {
+    YES: 'Yes',
+    NO: 'No',
+    NOT_SURE: 'I\'m not sure',
+};
+
+// Legacy insurance types for backward compatibility
 export const InsuranceType = {
     COMMERCIAL: 'Commercial / Employer',
     MEDICARE: 'Medicare',
