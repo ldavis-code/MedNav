@@ -45,7 +45,7 @@ export default function SavingsDashboard({ refreshTrigger }) {
 
     function handleShare() {
         const total = summary?.summary?.total_saved || 0;
-        const text = `I've saved $${parseFloat(total).toFixed(2)} on my medications with medication Med Navigator! Track your savings too: medicationmednavigator.com`;
+        const text = `I've saved $${parseFloat(total).toFixed(2)} on my medications with Medication Navigator! Track your savings too: medicationnavigator.com`;
 
         if (navigator.share) {
             navigator.share({ text });

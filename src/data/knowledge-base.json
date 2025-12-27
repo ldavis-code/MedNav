@@ -17,11 +17,11 @@
   },
   "specialtyPharmacy": {
     "keywords": ["specialty pharmacy", "mail order", "cvs", "walgreens"],
-    "response": "**Specialty Pharmacy Requirements:**\n\nMost commercial insurance requires medication meds be filled at designated specialty pharmacies (not retail).\n\n**Common specialty pharmacies:**\n• Accredo\n• CVS Specialty\n• Walgreens Specialty\n• Briova/Optum\n\n**Important:** Using the wrong pharmacy = full price! Call your insurance to confirm which one you must use."
+    "response": "**Specialty Pharmacy Requirements:**\n\nMost commercial insurance requires medications be filled at designated specialty pharmacies (not retail).\n\n**Common specialty pharmacies:**\n• Accredo\n• CVS Specialty\n• Walgreens Specialty\n• Briova/Optum\n\n**Important:** Using the wrong pharmacy = full price! Call your insurance to confirm which one you must use."
   },
   "medications": {
     "keywords": ["tacrolimus", "prograf", "cyclosporine", "mycophenolate", "cellcept", "medication"],
-    "response": "**Common medication Medications:**\n\n**Immunosuppressants** (prevent rejection):\n• Tacrolimus (Prograf)\n• Cyclosporine (Neoral)\n• Mycophenolate (CellCept)\n\n**Anti-virals** (prevent infection):\n• Valganciclovir (Valcyte)\n• Acyclovir (Zovirax)\n\nUse our **Search Meds** tool to find pricing, manufacturer PAPs, and assistance programs for specific medications."
+    "response": "**Common Medications:**\n\n**Immunosuppressants** (prevent rejection):\n• Tacrolimus (Prograf)\n• Cyclosporine (Neoral)\n• Mycophenolate (CellCept)\n\n**Anti-virals** (prevent infection):\n• Valganciclovir (Valcyte)\n• Acyclovir (Zovirax)\n\nUse our **Search Meds** tool to find pricing, manufacturer PAPs, and assistance programs for specific medications."
   },
   "wizard": {
     "keywords": ["my path", "wizard", "quiz", "start"],

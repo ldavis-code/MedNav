@@ -992,7 +992,7 @@ const savingsPrograms = [
   },
 
   // =====================================================
-  // SECTION 5: COMMON POST-medication MEDS
+  // SECTION 5: COMMON COMMON MEDICATIONS
   // =====================================================
 
   // ----- PREDNISONE -----
@@ -1806,7 +1806,7 @@ const savingsPrograms = [
   },
 
   // =====================================================
-  // SECTION 13: UNIVERSAL PROGRAMS (Apply to ALL medication meds)
+  // SECTION 13: UNIVERSAL PROGRAMS (Apply to ALL medications)
   // =====================================================
   {
     medication_id: null,

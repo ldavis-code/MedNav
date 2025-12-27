@@ -333,7 +333,7 @@ const Pricing = () => {
 
                         {/* Medical Disclaimer */}
                         <p className="text-center text-sm text-slate-500 max-w-2xl mx-auto">
-                            This tool is designed to help you organize and understand your medications. It does not replace medical advice. Always review medication changes with your medication team.
+                            This tool is designed to help you organize and understand your medications. It does not replace medical advice. Always review medication changes with your care team.
                         </p>
 
                         {/* FAQ Section */}
