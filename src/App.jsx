@@ -172,30 +172,147 @@ const getMedicationSuggestions = (answers) => {
     const conditions = answers.organs;
     const HealthCondition = OrganType; // Using the alias
 
-    // Diabetes medications
+    // CKD / ESRD medications
+    if (conditions.includes(HealthCondition.CKD_ESRD)) {
+        suggestions.push({
+            category: 'Kidney Disease Medications',
+            medications: ['renvela', 'sensipar', 'procrit', 'epogen', 'aranesp', 'velphoro'],
+            reason: 'Common medications for CKD and ESRD management'
+        });
+    }
+
+    // Hepatitis C medications
+    if (conditions.includes(HealthCondition.HEPATITIS_C)) {
+        suggestions.push({
+            category: 'Hepatitis C Medications',
+            medications: ['harvoni', 'epclusa', 'mavyret', 'sovaldi', 'zepatier'],
+            reason: 'Antiviral medications for Hepatitis C treatment'
+        });
+    }
+
+    // Liver disease medications
+    if (conditions.includes(HealthCondition.LIVER)) {
+        suggestions.push({
+            category: 'Liver Disease Medications',
+            medications: ['xifaxan', 'lactulose', 'rifaximin', 'nadolol'],
+            reason: 'Common medications for liver conditions'
+        });
+    }
+
+    // HIV/AIDS medications
+    if (conditions.includes(HealthCondition.HIV_AIDS)) {
+        suggestions.push({
+            category: 'HIV/AIDS Medications',
+            medications: ['biktarvy', 'triumeq', 'descovy', 'truvada', 'genvoya'],
+            reason: 'Antiretroviral medications for HIV treatment'
+        });
+    }
+
+    // Multiple Sclerosis medications
+    if (conditions.includes(HealthCondition.MS)) {
+        suggestions.push({
+            category: 'Multiple Sclerosis Medications',
+            medications: ['ocrevus', 'tecfidera', 'tysabri', 'copaxone', 'kesimpta', 'aubagio'],
+            reason: 'Disease-modifying therapies for MS'
+        });
+    }
+
+    // Rheumatoid Arthritis medications
+    if (conditions.includes(HealthCondition.RA)) {
+        suggestions.push({
+            category: 'Rheumatoid Arthritis Medications',
+            medications: ['humira', 'enbrel', 'xeljanz', 'rinvoq', 'orencia', 'methotrexate'],
+            reason: 'Common medications for RA treatment'
+        });
+    }
+
+    // Psoriasis / Psoriatic Arthritis medications
+    if (conditions.includes(HealthCondition.PSORIASIS)) {
+        suggestions.push({
+            category: 'Psoriasis Medications',
+            medications: ['humira', 'cosentyx', 'skyrizi', 'tremfya', 'stelara', 'otezla'],
+            reason: 'Biologics and treatments for psoriasis'
+        });
+    }
+
+    // IBD (Crohn's / Ulcerative Colitis) medications
+    if (conditions.includes(HealthCondition.IBD)) {
+        suggestions.push({
+            category: 'IBD Medications',
+            medications: ['humira', 'remicade', 'stelara', 'entyvio', 'rinvoq', 'zeposia'],
+            reason: 'Medications for Crohn\'s and Ulcerative Colitis'
+        });
+    }
+
+    // Type 2 Diabetes medications
     if (conditions.includes(HealthCondition.DIABETES)) {
         suggestions.push({
             category: 'Diabetes Medications',
-            medications: ['metformin', 'insulin', 'januvia', 'jardiance', 'ozempic', 'trulicity'],
-            reason: 'Common medications for managing blood sugar'
+            medications: ['metformin', 'insulin', 'ozempic', 'jardiance', 'trulicity', 'mounjaro'],
+            reason: 'Common medications for Type 2 Diabetes'
         });
     }
 
-    // Digestive disorder medications (IBS, IBD, Crohn's, Colitis)
-    if (conditions.includes(HealthCondition.GI)) {
+    // Blood Cancer medications
+    if (conditions.includes(HealthCondition.BLOOD_CANCER)) {
         suggestions.push({
-            category: 'Digestive Disorder Medications',
-            medications: ['humira', 'remicade', 'stelara', 'entyvio', 'xifaxan', 'linzess'],
-            reason: 'Common medications for IBS, IBD, Crohn\'s, and colitis'
+            category: 'Blood Cancer Medications',
+            medications: ['imbruvica', 'revlimid', 'venclexta', 'calquence', 'pomalyst', 'darzalex'],
+            reason: 'Targeted therapies for blood cancers'
         });
     }
 
-    // Heart disease medications
-    if (conditions.includes(HealthCondition.HEART)) {
+    // Breast Cancer medications
+    if (conditions.includes(HealthCondition.BREAST_CANCER)) {
         suggestions.push({
-            category: 'Heart Medications',
-            medications: ['eliquis', 'xarelto', 'entresto', 'lipitor', 'plavix'],
-            reason: 'Common medications for heart conditions'
+            category: 'Breast Cancer Medications',
+            medications: ['ibrance', 'verzenio', 'kisqali', 'herceptin', 'tamoxifen', 'letrozole'],
+            reason: 'Targeted therapies and hormone treatments for breast cancer'
+        });
+    }
+
+    // Prostate Cancer medications
+    if (conditions.includes(HealthCondition.PROSTATE_CANCER)) {
+        suggestions.push({
+            category: 'Prostate Cancer Medications',
+            medications: ['xtandi', 'zytiga', 'erleada', 'nubeqa', 'lupron', 'firmagon'],
+            reason: 'Hormone therapies and treatments for prostate cancer'
+        });
+    }
+
+    // Lung Cancer medications
+    if (conditions.includes(HealthCondition.LUNG_CANCER)) {
+        suggestions.push({
+            category: 'Lung Cancer Medications',
+            medications: ['keytruda', 'opdivo', 'tagrisso', 'alecensa', 'tecentriq', 'lorbrena'],
+            reason: 'Immunotherapies and targeted treatments for lung cancer'
+        });
+    }
+
+    // Heart Failure medications
+    if (conditions.includes(HealthCondition.HEART_FAILURE)) {
+        suggestions.push({
+            category: 'Heart Failure Medications',
+            medications: ['entresto', 'farxiga', 'jardiance', 'corlanor', 'verquvo'],
+            reason: 'Common medications for heart failure management'
+        });
+    }
+
+    // Pulmonary Fibrosis / Pulmonary Hypertension medications
+    if (conditions.includes(HealthCondition.PULMONARY)) {
+        suggestions.push({
+            category: 'Pulmonary Medications',
+            medications: ['ofev', 'esbriet', 'opsumit', 'uptravi', 'tyvaso', 'adempas'],
+            reason: 'Medications for pulmonary fibrosis and pulmonary hypertension'
+        });
+    }
+
+    // Mental health medications
+    if (conditions.includes(HealthCondition.MENTAL_HEALTH)) {
+        suggestions.push({
+            category: 'Mental Health Medications',
+            medications: ['lexapro', 'zoloft', 'wellbutrin', 'abilify', 'lamictal', 'vraylar'],
+            reason: 'Common medications for mental health conditions'
         });
     }
 
@@ -205,60 +322,6 @@ const getMedicationSuggestions = (answers) => {
             category: 'Blood Pressure Medications',
             medications: ['lisinopril', 'amlodipine', 'losartan', 'metoprolol'],
             reason: 'Common medications for managing blood pressure'
-        });
-    }
-
-    // Kidney disease medications
-    if (conditions.includes(HealthCondition.KIDNEY)) {
-        suggestions.push({
-            category: 'Kidney Disease Medications',
-            medications: ['renvela', 'sensipar', 'procrit', 'epogen'],
-            reason: 'Common medications for kidney disease management'
-        });
-    }
-
-    // Liver disease medications
-    if (conditions.includes(HealthCondition.LIVER)) {
-        suggestions.push({
-            category: 'Liver Disease Medications',
-            medications: ['xifaxan', 'lactulose', 'harvoni', 'epclusa'],
-            reason: 'Common medications for liver conditions'
-        });
-    }
-
-    // Lung disease medications
-    if (conditions.includes(HealthCondition.LUNG)) {
-        suggestions.push({
-            category: 'Lung Disease Medications',
-            medications: ['advair', 'symbicort', 'spiriva', 'trelegy'],
-            reason: 'Common medications for respiratory conditions'
-        });
-    }
-
-    // Autoimmune disease medications
-    if (conditions.includes(HealthCondition.AUTOIMMUNE)) {
-        suggestions.push({
-            category: 'Autoimmune Medications',
-            medications: ['humira', 'enbrel', 'stelara', 'cosentyx', 'rinvoq'],
-            reason: 'Common medications for autoimmune conditions'
-        });
-    }
-
-    // Cancer medications
-    if (conditions.includes(HealthCondition.CANCER)) {
-        suggestions.push({
-            category: 'Cancer Support Medications',
-            medications: ['neulasta', 'zofran', 'procrit'],
-            reason: 'Common supportive medications during cancer treatment'
-        });
-    }
-
-    // Mental health medications
-    if (conditions.includes(HealthCondition.MENTAL_HEALTH)) {
-        suggestions.push({
-            category: 'Mental Health Medications',
-            medications: ['lexapro', 'zoloft', 'wellbutrin', 'abilify', 'lamictal'],
-            reason: 'Common medications for mental health conditions'
         });
     }
 

@@ -17,16 +17,33 @@ export const TreatmentStatus = {
 
 // Health conditions
 export const HealthCondition = {
-    AUTOIMMUNE: 'Autoimmune disease (like lupus, rheumatoid arthritis, or MS)',
-    CANCER: 'Cancer',
-    DIABETES: 'Diabetes (high blood sugar)',
-    GI: 'Digestive disorders (IBS, IBD, Crohn\'s, colitis)',
-    HEART: 'Heart disease or heart failure',
-    HIGH_BP: 'High blood pressure',
-    KIDNEY: 'Kidney disease',
-    LIVER: 'Liver disease (including hepatitis, cirrhosis, or fatty liver)',
-    LUNG: 'Lung disease (COPD, asthma, pulmonary fibrosis)',
+    // Kidney
+    CKD_ESRD: 'Chronic Kidney Disease / End-Stage Renal Disease (ESRD)',
+    // Liver
+    HEPATITIS_C: 'Hepatitis C',
+    LIVER: 'Liver disease (cirrhosis, fatty liver)',
+    // Infectious
+    HIV_AIDS: 'HIV/AIDS',
+    // Autoimmune
+    MS: 'Multiple Sclerosis',
+    RA: 'Rheumatoid Arthritis',
+    PSORIASIS: 'Psoriasis / Psoriatic Arthritis',
+    // Digestive
+    IBD: 'Inflammatory Bowel Disease (Crohn\'s / Ulcerative Colitis)',
+    // Diabetes
+    DIABETES: 'Type 2 Diabetes',
+    // Cancers
+    BLOOD_CANCER: 'Blood Cancers (Leukemia, Lymphoma, Multiple Myeloma)',
+    BREAST_CANCER: 'Breast Cancer',
+    PROSTATE_CANCER: 'Prostate Cancer',
+    LUNG_CANCER: 'Lung Cancer (Non-Small Cell)',
+    // Heart & Lung
+    HEART_FAILURE: 'Heart Failure',
+    PULMONARY: 'Pulmonary Fibrosis / Pulmonary Hypertension',
+    // Mental Health
     MENTAL_HEALTH: 'Mental health (depression, anxiety, bipolar)',
+    // Other
+    HIGH_BP: 'High blood pressure',
     OTHER: 'Other',
 };
 
