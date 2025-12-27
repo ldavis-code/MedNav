@@ -1132,8 +1132,8 @@ const Wizard = () => {
     const handleNextFromSpecialty = () => setStep(7);
     const handleNextFromFinancial = () => setStep(8);
 
-    const stepLabels = ['Role', 'Status', 'Conditions', 'Insurance', 'Medications'];
-    const totalVisibleSteps = 5; // Main 5 steps the user sees
+    const stepLabels = ['Role', 'Status', 'Conditions', 'Insurance', 'Medications', 'Pharmacy', 'Costs'];
+    const totalVisibleSteps = 7; // Main 7 steps the user sees
 
     const renderProgress = () => (
         <div className="mb-8 no-print">
@@ -1416,9 +1416,9 @@ const Wizard = () => {
                 {renderProgress()}
                 <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
                 <div className="mb-6">
-                    <h1 className="text-2xl font-bold mb-2">Which medications do you take?</h1>
+                    <h1 className="text-2xl font-bold mb-2">Step 5: Your Medications</h1>
                     <p className="text-slate-600">
-                        Showing medications relevant for: <strong className="text-emerald-700">{isPremedication ? 'Pre-medication' : 'Post-medication'}</strong>
+                        Click on a medication below or search to input your medication.
                     </p>
                 </div>
                 <WizardHelp step={step} answers={answers} />
@@ -1581,7 +1581,7 @@ const Wizard = () => {
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
                 <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
-                <h1 className="text-2xl font-bold mb-4">Specialty Pharmacy Check</h1>
+                <h1 className="text-2xl font-bold mb-4">Step 6: Specialty Pharmacy</h1>
                 <WizardHelp step={step} answers={answers} />
                 <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6" role="note">
                     <p className="text-blue-800">
@@ -1616,7 +1616,7 @@ const Wizard = () => {
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
                 <button onClick={() => setStep(answers.insurance === InsuranceType.COMMERCIAL ? 6 : 5)} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
-                <h1 className="text-2xl font-bold mb-2">Find Your Best Options</h1>
+                <h1 className="text-2xl font-bold mb-2">Step 7: Paying for Your Medicine</h1>
                 <p className="text-slate-600 mb-6">How would you describe your current medication costs?</p>
                 <WizardHelp step={step} answers={answers} />
                 <div className="bg-slate-50 p-4 rounded-lg mb-6 border border-slate-200 text-sm text-slate-600" role="note">
