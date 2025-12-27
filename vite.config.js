@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'icons/*.png'],
       manifest: {
-        name: 'Transplant Medication Navigator',
+        name: 'Medication Navigator',
         short_name: 'Med Navigator',
-        description: 'Free guide for transplant patients to find affordable medications and assistance programs',
+        description: 'Free guide for patients to find affordable medications and assistance programs',
         theme_color: '#059669',
         background_color: '#f8fafc',
         display: 'standalone',

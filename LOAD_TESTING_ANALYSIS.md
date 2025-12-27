@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Your Transplant Medication Navigator is a **React SPA + Netlify serverless + Neon PostgreSQL** application. Here's how it will handle 5000 concurrent users:
+Your Medication Navigator is a **React SPA + Netlify serverless + Neon PostgreSQL** application. Here's how it will handle 5000 concurrent users:
 
 | Component | Rating | Notes |
 |-----------|--------|-------|
@@ -268,14 +268,14 @@ export const options = {
 
 export default function () {
   // Test static page load
-  const homeRes = http.get('https://transplantmedicationnavigator.com/');
+  const homeRes = http.get('https://medicationnavigator.com/');
   check(homeRes, {
     'home page status 200': (r) => r.status === 200,
     'home page < 2s': (r) => r.timings.duration < 2000,
   });
 
   // Test medications API
-  const medsRes = http.get('https://transplantmedicationnavigator.com/api/medications');
+  const medsRes = http.get('https://medicationnavigator.com/api/medications');
   check(medsRes, {
     'medications API 200': (r) => r.status === 200,
     'medications API < 3s': (r) => r.timings.duration < 3000,
@@ -294,10 +294,10 @@ k6 run load-test.js
 
 ```bash
 # Test static assets (should handle easily)
-ab -n 1000 -c 100 https://transplantmedicationnavigator.com/
+ab -n 1000 -c 100 https://medicationnavigator.com/
 
 # Test medications API (watch for failures)
-ab -n 500 -c 50 https://transplantmedicationnavigator.com/api/medications
+ab -n 500 -c 50 https://medicationnavigator.com/api/medications
 ```
 
 ---

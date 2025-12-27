@@ -1,7 +1,7 @@
 {
-  "name": "transplant-medication-navigator",
+  "name": "medication-navigator",
   "version": "1.0.0",
-  "description": "Medication Assistance Guide for Transplant Patients",
+  "description": "Medication Assistance Guide for Patients",
   "type": "module",
   "scripts": {
     "dev": "vite",
