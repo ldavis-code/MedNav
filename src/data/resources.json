@@ -1,0 +1,104 @@
+[
+  {
+    "name": "American Kidney Fund (AKF)",
+    "url": "https://www.kidneyfund.org/",
+    "description": "Provides treatment-related financial assistance to dialysis and patients who meet eligibility criteria.",
+    "category": "Foundation"
+  },
+  {
+    "name": "American medication Foundation",
+    "url": "https://www.americanmedicationfoundation.org/",
+    "description": "Provides patient assistance grants, mentorship programs connecting patients with medication mentors, and educational resources for medication recipients and living donors.",
+    "category": "Foundation"
+  },
+  {
+    "name": "Cost Plus Drugs",
+    "url": "https://costplusdrugs.com/",
+    "description": "A low-cost online pharmacy that cuts out middlemen. Excellent for comparing cash prices against insurance copays.",
+    "category": "Low-Cost Pharmacy"
+  },
+  {
+    "name": "Donate Life America",
+    "url": "https://www.donatelife.net/patient-services/",
+    "description": "Connects medication recipients with local resources, events, and community support programs across the United States.",
+    "category": "Support Group"
+  },
+  {
+    "name": "Drugs.com",
+    "url": "https://www.drugs.com/",
+    "description": "Look up and identify medications, find manufacturers, and connect directly to their specific Patient Assistance Programs.",
+    "category": "Medication Database"
+  },
+  {
+    "name": "GoodRx",
+    "url": "https://www.goodrx.com/",
+    "description": "Free prescription discount coupons that work at virtually all pharmacies. Compare prices and get instant coupons for generic and brand medications.",
+    "category": "Discount Program"
+  },
+  {
+    "name": "HealthWell Foundation",
+    "url": "https://www.healthwellfoundation.org/",
+    "description": "Reduces financial barriers to care for underinsured patients with chronic or life-altering diseases. Includes copays, travel costs, pediatric and insurance premiums.",
+    "category": "Foundation"
+  },
+  {
+    "name": "Medicare.gov",
+    "url": "https://www.medicare.gov",
+    "description": "The official U.S. government site for Medicare. Use this to compare Part D plans and check Part B-ID eligibility.",
+    "category": "Government"
+  },
+  {
+    "name": "National Alliance for Caregiving",
+    "url": "https://www.caregiving.org/",
+    "description": "A national nonprofit coalition dedicated to advancing family caregiving through research, innovation, and advocacy. Provides resources, research, and support for caregivers and care partners.",
+    "category": "Caregiver Support"
+  },
+  {
+    "name": "NORD RareCare",
+    "url": "https://rarediseases.org/",
+    "description": "Since 1987, provides assistance programs for life-saving medications, financial assistance with insurance premiums and co-pays, diagnostic testing for rare diseases.",
+    "category": "Foundation"
+  },
+  {
+    "name": "PAN Foundation",
+    "url": "https://www.panfoundation.org/",
+    "description": "Helps underinsured people with life-threatening, chronic and rare diseases get medications by assisting with out-of-pocket costs and advocating for access.",
+    "category": "Foundation"
+  },
+  {
+    "name": "PAN Foundation FundFinder",
+    "url": "https://fundfinder.panfoundation.org/",
+    "description": "Directory of more than 150 patient advocacy organizations providing helplines, peer counseling, disease-specific education, and more.",
+    "category": "Foundation Directory"
+  },
+  {
+    "name": "Patient Advocate Foundation (PAF)",
+    "url": "https://www.patientadvocate.org/",
+    "description": "Provides direct services to patients with chronic, life threatening and debilitating diseases to help access care and treatment recommended by their doctor.",
+    "category": "Foundation"
+  },
+  {
+    "name": "Accessia Health (formerly Patient Services Inc)",
+    "url": "https://www.accessiahealth.org/",
+    "description": "Helps pay for medication, provides health insurance premium and copay assistance, navigates insurance plans, gives legal advice, and supports every step of the way.",
+    "category": "Foundation"
+  },
+  {
+    "name": "PhRMA's Medicine Assistance Tool (MAT)",
+    "url": "https://medicineassistancetool.org/",
+    "description": "Free SEARCH ENGINE for biopharmaceutical industry programs. MAT is not its own patient assistance program, but rather a search engine for many patient assistance resources.",
+    "category": "Search Engine"
+  },
+  {
+    "name": "Rx Outreach",
+    "url": "https://rxoutreach.org/",
+    "description": "Non-profit pharmacy providing affordable medications. Since 2010, saved patients more than $822 million in prescription medication costs.",
+    "category": "Low-Cost Pharmacy"
+  },
+  {
+    "name": "TRIO (Medication Navigator Organization)",
+    "url": "https://www.trioweb.org/",
+    "description": "The nation's largest organization of medication recipients, living donors, donor families, and candidates. Offers local chapters, peer mentoring, and educational resources.",
+    "category": "Support Group"
+  }
+]

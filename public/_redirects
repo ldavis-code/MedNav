@@ -1,0 +1,25 @@
+# Netlify redirects file
+
+# WWW to non-WWW redirect (301 permanent) - must come first
+https://www.medicationnavigator.com/*  https://medicationnavigator.com/:splat  301!
+
+# Admin auth API (must be before generic /api/*)
+/api/admin-auth/*  /.netlify/functions/admin-auth/:splat  200!
+
+# Admin API (must be before generic /api/*)
+/api/admin-api/*  /.netlify/functions/admin-api/:splat  200!
+
+# Chat API
+/api/chat  /.netlify/functions/chat  200!
+
+# Generic API route
+/api/*  /.netlify/functions/:splat  200!
+
+# Outbound tracking redirects
+/out/copay/*  /.netlify/functions/out-redirect  200!
+/out/foundation/*  /.netlify/functions/out-redirect  200!
+/out/pap/*  /.netlify/functions/out-redirect  200!
+
+# SPA fallback - all other routes go to index.html
+# NOTE: Do NOT use ! (force) here, or it will override static files!
+/*  /index.html  200
