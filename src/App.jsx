@@ -181,6 +181,15 @@ const getMedicationSuggestions = (answers) => {
         });
     }
 
+    // Digestive disorder medications (IBS, IBD, Crohn's, Colitis)
+    if (conditions.includes(HealthCondition.GI)) {
+        suggestions.push({
+            category: 'Digestive Disorder Medications',
+            medications: ['humira', 'remicade', 'stelara', 'entyvio', 'xifaxan', 'linzess'],
+            reason: 'Common medications for IBS, IBD, Crohn\'s, and colitis'
+        });
+    }
+
     // Heart disease medications
     if (conditions.includes(HealthCondition.HEART)) {
         suggestions.push({

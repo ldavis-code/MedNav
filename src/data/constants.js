@@ -20,6 +20,7 @@ export const HealthCondition = {
     AUTOIMMUNE: 'Autoimmune disease (like lupus, rheumatoid arthritis, or MS)',
     CANCER: 'Cancer',
     DIABETES: 'Diabetes (high blood sugar)',
+    GI: 'Digestive disorders (IBS, IBD, Crohn\'s, colitis)',
     HEART: 'Heart disease or heart failure',
     HIGH_BP: 'High blood pressure',
     KIDNEY: 'Kidney disease',
