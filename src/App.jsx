@@ -820,24 +820,24 @@ const Home = () => {
 const WizardHelp = ({ step, answers }) => {
     const helpContent = {
         1: {
-            title: "Choosing Your Role",
-            content: "Select the option that best describes you. This helps us tailor the guidance:\n\n• **Patient**: You're receiving or awaiting a medication\n• **Carepartner**: You're helping a loved one\n• **Social Worker**: You're assisting patients professionally\n\nAll roles receive the same resources, but the language may be adjusted."
+            title: "Who is this quiz for?",
+            content: "Select the option that best describes you:\n\n• **Patient**: You take medications yourself\n• **Carepartner**: You help a family member or friend with their medications\n• **Social Worker**: You assist patients professionally\n\nAll roles receive the same resources, but the language may be adjusted."
         },
         2: {
-            title: "medication Status",
-            content: "Your medication stage determines which medications are relevant:\n\n• **Pre-medication**: Shows medications for candidates (dialysis support, heart failure meds, etc.)\n• **Post-medication (1st year)**: Focus on immunosuppressants and anti-infection medications\n• **Post-medication (1+ years)**: Long-term maintenance medications\n\nDifferent assistance programs may be available at each stage."
+            title: "Your Medicine Journey",
+            content: "Where are you in starting this medicine?\n\n• **Not yet**: Your doctor wants you to start soon\n• **Just started**: Less than 3 months ago\n• **Been taking it**: More than 3 months\n\nDifferent assistance programs may be available at each stage."
         },
         3: {
-            title: "Selecting Your Organ",
-            content: "Choose all organs that apply to your situation:\n\n• **Single organ**: We'll show medications specific to that organ\n• **Multi-organ**: Select all relevant organs\n• **Other/Not listed**: Shows general medications\n\nThis filters the medication list to show only relevant options."
+            title: "Health Conditions",
+            content: "Select all health conditions that apply to you:\n\n• Check everything that applies to your situation\n• This helps us show relevant medications and programs\n• Not sure? That's okay - just check what you know\n\nYour conditions help us filter to show only relevant options."
         },
         4: {
-            title: "Insurance Type",
-            content: "Your insurance determines which assistance programs you can use:\n\n• **Commercial**: Can use manufacturer copay cards + PAPs\n• **Medicare**: Part B-ID important for kidney patients; can use PAPs but NOT copay cards\n• **Medicaid**: May have full coverage; check state formulary\n• **Uninsured**: Manufacturer PAPs are your primary option\n\n💡 Having insurance doesn't mean you can't get additional help!"
+            title: "Your Insurance",
+            content: "Your insurance determines which assistance programs you can use:\n\n• **Commercial**: Can use manufacturer copay cards + PAPs\n• **Medicare**: Can use PAPs but NOT copay cards\n• **Medicaid**: May have full coverage; check state formulary\n• **Uninsured**: Manufacturer PAPs are your primary option\n\n💡 Having insurance doesn't mean you can't get additional help!"
         },
         5: {
             title: "Selecting Medications",
-            content: "Choose all medications you currently take or expect to take:\n\n• Don't worry if you're not sure - you can always come back\n• Selecting medications gives you direct links to manufacturer programs\n• You can search for specific meds using the Search Meds tool\n\n💡 If you're pre-medication, the list shows supportive medications. Post-medication shows immunosuppressants and prophylaxis."
+            content: "Choose all medications you currently take or expect to take:\n\n• Don't worry if you're not sure - you can always come back\n• Selecting medications gives you direct links to manufacturer programs\n• You can search for specific meds using the Search Meds tool"
         },
         6: {
             title: "Specialty Pharmacy",
