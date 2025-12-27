@@ -176,7 +176,7 @@ const getMedicationSuggestions = (answers) => {
     if (conditions.includes(HealthCondition.DIABETES)) {
         suggestions.push({
             category: 'Diabetes Medications',
-            medications: ['metformin', 'januvia', 'jardiance', 'ozempic', 'trulicity'],
+            medications: ['metformin', 'insulin', 'januvia', 'jardiance', 'ozempic', 'trulicity'],
             reason: 'Common medications for managing blood sugar'
         });
     }
@@ -1060,7 +1060,7 @@ const Wizard = () => {
     const handleNextFromSpecialty = () => setStep(7);
     const handleNextFromFinancial = () => setStep(8);
 
-    const stepLabels = ['Role', 'Status', 'Organ', 'Insurance', 'Medications'];
+    const stepLabels = ['Role', 'Status', 'Conditions', 'Insurance', 'Medications'];
     const totalVisibleSteps = 5; // Main 5 steps the user sees
 
     const renderProgress = () => (
