@@ -2,79 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://medicationnavigator.com/</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/wizard</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/medications</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/education</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/application-help</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/pricing</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/my-medications</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/savings-tracker</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/subscribe</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/faq</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/survey</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/pilot</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medicationnavigator.com/survey/medication</loc>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://medicationnavigator.com/survey/general</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

@@ -57,6 +57,8 @@ import {
     Role,
     medicationStatus,
     OrganType,
+    HealthCondition,
+    ConditionCategories,
     InsuranceType,
     FinancialStatus,
     medicationStage
@@ -170,135 +172,49 @@ const getMedicationSuggestions = (answers) => {
     }
 
     const conditions = answers.organs;
-    const HealthCondition = OrganType; // Using the alias
 
-    // CKD / ESRD medications
-    if (conditions.includes(HealthCondition.CKD_ESRD)) {
+    // === DIABETES ===
+    if (conditions.includes(HealthCondition.TYPE_1_DIABETES)) {
         suggestions.push({
-            category: 'Kidney Disease Medications',
-            medications: ['renvela', 'sensipar', 'procrit', 'epogen', 'aranesp', 'velphoro'],
-            reason: 'Common medications for CKD and ESRD management'
+            category: 'Type 1 Diabetes Medications',
+            medications: ['insulin', 'humalog', 'novolog', 'lantus', 'tresiba', 'dexcom'],
+            reason: 'Insulin and diabetes management for Type 1 Diabetes'
         });
     }
 
-    // Hepatitis C medications
-    if (conditions.includes(HealthCondition.HEPATITIS_C)) {
+    if (conditions.includes(HealthCondition.TYPE_2_DIABETES)) {
         suggestions.push({
-            category: 'Hepatitis C Medications',
-            medications: ['harvoni', 'epclusa', 'mavyret', 'sovaldi', 'zepatier'],
-            reason: 'Antiviral medications for Hepatitis C treatment'
-        });
-    }
-
-    // Liver disease medications
-    if (conditions.includes(HealthCondition.LIVER)) {
-        suggestions.push({
-            category: 'Liver Disease Medications',
-            medications: ['xifaxan', 'lactulose', 'rifaximin', 'nadolol'],
-            reason: 'Common medications for liver conditions'
-        });
-    }
-
-    // HIV/AIDS medications
-    if (conditions.includes(HealthCondition.HIV_AIDS)) {
-        suggestions.push({
-            category: 'HIV/AIDS Medications',
-            medications: ['biktarvy', 'triumeq', 'descovy', 'truvada', 'genvoya'],
-            reason: 'Antiretroviral medications for HIV treatment'
-        });
-    }
-
-    // Multiple Sclerosis medications
-    if (conditions.includes(HealthCondition.MS)) {
-        suggestions.push({
-            category: 'Multiple Sclerosis Medications',
-            medications: ['ocrevus', 'tecfidera', 'tysabri', 'copaxone', 'kesimpta', 'aubagio'],
-            reason: 'Disease-modifying therapies for MS'
-        });
-    }
-
-    // Rheumatoid Arthritis medications
-    if (conditions.includes(HealthCondition.RA)) {
-        suggestions.push({
-            category: 'Rheumatoid Arthritis Medications',
-            medications: ['humira', 'enbrel', 'xeljanz', 'rinvoq', 'orencia', 'methotrexate'],
-            reason: 'Common medications for RA treatment'
-        });
-    }
-
-    // Psoriasis / Psoriatic Arthritis medications
-    if (conditions.includes(HealthCondition.PSORIASIS)) {
-        suggestions.push({
-            category: 'Psoriasis Medications',
-            medications: ['humira', 'cosentyx', 'skyrizi', 'tremfya', 'stelara', 'otezla'],
-            reason: 'Biologics and treatments for psoriasis'
-        });
-    }
-
-    // IBD (Crohn's / Ulcerative Colitis) medications
-    if (conditions.includes(HealthCondition.IBD)) {
-        suggestions.push({
-            category: 'IBD Medications',
-            medications: ['humira', 'remicade', 'stelara', 'entyvio', 'rinvoq', 'zeposia'],
-            reason: 'Medications for Crohn\'s and Ulcerative Colitis'
-        });
-    }
-
-    // Type 2 Diabetes medications
-    if (conditions.includes(HealthCondition.DIABETES)) {
-        suggestions.push({
-            category: 'Diabetes Medications',
-            medications: ['metformin', 'insulin', 'ozempic', 'jardiance', 'trulicity', 'mounjaro'],
+            category: 'Type 2 Diabetes Medications',
+            medications: ['metformin', 'ozempic', 'jardiance', 'trulicity', 'mounjaro', 'rybelsus'],
             reason: 'Common medications for Type 2 Diabetes'
         });
     }
 
-    // Blood Cancer medications
-    if (conditions.includes(HealthCondition.BLOOD_CANCER)) {
+    // === RESPIRATORY ===
+    if (conditions.includes(HealthCondition.ASTHMA)) {
         suggestions.push({
-            category: 'Blood Cancer Medications',
-            medications: ['imbruvica', 'revlimid', 'venclexta', 'calquence', 'pomalyst', 'darzalex'],
-            reason: 'Targeted therapies for blood cancers'
+            category: 'Asthma Medications',
+            medications: ['advair', 'symbicort', 'dulera', 'breo', 'xolair', 'nucala'],
+            reason: 'Inhalers and biologics for asthma management'
         });
     }
 
-    // Breast Cancer medications
-    if (conditions.includes(HealthCondition.BREAST_CANCER)) {
+    if (conditions.includes(HealthCondition.COPD)) {
         suggestions.push({
-            category: 'Breast Cancer Medications',
-            medications: ['ibrance', 'verzenio', 'kisqali', 'herceptin', 'tamoxifen', 'letrozole'],
-            reason: 'Targeted therapies and hormone treatments for breast cancer'
+            category: 'COPD Medications',
+            medications: ['spiriva', 'symbicort', 'advair', 'anoro', 'trelegy', 'stiolto'],
+            reason: 'Inhalers and bronchodilators for COPD management'
         });
     }
 
-    // Prostate Cancer medications
-    if (conditions.includes(HealthCondition.PROSTATE_CANCER)) {
+    if (conditions.includes(HealthCondition.CYSTIC_FIBROSIS)) {
         suggestions.push({
-            category: 'Prostate Cancer Medications',
-            medications: ['xtandi', 'zytiga', 'erleada', 'nubeqa', 'lupron', 'firmagon'],
-            reason: 'Hormone therapies and treatments for prostate cancer'
+            category: 'Cystic Fibrosis Medications',
+            medications: ['trikafta', 'kalydeco', 'orkambi', 'symdeko', 'pulmozyme'],
+            reason: 'CFTR modulators and treatments for Cystic Fibrosis'
         });
     }
 
-    // Lung Cancer medications
-    if (conditions.includes(HealthCondition.LUNG_CANCER)) {
-        suggestions.push({
-            category: 'Lung Cancer Medications',
-            medications: ['keytruda', 'opdivo', 'tagrisso', 'alecensa', 'tecentriq', 'lorbrena'],
-            reason: 'Immunotherapies and targeted treatments for lung cancer'
-        });
-    }
-
-    // Heart Failure medications
-    if (conditions.includes(HealthCondition.HEART_FAILURE)) {
-        suggestions.push({
-            category: 'Heart Failure Medications',
-            medications: ['entresto', 'farxiga', 'jardiance', 'corlanor', 'verquvo'],
-            reason: 'Common medications for heart failure management'
-        });
-    }
-
-    // Pulmonary Fibrosis / Pulmonary Hypertension medications
     if (conditions.includes(HealthCondition.PULMONARY)) {
         suggestions.push({
             category: 'Pulmonary Medications',
@@ -307,21 +223,392 @@ const getMedicationSuggestions = (answers) => {
         });
     }
 
-    // Mental health medications
-    if (conditions.includes(HealthCondition.MENTAL_HEALTH)) {
+    // === NEUROLOGICAL ===
+    if (conditions.includes(HealthCondition.EPILEPSY)) {
         suggestions.push({
-            category: 'Mental Health Medications',
-            medications: ['lexapro', 'zoloft', 'wellbutrin', 'abilify', 'lamictal', 'vraylar'],
-            reason: 'Common medications for mental health conditions'
+            category: 'Epilepsy Medications',
+            medications: ['keppra', 'lamictal', 'topamax', 'vimpat', 'briviact', 'epidiolex'],
+            reason: 'Anti-seizure medications for epilepsy management'
         });
     }
 
-    // High blood pressure medications
+    if (conditions.includes(HealthCondition.PARKINSONS)) {
+        suggestions.push({
+            category: 'Parkinson\'s Disease Medications',
+            medications: ['sinemet', 'rytary', 'stalevo', 'mirapex', 'requip', 'neupro'],
+            reason: 'Dopamine-related medications for Parkinson\'s Disease'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ALZHEIMERS)) {
+        suggestions.push({
+            category: 'Alzheimer\'s / Dementia Medications',
+            medications: ['aricept', 'namenda', 'exelon', 'leqembi', 'aduhelm'],
+            reason: 'Medications for Alzheimer\'s and dementia'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.MS)) {
+        suggestions.push({
+            category: 'Multiple Sclerosis Medications',
+            medications: ['ocrevus', 'tecfidera', 'tysabri', 'copaxone', 'kesimpta', 'aubagio'],
+            reason: 'Disease-modifying therapies for MS'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.MIGRAINE)) {
+        suggestions.push({
+            category: 'Migraine Medications',
+            medications: ['aimovig', 'ajovy', 'emgality', 'ubrelvy', 'nurtec', 'qulipta'],
+            reason: 'CGRP inhibitors and treatments for chronic migraine'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ALS)) {
+        suggestions.push({
+            category: 'ALS Medications',
+            medications: ['rilutek', 'radicava', 'relyvrio', 'nuedexta'],
+            reason: 'Medications for ALS management'
+        });
+    }
+
+    // === MENTAL HEALTH ===
+    if (conditions.includes(HealthCondition.DEPRESSION)) {
+        suggestions.push({
+            category: 'Depression Medications',
+            medications: ['lexapro', 'zoloft', 'wellbutrin', 'cymbalta', 'pristiq', 'trintellix'],
+            reason: 'Antidepressants for depression treatment'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ANXIETY)) {
+        suggestions.push({
+            category: 'Anxiety Medications',
+            medications: ['lexapro', 'zoloft', 'buspar', 'effexor', 'cymbalta'],
+            reason: 'Medications for anxiety disorders'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.BIPOLAR)) {
+        suggestions.push({
+            category: 'Bipolar Disorder Medications',
+            medications: ['lamictal', 'lithium', 'depakote', 'seroquel', 'abilify', 'latuda'],
+            reason: 'Mood stabilizers and medications for bipolar disorder'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.SCHIZOPHRENIA)) {
+        suggestions.push({
+            category: 'Schizophrenia Medications',
+            medications: ['abilify', 'risperdal', 'seroquel', 'zyprexa', 'latuda', 'vraylar'],
+            reason: 'Antipsychotic medications for schizophrenia'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.PTSD)) {
+        suggestions.push({
+            category: 'PTSD Medications',
+            medications: ['zoloft', 'paxil', 'effexor', 'prazosin'],
+            reason: 'Medications commonly used for PTSD treatment'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ADHD)) {
+        suggestions.push({
+            category: 'ADHD Medications',
+            medications: ['adderall', 'vyvanse', 'concerta', 'ritalin', 'strattera', 'qelbree'],
+            reason: 'Stimulants and non-stimulants for ADHD'
+        });
+    }
+
+    // === HEART & VASCULAR ===
+    if (conditions.includes(HealthCondition.HEART_FAILURE)) {
+        suggestions.push({
+            category: 'Heart Failure Medications',
+            medications: ['entresto', 'farxiga', 'jardiance', 'corlanor', 'verquvo'],
+            reason: 'Common medications for heart failure management'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ATRIAL_FIBRILLATION)) {
+        suggestions.push({
+            category: 'Atrial Fibrillation Medications',
+            medications: ['eliquis', 'xarelto', 'pradaxa', 'multaq', 'tikosyn'],
+            reason: 'Blood thinners and rhythm control for AFib'
+        });
+    }
+
     if (conditions.includes(HealthCondition.HIGH_BP)) {
         suggestions.push({
             category: 'Blood Pressure Medications',
             medications: ['lisinopril', 'amlodipine', 'losartan', 'metoprolol'],
             reason: 'Common medications for managing blood pressure'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.HIGH_CHOLESTEROL)) {
+        suggestions.push({
+            category: 'Cholesterol Medications',
+            medications: ['lipitor', 'crestor', 'zetia', 'repatha', 'praluent', 'leqvio'],
+            reason: 'Statins and PCSK9 inhibitors for cholesterol management'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.DVT_PE)) {
+        suggestions.push({
+            category: 'Blood Clot Medications',
+            medications: ['eliquis', 'xarelto', 'pradaxa', 'warfarin', 'lovenox'],
+            reason: 'Anticoagulants for blood clot treatment and prevention'
+        });
+    }
+
+    // === CANCERS ===
+    if (conditions.includes(HealthCondition.BLOOD_CANCER)) {
+        suggestions.push({
+            category: 'Blood Cancer Medications',
+            medications: ['imbruvica', 'revlimid', 'venclexta', 'calquence', 'pomalyst', 'darzalex'],
+            reason: 'Targeted therapies for blood cancers'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.BREAST_CANCER)) {
+        suggestions.push({
+            category: 'Breast Cancer Medications',
+            medications: ['ibrance', 'verzenio', 'kisqali', 'herceptin', 'tamoxifen', 'letrozole'],
+            reason: 'Targeted therapies and hormone treatments for breast cancer'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.PROSTATE_CANCER)) {
+        suggestions.push({
+            category: 'Prostate Cancer Medications',
+            medications: ['xtandi', 'zytiga', 'erleada', 'nubeqa', 'lupron', 'firmagon'],
+            reason: 'Hormone therapies and treatments for prostate cancer'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.LUNG_CANCER)) {
+        suggestions.push({
+            category: 'Lung Cancer Medications',
+            medications: ['keytruda', 'opdivo', 'tagrisso', 'alecensa', 'tecentriq', 'lorbrena'],
+            reason: 'Immunotherapies and targeted treatments for lung cancer'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.COLORECTAL_CANCER)) {
+        suggestions.push({
+            category: 'Colorectal Cancer Medications',
+            medications: ['keytruda', 'avastin', 'erbitux', 'stivarga', 'lonsurf'],
+            reason: 'Targeted therapies for colorectal cancer'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.MELANOMA)) {
+        suggestions.push({
+            category: 'Melanoma Medications',
+            medications: ['keytruda', 'opdivo', 'yervoy', 'tafinlar', 'mekinist', 'zelboraf'],
+            reason: 'Immunotherapies and targeted therapies for melanoma'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.OVARIAN_CANCER)) {
+        suggestions.push({
+            category: 'Ovarian Cancer Medications',
+            medications: ['lynparza', 'rubraca', 'zejula', 'avastin'],
+            reason: 'PARP inhibitors and treatments for ovarian cancer'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.KIDNEY_CANCER)) {
+        suggestions.push({
+            category: 'Kidney Cancer Medications',
+            medications: ['keytruda', 'opdivo', 'cabometyx', 'sutent', 'inlyta', 'lenvima'],
+            reason: 'Immunotherapies and targeted therapies for kidney cancer'
+        });
+    }
+
+    // === DIGESTIVE / GI ===
+    if (conditions.includes(HealthCondition.CROHNS_DISEASE)) {
+        suggestions.push({
+            category: 'Crohn\'s Disease Medications',
+            medications: ['humira', 'remicade', 'stelara', 'entyvio', 'skyrizi', 'rinvoq'],
+            reason: 'Biologics and treatments for Crohn\'s Disease'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ULCERATIVE_COLITIS)) {
+        suggestions.push({
+            category: 'Ulcerative Colitis Medications',
+            medications: ['humira', 'remicade', 'entyvio', 'zeposia', 'rinvoq', 'xeljanz'],
+            reason: 'Biologics and treatments for Ulcerative Colitis'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.IBS)) {
+        suggestions.push({
+            category: 'IBS Medications',
+            medications: ['linzess', 'trulance', 'viberzi', 'xifaxan', 'lotronex'],
+            reason: 'Medications for Irritable Bowel Syndrome'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.GERD)) {
+        suggestions.push({
+            category: 'GERD Medications',
+            medications: ['nexium', 'prilosec', 'protonix', 'dexilant', 'prevacid'],
+            reason: 'Proton pump inhibitors for acid reflux'
+        });
+    }
+
+    // === KIDNEY ===
+    if (conditions.includes(HealthCondition.CKD_ESRD)) {
+        suggestions.push({
+            category: 'Kidney Disease Medications',
+            medications: ['renvela', 'sensipar', 'procrit', 'epogen', 'aranesp', 'velphoro'],
+            reason: 'Common medications for CKD and ESRD management'
+        });
+    }
+
+    // === LIVER ===
+    if (conditions.includes(HealthCondition.HEPATITIS_C)) {
+        suggestions.push({
+            category: 'Hepatitis C Medications',
+            medications: ['harvoni', 'epclusa', 'mavyret', 'sovaldi', 'zepatier'],
+            reason: 'Antiviral medications for Hepatitis C treatment'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.HEPATITIS_B)) {
+        suggestions.push({
+            category: 'Hepatitis B Medications',
+            medications: ['vemlidy', 'viread', 'baraclude', 'epivir-hbv'],
+            reason: 'Antiviral medications for Hepatitis B treatment'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.LIVER)) {
+        suggestions.push({
+            category: 'Liver Disease Medications',
+            medications: ['xifaxan', 'lactulose', 'rifaximin', 'nadolol'],
+            reason: 'Common medications for liver conditions'
+        });
+    }
+
+    // === AUTOIMMUNE ===
+    if (conditions.includes(HealthCondition.RA)) {
+        suggestions.push({
+            category: 'Rheumatoid Arthritis Medications',
+            medications: ['humira', 'enbrel', 'xeljanz', 'rinvoq', 'orencia', 'methotrexate'],
+            reason: 'Common medications for RA treatment'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.PSORIASIS)) {
+        suggestions.push({
+            category: 'Psoriasis Medications',
+            medications: ['humira', 'cosentyx', 'skyrizi', 'tremfya', 'stelara', 'otezla'],
+            reason: 'Biologics and treatments for psoriasis'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.LUPUS)) {
+        suggestions.push({
+            category: 'Lupus Medications',
+            medications: ['benlysta', 'plaquenil', 'cellcept', 'azathioprine', 'saphnelo'],
+            reason: 'Immunosuppressants and biologics for lupus'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.ANKYLOSING_SPONDYLITIS)) {
+        suggestions.push({
+            category: 'Ankylosing Spondylitis Medications',
+            medications: ['humira', 'enbrel', 'cosentyx', 'taltz', 'simponi'],
+            reason: 'Biologics for Ankylosing Spondylitis'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.MYASTHENIA_GRAVIS)) {
+        suggestions.push({
+            category: 'Myasthenia Gravis Medications',
+            medications: ['mestinon', 'cellcept', 'imuran', 'vyvgart', 'soliris'],
+            reason: 'Treatments for Myasthenia Gravis'
+        });
+    }
+
+    // === INFECTIOUS ===
+    if (conditions.includes(HealthCondition.HIV_AIDS)) {
+        suggestions.push({
+            category: 'HIV/AIDS Medications',
+            medications: ['biktarvy', 'triumeq', 'descovy', 'truvada', 'genvoya'],
+            reason: 'Antiretroviral medications for HIV treatment'
+        });
+    }
+
+    // === BONE & JOINT ===
+    if (conditions.includes(HealthCondition.OSTEOPOROSIS)) {
+        suggestions.push({
+            category: 'Osteoporosis Medications',
+            medications: ['prolia', 'evenity', 'forteo', 'tymlos', 'fosamax', 'boniva'],
+            reason: 'Bone-strengthening medications for osteoporosis'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.GOUT)) {
+        suggestions.push({
+            category: 'Gout Medications',
+            medications: ['colcrys', 'uloric', 'krystexxa', 'zyloprim'],
+            reason: 'Medications for gout management'
+        });
+    }
+
+    // === ENDOCRINE ===
+    if (conditions.includes(HealthCondition.HYPOTHYROIDISM)) {
+        suggestions.push({
+            category: 'Hypothyroidism Medications',
+            medications: ['synthroid', 'levoxyl', 'tirosint', 'armour thyroid'],
+            reason: 'Thyroid hormone replacement medications'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.GROWTH_HORMONE_DEFICIENCY)) {
+        suggestions.push({
+            category: 'Growth Hormone Medications',
+            medications: ['genotropin', 'norditropin', 'humatrope', 'nutropin', 'saizen'],
+            reason: 'Growth hormone therapies'
+        });
+    }
+
+    // === EYE CONDITIONS ===
+    if (conditions.includes(HealthCondition.MACULAR_DEGENERATION)) {
+        suggestions.push({
+            category: 'Macular Degeneration Medications',
+            medications: ['eylea', 'lucentis', 'avastin', 'vabysmo', 'beovu'],
+            reason: 'Anti-VEGF injections for macular degeneration'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.GLAUCOMA)) {
+        suggestions.push({
+            category: 'Glaucoma Medications',
+            medications: ['lumigan', 'travatan', 'xalatan', 'alphagan', 'vyzulta'],
+            reason: 'Eye drops for glaucoma management'
+        });
+    }
+
+    // === BLOOD DISORDERS ===
+    if (conditions.includes(HealthCondition.HEMOPHILIA)) {
+        suggestions.push({
+            category: 'Hemophilia Medications',
+            medications: ['hemlibra', 'advate', 'kogenate', 'eloctate', 'alprolix'],
+            reason: 'Clotting factor treatments for hemophilia'
+        });
+    }
+
+    if (conditions.includes(HealthCondition.SICKLE_CELL)) {
+        suggestions.push({
+            category: 'Sickle Cell Disease Medications',
+            medications: ['hydroxyurea', 'oxbryta', 'adakveo', 'endari'],
+            reason: 'Disease-modifying treatments for sickle cell disease'
         });
     }
 
@@ -1054,7 +1341,10 @@ const Wizard = () => {
         financialStatus: null,
     });
 
-    // Search state for Step 5
+    // Search state for Step 3 (Health Conditions)
+    const [conditionSearch, setConditionSearch] = useState('');
+
+    // Search state for Step 5 (Medications)
     const [medSearchTerm, setMedSearchTerm] = useState('');
     const [medSearchResult, setMedSearchResult] = useState(null);
     const [isMedSearching, setIsMedSearching] = useState(false);
@@ -1230,32 +1520,131 @@ const Wizard = () => {
         );
     }
 
-    // Step 3: Health Conditions
+    // Step 3: Health Conditions with search and categories
     if (step === 3) {
+        // Filter conditions based on search
+        const filteredCategories = conditionSearch.trim()
+            ? Object.entries(ConditionCategories).reduce((acc, [category, keys]) => {
+                const matchingKeys = keys.filter(key => {
+                    const conditionName = HealthCondition[key];
+                    return conditionName && conditionName.toLowerCase().includes(conditionSearch.toLowerCase());
+                });
+                if (matchingKeys.length > 0) {
+                    acc[category] = matchingKeys;
+                }
+                return acc;
+            }, {})
+            : ConditionCategories;
+
+        const hasResults = Object.keys(filteredCategories).length > 0;
+
         return (
             <div className="max-w-2xl mx-auto">
                 {renderProgress()}
                 <button onClick={prevStep} className="text-slate-700 mb-4 flex items-center gap-1 text-sm hover:text-emerald-600 min-h-[44px] min-w-[44px]" aria-label="Go back to previous step"><ChevronLeft size={16} aria-hidden="true" /> Back</button>
                 <h1 className="text-2xl font-bold mb-2">Health Conditions</h1>
-                <p className="text-slate-600 mb-6">What health issues do you have? Check all that apply.</p>
+                <p className="text-slate-600 mb-4">What health issues do you have? Check all that apply.</p>
                 <WizardHelp step={step} answers={answers} />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" role="group" aria-label="Select health conditions">
-                    {Object.values(OrganType).map((o) => (
+
+                {/* Search input */}
+                <div className="relative mb-4">
+                    <Search size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true" />
+                    <input
+                        type="text"
+                        value={conditionSearch}
+                        onChange={(e) => setConditionSearch(e.target.value)}
+                        placeholder="Search conditions (e.g., diabetes, asthma, cancer...)"
+                        className="w-full pl-10 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:border-emerald-500 focus:outline-none"
+                        aria-label="Search health conditions"
+                    />
+                    {conditionSearch && (
                         <button
-                            key={o}
-                            onClick={() => handleMultiSelect('organs', o)}
-                            className={`p-4 text-left rounded-xl border-2 transition flex justify-between items-center ${
-                                answers.organs.includes(o) ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 hover:border-emerald-200'
-                            }`}
-                            role="checkbox"
-                            aria-checked={answers.organs.includes(o)}
+                            onClick={() => setConditionSearch('')}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                            aria-label="Clear search"
                         >
-                            <span className="font-medium">{o}</span>
-                            {answers.organs.includes(o) && <CheckCircle size={20} className="text-emerald-600" aria-hidden="true" />}
+                            <X size={18} />
                         </button>
-                    ))}
+                    )}
                 </div>
-                <p className="text-sm text-slate-500 mb-4">Not sure? That's okay. Just check what you know.</p>
+
+                {/* Selected conditions summary */}
+                {answers.organs.length > 0 && (
+                    <div className="mb-4 p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <p className="text-sm font-medium text-emerald-800 mb-2">
+                            Selected ({answers.organs.length}):
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {answers.organs.map((condition) => (
+                                <span
+                                    key={condition}
+                                    className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-sm"
+                                >
+                                    {condition}
+                                    <button
+                                        onClick={() => handleMultiSelect('organs', condition)}
+                                        className="hover:text-emerald-600"
+                                        aria-label={`Remove ${condition}`}
+                                    >
+                                        <X size={14} />
+                                    </button>
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Scrollable categorized conditions list */}
+                <div
+                    className="max-h-[400px] overflow-y-auto border border-slate-200 rounded-xl p-4 mb-4"
+                    role="group"
+                    aria-label="Select health conditions"
+                >
+                    {hasResults ? (
+                        Object.entries(filteredCategories).map(([category, keys]) => (
+                            <div key={category} className="mb-4 last:mb-0">
+                                <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2 sticky top-0 bg-white py-1">
+                                    {category}
+                                </h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    {keys.map((key) => {
+                                        const conditionName = HealthCondition[key];
+                                        if (!conditionName) return null;
+                                        const isSelected = answers.organs.includes(conditionName);
+                                        return (
+                                            <button
+                                                key={key}
+                                                onClick={() => handleMultiSelect('organs', conditionName)}
+                                                className={`p-3 text-left rounded-lg border-2 transition flex justify-between items-center text-sm ${
+                                                    isSelected
+                                                        ? 'border-emerald-500 bg-emerald-50'
+                                                        : 'border-slate-200 hover:border-emerald-200'
+                                                }`}
+                                                role="checkbox"
+                                                aria-checked={isSelected}
+                                            >
+                                                <span className="font-medium">{conditionName}</span>
+                                                {isSelected && <CheckCircle size={18} className="text-emerald-600 flex-shrink-0" aria-hidden="true" />}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <div className="text-center py-8 text-slate-500">
+                            <p>No conditions found matching "{conditionSearch}"</p>
+                            <button
+                                onClick={() => setConditionSearch('')}
+                                className="text-emerald-600 hover:underline mt-2"
+                            >
+                                Clear search
+                            </button>
+                        </div>
+                    )}
+                </div>
+
+                <p className="text-sm text-slate-500 mb-4">Not sure? That's okay. Just check what you know, or select "Other condition not listed".</p>
                 <button
                     disabled={answers.organs.length === 0}
                     onClick={nextStep}
@@ -1497,7 +1886,7 @@ const Wizard = () => {
                     {(() => {
                         // First, filter all medications by stage and organs
                         const userOrgans = answers.organs;
-                        const showAllOrgans = userOrgans.includes(OrganType.OTHER) || userOrgans.includes(OrganType.MULTI);
+                        const showAllOrgans = userOrgans.includes(HealthCondition.OTHER) || userOrgans.includes(HealthCondition.RARE_DISEASES);
 
                         let filteredMeds = MEDICATIONS.filter(m => {
                             // Filter by stage
@@ -1653,7 +2042,7 @@ const Wizard = () => {
 
     // Step 8: Results
     if (step === 8) {
-        const isKidney = answers.organs.includes(OrganType.KIDNEY);
+        const isKidney = answers.organs.includes(HealthCondition.CKD_ESRD);
         const isMedicare = answers.insurance === InsuranceType.MEDICARE;
         const isCommercial = answers.insurance === InsuranceType.COMMERCIAL;
         const isUninsured = answers.insurance === InsuranceType.UNINSURED;
