@@ -78,11 +78,12 @@ export const HealthCondition = {
     SARCOMA: 'Sarcoma',
 
     // Digestive / GI
-    CROHNS_DISEASE: 'Crohn\'s Disease',
-    ULCERATIVE_COLITIS: 'Ulcerative Colitis',
-    IBS: 'Irritable Bowel Syndrome (IBS)',
-    GERD: 'GERD / Acid Reflux',
     CELIAC: 'Celiac Disease',
+    CROHNS_DISEASE: 'Crohn\'s Disease',
+    GERD: 'GERD / Acid Reflux',
+    IBD: 'IBD (Inflammatory Bowel Disease)',
+    IBS: 'Irritable Bowel Syndrome (IBS)',
+    ULCERATIVE_COLITIS: 'Ulcerative Colitis',
 
     // Kidney
     CKD_ESRD: 'Chronic Kidney Disease / ESRD',
@@ -138,7 +139,7 @@ export const ConditionCategories = {
     'Mental Health': ['DEPRESSION', 'ANXIETY', 'BIPOLAR', 'SCHIZOPHRENIA', 'PTSD', 'OCD', 'ADHD', 'EATING_DISORDERS'],
     'Heart & Vascular': ['HEART_FAILURE', 'CORONARY_ARTERY_DISEASE', 'ATRIAL_FIBRILLATION', 'HIGH_BP', 'HIGH_CHOLESTEROL', 'PERIPHERAL_ARTERY_DISEASE', 'DVT_PE'],
     'Cancer': ['BLOOD_CANCER', 'BREAST_CANCER', 'PROSTATE_CANCER', 'LUNG_CANCER', 'COLORECTAL_CANCER', 'MELANOMA', 'OVARIAN_CANCER', 'PANCREATIC_CANCER', 'THYROID_CANCER', 'BLADDER_CANCER', 'KIDNEY_CANCER', 'STOMACH_CANCER', 'HEAD_NECK_CANCER', 'BRAIN_CANCER', 'LIVER_CANCER', 'SARCOMA'],
-    'Digestive / GI': ['CROHNS_DISEASE', 'ULCERATIVE_COLITIS', 'IBS', 'GERD', 'CELIAC'],
+    'Digestive / GI': ['CELIAC', 'CROHNS_DISEASE', 'GERD', 'IBD', 'IBS', 'ULCERATIVE_COLITIS'],
     'Kidney': ['CKD_ESRD'],
     'Liver': ['HEPATITIS_C', 'HEPATITIS_B', 'LIVER'],
     'Autoimmune': ['RA', 'PSORIASIS', 'LUPUS', 'SJOGRENS', 'ANKYLOSING_SPONDYLITIS', 'MYASTHENIA_GRAVIS'],
@@ -154,7 +155,6 @@ export const ConditionCategories = {
 // Legacy mapping for backward compatibility (maps old keys to new)
 export const LegacyConditionMapping = {
     'DIABETES': 'TYPE_2_DIABETES',
-    'IBD': 'CROHNS_DISEASE', // Map to Crohn's, users can also select UC
     'MENTAL_HEALTH': 'DEPRESSION', // Map to depression as default
 };
 
