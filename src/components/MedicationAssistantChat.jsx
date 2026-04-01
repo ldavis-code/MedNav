@@ -138,7 +138,7 @@ const MedicationAssistantChat = () => {
       setMessages([{
         id: Date.now(),
         role: 'assistant',
-        content: "Hi! I'm your Medication Navigator. I'll help you find assistance programs for your medications. Let's get started!\n\nFirst, who am I helping today?",
+        content: "Hi! I'm your Medication Navigator. I'll help you find assistance programs to reduce your medication costs.\n\n**What medications do you need help affording?** Search below, or skip to see all options.",
         timestamp: new Date(),
       }]);
     } finally {
@@ -493,8 +493,8 @@ const MedicationAssistantChat = () => {
       <div style="background: #f1f5f9; padding: 16px; border-radius: 8px; margin-bottom: 24px;">
         <h3 style="margin: 0 0 12px 0; color: #334155;">Your Profile</h3>
         <p style="margin: 4px 0; font-size: 14px;"><strong>Insurance:</strong> ${answers.insurance_type || 'Not specified'}</p>
-        <p style="margin: 4px 0; font-size: 14px;"><strong>medication Stage:</strong> ${answers.medication_stage || 'Not specified'}</p>
-        <p style="margin: 4px 0; font-size: 14px;"><strong>Organ Type:</strong> ${answers.organ_type || 'Not specified'}</p>
+        <p style="margin: 4px 0; font-size: 14px;"><strong>Cost Burden:</strong> ${answers.cost_burden || 'Not specified'}</p>
+        ${selectedMedications.length > 0 ? `<p style="margin: 4px 0; font-size: 14px;"><strong>Medications:</strong> ${selectedMedications.map(m => m.brand_name || m.generic_name || m.name).join(', ')}</p>` : ''}
       </div>
     `;
 
@@ -877,9 +877,10 @@ const MedicationAssistantChat = () => {
           </h4>
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div><span className="text-slate-500">Insurance:</span> <span className="font-medium">{answers.insurance_type || '-'}</span></div>
-            <div><span className="text-slate-500">Stage:</span> <span className="font-medium">{answers.medication_stage || '-'}</span></div>
-            <div><span className="text-slate-500">Organ:</span> <span className="font-medium">{answers.organ_type || '-'}</span></div>
             <div><span className="text-slate-500">Cost:</span> <span className="font-medium">{answers.cost_burden || '-'}</span></div>
+            {selectedMedications.length > 0 && (
+              <div className="col-span-2"><span className="text-slate-500">Medications:</span> <span className="font-medium">{selectedMedications.map(m => m.brand_name || m.generic_name || m.name).join(', ')}</span></div>
+            )}
           </div>
         </div>
 
