@@ -1,0 +1,1698 @@
+{
+  "copayPrograms": {
+    "astellas-copay": {
+      "programId": "astellas-copay",
+      "name": "Astellas Patient Support Solutions - Copay Card",
+      "manufacturer": "Astellas",
+      "medications": ["tacrolimus", "cresemba"],
+      "url": "https://www.astellaspharmasupportsolutions.com/",
+      "phone": "1-800-477-6472",
+      "fax": "1-800-477-6572",
+      "address": {
+        "street": "Astellas Patient Support Solutions",
+        "line2": "P.O. Box 220749",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0749"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "novartis-copay": {
+      "programId": "novartis-copay",
+      "name": "Novartis Patient Assistance - Copay Card",
+      "manufacturer": "Novartis",
+      "medications": ["cyclosporine", "myfortic", "everolimus", "basiliximab", "entresto"],
+      "url": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+      "phone": "1-800-277-2254",
+      "fax": "1-888-891-0026",
+      "address": {
+        "street": "Novartis Patient Assistance Foundation",
+        "line2": "P.O. Box 66556",
+        "city": "St. Louis",
+        "state": "MO",
+        "zip": "63166-6556"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "zortress-copay": {
+      "programId": "zortress-copay",
+      "name": "Zortress Copay Card",
+      "manufacturer": "Novartis",
+      "medications": ["everolimus"],
+      "url": "https://www.zortress.com/transplant/savings-and-support",
+      "phone": "1-888-669-6682",
+      "fax": "1-888-891-0026",
+      "address": {
+        "street": "Novartis Patient Assistance Foundation",
+        "line2": "P.O. Box 66556",
+        "city": "St. Louis",
+        "state": "MO",
+        "zip": "63166-6556"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "genentech-copay": {
+      "programId": "genentech-copay",
+      "name": "Genentech Access Solutions - Copay Card",
+      "manufacturer": "Genentech",
+      "medications": ["mycophenolate", "valcyte", "cytovene", "rituxan"],
+      "url": "https://www.genentech-access.com/patient.html",
+      "phone": "1-866-422-2377",
+      "fax": "1-866-480-7762",
+      "address": {
+        "street": "Genentech Patient Foundation",
+        "line2": "P.O. Box 9958",
+        "city": "Gaithersburg",
+        "state": "MD",
+        "zip": "20898-9958"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "bms-copay": {
+      "programId": "bms-copay",
+      "name": "BMS Access Support - Copay Card",
+      "manufacturer": "Bristol Myers Squibb",
+      "medications": ["belatacept", "apixaban"],
+      "url": "https://www.bmscopay.com/",
+      "phone": "1-800-721-8909",
+      "fax": "1-855-898-0296",
+      "address": {
+        "street": "Bristol Myers Squibb Access Support",
+        "line2": "P.O. Box 1000",
+        "city": "Palatine",
+        "state": "IL",
+        "zip": "60078-1000"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 for first year",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "nulojix-copay": {
+      "programId": "nulojix-copay",
+      "name": "Nulojix Co-Pay Assistance",
+      "manufacturer": "Bristol Myers Squibb",
+      "medications": ["belatacept"],
+      "url": "https://www.bmscopay.com/",
+      "phone": "1-800-861-0048",
+      "fax": "1-855-898-0296",
+      "address": {
+        "street": "Bristol Myers Squibb Access Support",
+        "line2": "P.O. Box 1000",
+        "city": "Palatine",
+        "state": "IL",
+        "zip": "60078-1000"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per infusion",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "pfizer-copay": {
+      "programId": "pfizer-copay",
+      "name": "Pfizer Savings Program",
+      "manufacturer": "Pfizer",
+      "medications": ["sirolimus", "atgam", "solu-medrol", "diflucan", "vfend", "revatio"],
+      "url": "https://www.pfizerrxpathways.com/",
+      "phone": "1-844-989-7284",
+      "fax": "1-855-216-3652",
+      "address": {
+        "street": "Pfizer RxPathways",
+        "line2": "P.O. Box 220083",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0083"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Varies by medication",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "sanofi-copay": {
+      "programId": "sanofi-copay",
+      "name": "Sanofi Patient Connection - Copay Card",
+      "manufacturer": "Sanofi",
+      "medications": ["thymoglobulin", "renvela", "campath"],
+      "url": "https://www.sanofipatientconnection.com/",
+      "phone": "1-888-847-4877",
+      "fax": "1-866-257-6031",
+      "address": {
+        "street": "Sanofi Patient Connection",
+        "line2": "P.O. Box 221857",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-1857"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "gilead-copay": {
+      "programId": "gilead-copay",
+      "name": "Gilead Advancing Access - Copay Card",
+      "manufacturer": "Gilead",
+      "medications": ["vemlidy", "epclusa", "harvoni"],
+      "url": "https://www.gileadadvancingaccess.com/",
+      "phone": "1-800-226-2056",
+      "fax": "1-866-216-1510",
+      "address": {
+        "street": "Gilead Advancing Access",
+        "line2": "P.O. Box 29474",
+        "city": "Hot Springs",
+        "state": "AR",
+        "zip": "71903-9474"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Varies by medication",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "merck-copay": {
+      "programId": "merck-copay",
+      "name": "Merck Patient Assistance - Copay Card",
+      "manufacturer": "Merck",
+      "medications": ["prevymis", "noxafil", "januvia", "janumet"],
+      "url": "https://www.merckhelps.com/",
+      "phone": "1-800-727-5400",
+      "fax": "1-800-444-2080",
+      "address": {
+        "street": "Merck Patient Assistance Program",
+        "line2": "P.O. Box 690",
+        "city": "Horsham",
+        "state": "PA",
+        "zip": "19044-0690"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Varies by medication",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "jardiance-copay": {
+      "programId": "jardiance-copay",
+      "name": "Jardiance Savings Card",
+      "manufacturer": "Boehringer Ingelheim",
+      "medications": ["jardiance"],
+      "url": "https://www.jardiance.com/savings/",
+      "phone": "1-800-325-9881",
+      "fax": "1-888-654-8933",
+      "address": {
+        "street": "Boehringer Ingelheim Patient Assistance Program",
+        "line2": "P.O. Box 368",
+        "city": "Ridgefield",
+        "state": "CT",
+        "zip": "06877-0368"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "farxiga-copay": {
+      "programId": "farxiga-copay",
+      "name": "Farxiga Savings Card",
+      "manufacturer": "AstraZeneca",
+      "medications": ["farxiga"],
+      "url": "https://www.farxiga.com/savings-and-support",
+      "phone": "1-800-236-9933",
+      "fax": "1-888-422-4680",
+      "address": {
+        "street": "AZ&Me Prescription Savings Program",
+        "line2": "P.O. Box 220181",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0181"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "entresto-copay": {
+      "programId": "entresto-copay",
+      "name": "Entresto Savings Card",
+      "manufacturer": "Novartis",
+      "medications": ["entresto"],
+      "url": "https://www.entresto.com/savings-and-support",
+      "phone": "1-888-669-6682",
+      "fax": "1-888-891-0026",
+      "address": {
+        "street": "Novartis Patient Assistance Foundation",
+        "line2": "P.O. Box 66556",
+        "city": "St. Louis",
+        "state": "MO",
+        "zip": "63166-6556"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "xarelto-copay": {
+      "programId": "xarelto-copay",
+      "name": "Xarelto Savings Program",
+      "manufacturer": "Janssen",
+      "medications": ["rivaroxaban"],
+      "url": "https://www.xarelto-us.com/savings",
+      "phone": "1-888-927-3586",
+      "fax": "1-888-526-5168",
+      "address": {
+        "street": "Janssen CarePath",
+        "line2": "P.O. Box 220083",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0083"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "eliquis-copay": {
+      "programId": "eliquis-copay",
+      "name": "Eliquis Savings Card",
+      "manufacturer": "Bristol Myers Squibb",
+      "medications": ["apixaban"],
+      "url": "https://www.bmscopay.com/",
+      "phone": "1-855-354-7847",
+      "fax": "1-855-898-0296",
+      "address": {
+        "street": "Bristol Myers Squibb Patient Assistance Foundation",
+        "line2": "P.O. Box 1000",
+        "city": "Palatine",
+        "state": "IL",
+        "zip": "60078-1000"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "dupixent-copay": {
+      "programId": "dupixent-copay",
+      "name": "Dupixent MyWay Copay Card",
+      "manufacturer": "Regeneron / Sanofi",
+      "medications": ["dupixent"],
+      "url": "https://www.dupixent.com/support-savings/dupixent-my-way",
+      "phone": "1-844-387-4936",
+      "fax": "1-844-387-9370",
+      "address": {
+        "street": "Dupixent MyWay",
+        "line2": "P.O. Box 1903",
+        "city": "Stony Brook",
+        "state": "NY",
+        "zip": "11790-1903"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "simulect-copay": {
+      "programId": "simulect-copay",
+      "name": "Simulect Copay Card",
+      "manufacturer": "Novartis",
+      "medications": ["basiliximab"],
+      "url": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+      "phone": "1-800-277-2254",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "thymoglobulin-copay": {
+      "programId": "thymoglobulin-copay",
+      "name": "Thymoglobulin CoPay Card",
+      "manufacturer": "Sanofi",
+      "medications": ["thymoglobulin"],
+      "url": "https://www.thymoglobulin.com/resources",
+      "phone": "1-888-847-4877",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 copay",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "januvia-copay": {
+      "programId": "januvia-copay",
+      "name": "Januvia Savings Card",
+      "manufacturer": "Merck",
+      "medications": ["sitagliptin"],
+      "url": "https://www.januvia.com/savings-and-resources/",
+      "phone": "1-800-727-5400",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "ozempic-copay": {
+      "programId": "ozempic-copay",
+      "name": "Ozempic Savings Card",
+      "manufacturer": "Novo Nordisk",
+      "medications": ["semaglutide"],
+      "url": "https://www.ozempic.com/savings-and-resources/save-on-ozempic.html",
+      "phone": "1-888-693-6742",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $25 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "trulicity-copay": {
+      "programId": "trulicity-copay",
+      "name": "Trulicity Savings Card",
+      "manufacturer": "Lilly",
+      "medications": ["dulaglutide"],
+      "url": "https://www.trulicity.com/savings-resources/savings-card",
+      "phone": "1-800-545-6962",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $25 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "opsumit-copay": {
+      "programId": "opsumit-copay",
+      "name": "Opsumit Co-Pay Program",
+      "manufacturer": "Janssen",
+      "medications": ["macitentan"],
+      "url": "https://www.opsumit.com/support",
+      "phone": "1-866-228-3546",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $5 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "adempas-copay": {
+      "programId": "adempas-copay",
+      "name": "Adempas Co-Pay Program",
+      "manufacturer": "Bayer",
+      "medications": ["riociguat"],
+      "url": "https://www.adempas-us.com/",
+      "phone": "1-855-423-3672",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $5 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "uptravi-copay": {
+      "programId": "uptravi-copay",
+      "name": "Uptravi Co-Pay Program",
+      "manufacturer": "Janssen",
+      "medications": ["selexipag"],
+      "url": "https://www.uptravi.com/support",
+      "phone": "1-866-228-3546",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $5 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "tyvaso-copay": {
+      "programId": "tyvaso-copay",
+      "name": "Tyvaso Co-Pay Assistance",
+      "manufacturer": "United Therapeutics",
+      "medications": ["treprostinil"],
+      "url": "https://unitedtherapeuticscares.com/",
+      "phone": "1-877-864-8437",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "spiriva-copay": {
+      "programId": "spiriva-copay",
+      "name": "Spiriva Savings Card",
+      "manufacturer": "Boehringer Ingelheim",
+      "medications": ["tiotropium"],
+      "url": "https://www.spiriva.com/copd-resources/savings",
+      "phone": "1-800-325-9881",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "breo-copay": {
+      "programId": "breo-copay",
+      "name": "Breo Ellipta Savings Offer",
+      "manufacturer": "GlaxoSmithKline",
+      "medications": ["fluticasone-vilanterol"],
+      "url": "https://www.breoellipta.com/savings/",
+      "phone": "1-888-825-5249",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "nucala-copay": {
+      "programId": "nucala-copay",
+      "name": "Nucala Copay Program",
+      "manufacturer": "GlaxoSmithKline",
+      "medications": ["mepolizumab"],
+      "url": "https://www.nucala.com/severe-eosinophilic-asthma/nucala-costs/",
+      "phone": "1-844-468-2252",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per dose",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "fasenra-copay": {
+      "programId": "fasenra-copay",
+      "name": "Fasenra Copay Card",
+      "manufacturer": "AstraZeneca",
+      "medications": ["benralizumab"],
+      "url": "https://www.fasenra.com/savings-and-support/",
+      "phone": "1-844-275-2360",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per dose",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "tezspire-copay": {
+      "programId": "tezspire-copay",
+      "name": "Tezspire Copay Program",
+      "manufacturer": "AstraZeneca",
+      "medications": ["tezepelumab"],
+      "url": "https://www.tezspire.com/savings/",
+      "phone": "1-833-839-7747",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per dose",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "xolair-copay": {
+      "programId": "xolair-copay",
+      "name": "Xolair Co-pay Program",
+      "manufacturer": "Genentech / Novartis",
+      "medications": ["omalizumab"],
+      "url": "https://www.xolair.com/allergic-asthma/financial-support.html",
+      "phone": "1-866-496-5247",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $5 per dose",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "anoro-copay": {
+      "programId": "anoro-copay",
+      "name": "Anoro Ellipta Savings Offer",
+      "manufacturer": "GlaxoSmithKline",
+      "medications": ["umeclidinium-vilanterol"],
+      "url": "https://www.anoro.com/savings-and-support/",
+      "phone": "1-888-825-5249",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "dulera-copay": {
+      "programId": "dulera-copay",
+      "name": "Dulera Savings Card",
+      "manufacturer": "Organon",
+      "medications": ["mometasone-formoterol"],
+      "url": "https://www.organonhelps.com/",
+      "phone": "1-800-672-6372",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "envarsus-copay": {
+      "programId": "envarsus-copay",
+      "name": "Envarsus XR Savings Program",
+      "manufacturer": "Veloxis",
+      "medications": ["tacrolimus-xr"],
+      "url": "https://www.envarsusxr.com/savings/",
+      "phone": "1-844-836-0088",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "mavyret-copay": {
+      "programId": "mavyret-copay",
+      "name": "Mavyret Savings Card",
+      "manufacturer": "AbbVie",
+      "medications": ["glecaprevir-pibrentasvir"],
+      "url": "https://www.mavyret.com/savings",
+      "phone": "1-800-222-6885",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $5 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "creon-copay": {
+      "programId": "creon-copay",
+      "name": "Creon Savings Card",
+      "manufacturer": "AbbVie",
+      "medications": ["creon"],
+      "url": "https://www.creoninfo.com/savings/",
+      "phone": "1-800-633-9110",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "auryxia-copay": {
+      "programId": "auryxia-copay",
+      "name": "Auryxia Co-Pay Assistance",
+      "manufacturer": "Akebia",
+      "medications": ["auryxia"],
+      "url": "https://www.akebiacares.com/",
+      "phone": "1-844-445-3799",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "rezdiffra-copay": {
+      "programId": "rezdiffra-copay",
+      "name": "Rezdiffra Copay Card",
+      "manufacturer": "Madrigal",
+      "medications": ["resmetirom"],
+      "url": "https://madrigalpatientsupport.com/",
+      "phone": "1-877-591-0871",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "symbicort-copay": {
+      "programId": "symbicort-copay",
+      "name": "Symbicort Savings Card",
+      "manufacturer": "AstraZeneca",
+      "medications": ["budesonide-formoterol"],
+      "url": "https://www.symbicort.com/savings-and-support",
+      "phone": "1-800-236-9933",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "advair-copay": {
+      "programId": "advair-copay",
+      "name": "Advair Savings Offer",
+      "manufacturer": "GlaxoSmithKline",
+      "medications": ["fluticasone-salmeterol"],
+      "url": "https://www.advair.com/savings-and-support/",
+      "phone": "1-888-825-5249",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $10 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "lantus-copay": {
+      "programId": "lantus-copay",
+      "name": "Lantus Savings Card",
+      "manufacturer": "Sanofi",
+      "medications": ["insulin-glargine"],
+      "url": "https://www.lantus.com/sign-up-for-savings",
+      "phone": "1-866-390-5622",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $0 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "humalog-copay": {
+      "programId": "humalog-copay",
+      "name": "Humalog Savings Card",
+      "manufacturer": "Lilly",
+      "medications": ["insulin-lispro"],
+      "url": "https://www.humalog.com/savings-support",
+      "phone": "1-800-545-6962",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $35 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "novolog-copay": {
+      "programId": "novolog-copay",
+      "name": "NovoLog Savings Card",
+      "manufacturer": "Novo Nordisk",
+      "medications": ["insulin-aspart"],
+      "url": "https://www.novolog.com/savings-card",
+      "phone": "1-888-693-6742",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $25 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "lyrica-copay": {
+      "programId": "lyrica-copay",
+      "name": "Lyrica Savings Card",
+      "manufacturer": "Pfizer",
+      "medications": ["pregabalin"],
+      "url": "https://www.lyrica.com/savings",
+      "phone": "1-866-706-2400",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "maxBenefit": "Pay as little as $25 per month",
+      "notes": "Commercial insurance only. Not valid for government insurance."
+    },
+    "goodrx-search": {
+      "programId": "goodrx-search",
+      "name": "GoodRx",
+      "manufacturer": "GoodRx",
+      "medications": [],
+      "url": "https://www.goodrx.com/search?s={query}",
+      "phone": "",
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": true,
+        "uninsured": true
+      },
+      "maxBenefit": "Free discount card",
+      "notes": "Search and compare prescription drug prices."
+    },
+    "singlecare-search": {
+      "programId": "singlecare-search",
+      "name": "SingleCare",
+      "manufacturer": "SingleCare",
+      "medications": [],
+      "url": "https://www.singlecare.com/search?search={query}",
+      "phone": "",
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": true,
+        "uninsured": true
+      },
+      "maxBenefit": "Free discount card",
+      "notes": "Free card at 35,000+ pharmacies."
+    },
+    "costplus-search": {
+      "programId": "costplus-search",
+      "name": "Cost Plus Drugs",
+      "manufacturer": "Cost Plus Drugs",
+      "medications": [],
+      "url": "https://costplusdrugs.com/medications/?query={query}",
+      "phone": "",
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": true,
+        "uninsured": true
+      },
+      "maxBenefit": "Cost-plus pricing",
+      "notes": "Online pharmacy with cost-plus pricing model."
+    }
+  },
+  "papPrograms": {
+    "astellas-pap": {
+      "programId": "astellas-pap",
+      "name": "Astellas Patient Assistance Program",
+      "manufacturer": "Astellas",
+      "medications": ["tacrolimus", "cresemba"],
+      "url": "https://www.astellaspharmasupportsolutions.com/",
+      "phone": "1-800-477-6472",
+      "fax": "1-800-477-6572",
+      "address": {
+        "street": "Astellas Patient Assistance Program",
+        "line2": "P.O. Box 220749",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0749"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "For uninsured or Medicare patients who meet income requirements."
+    },
+    "novartis-pap": {
+      "programId": "novartis-pap",
+      "name": "Novartis Patient Assistance Foundation",
+      "manufacturer": "Novartis",
+      "medications": ["cyclosporine", "myfortic", "everolimus", "basiliximab", "entresto"],
+      "url": "https://www.novartis.com/us-en/patients-and-caregivers/patient-assistance",
+      "phone": "1-800-277-2254",
+      "fax": "1-888-891-0026",
+      "address": {
+        "street": "Novartis Patient Assistance Foundation",
+        "line2": "P.O. Box 66556",
+        "city": "St. Louis",
+        "state": "MO",
+        "zip": "63166-6556"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Zortress, Myfortic, Neoral, Simulect, Entresto and other Novartis medications."
+    },
+    "genentech-pap": {
+      "programId": "genentech-pap",
+      "name": "Genentech Patient Foundation",
+      "manufacturer": "Genentech",
+      "medications": ["mycophenolate", "valcyte", "cytovene", "rituxan"],
+      "url": "https://www.genentech-access.com/patient.html",
+      "phone": "1-866-422-2377",
+      "fax": "1-866-480-7762",
+      "address": {
+        "street": "Genentech Patient Foundation",
+        "line2": "P.O. Box 9958",
+        "city": "Gaithersburg",
+        "state": "MD",
+        "zip": "20898-9958"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers CellCept, Valcyte, Cytovene, Rituxan and other Genentech medications."
+    },
+    "bms-pap": {
+      "programId": "bms-pap",
+      "name": "Bristol Myers Squibb Patient Assistance Foundation",
+      "manufacturer": "Bristol Myers Squibb",
+      "medications": ["belatacept", "apixaban"],
+      "url": "https://www.bmspaf.org/",
+      "phone": "1-800-736-0003",
+      "fax": "1-800-736-1611",
+      "address": {
+        "street": "Bristol Myers Squibb Patient Assistance Foundation",
+        "line2": "P.O. Box 220769",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0769"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "300% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Nulojix, Eliquis and other BMS medications."
+    },
+    "pfizer-pap": {
+      "programId": "pfizer-pap",
+      "name": "Pfizer RxPathways",
+      "manufacturer": "Pfizer",
+      "medications": ["sirolimus", "atgam", "solu-medrol", "diflucan", "vfend", "revatio"],
+      "url": "https://www.pfizerrxpathways.com/",
+      "phone": "1-844-989-7284",
+      "fax": "1-855-216-3652",
+      "address": {
+        "street": "Pfizer RxPathways",
+        "line2": "P.O. Box 220083",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0083"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Rapamune, ATGAM, Solu-Medrol, Diflucan, Vfend, Revatio and many other Pfizer medications."
+    },
+    "sanofi-pap": {
+      "programId": "sanofi-pap",
+      "name": "Sanofi Patient Connection",
+      "manufacturer": "Sanofi",
+      "medications": ["thymoglobulin", "renvela", "campath"],
+      "url": "https://www.sanofipatientconnection.com/",
+      "phone": "1-888-847-4877",
+      "fax": "1-866-257-6031",
+      "address": {
+        "street": "Sanofi Patient Connection",
+        "line2": "P.O. Box 221857",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-1857"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Thymoglobulin, Renvela, Campath and other Sanofi medications."
+    },
+    "gilead-pap": {
+      "programId": "gilead-pap",
+      "name": "Gilead Advancing Access",
+      "manufacturer": "Gilead",
+      "medications": ["vemlidy", "epclusa", "harvoni"],
+      "url": "https://www.gileadadvancingaccess.com/",
+      "phone": "1-800-226-2056",
+      "fax": "1-866-216-1510",
+      "address": {
+        "street": "Gilead Advancing Access",
+        "line2": "P.O. Box 29474",
+        "city": "Hot Springs",
+        "state": "AR",
+        "zip": "71903-9474"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Vemlidy, Epclusa, Harvoni and other Gilead hepatitis medications."
+    },
+    "merck-pap": {
+      "programId": "merck-pap",
+      "name": "Merck Patient Assistance Program",
+      "manufacturer": "Merck",
+      "medications": ["prevymis", "noxafil", "januvia", "janumet"],
+      "url": "https://www.merckhelps.com/",
+      "phone": "1-800-727-5400",
+      "fax": "1-800-444-2080",
+      "address": {
+        "street": "Merck Patient Assistance Program",
+        "line2": "P.O. Box 690",
+        "city": "Horsham",
+        "state": "PA",
+        "zip": "19044-0690"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Prevymis, Noxafil, Januvia, Janumet and other Merck medications."
+    },
+    "abbvie-pap": {
+      "programId": "abbvie-pap",
+      "name": "AbbVie Patient Assistance Foundation",
+      "manufacturer": "AbbVie",
+      "medications": ["mavyret", "creon", "humira"],
+      "url": "https://www.abbvie.com/patients/patient-assistance.html",
+      "phone": "1-800-222-6885",
+      "fax": "1-800-222-6885",
+      "address": {
+        "street": "AbbVie Patient Assistance Foundation",
+        "line2": "P.O. Box 1129",
+        "city": "North Chicago",
+        "state": "IL",
+        "zip": "60064-1129"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Mavyret, Creon, Humira and other AbbVie medications."
+    },
+    "lilly-pap": {
+      "programId": "lilly-pap",
+      "name": "Lilly Cares Foundation",
+      "manufacturer": "Eli Lilly",
+      "medications": ["insulin-lispro", "insulin-glargine", "mounjaro"],
+      "url": "https://www.lillycares.com/",
+      "phone": "1-800-545-6962",
+      "fax": "1-844-431-6650",
+      "address": {
+        "street": "Lilly Cares Foundation Patient Assistance Program",
+        "line2": "P.O. Box 13185",
+        "city": "La Jolla",
+        "state": "CA",
+        "zip": "92039-3185"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Humalog, Basaglar, Mounjaro and other Lilly insulins and medications."
+    },
+    "boehringer-pap": {
+      "programId": "boehringer-pap",
+      "name": "Boehringer Ingelheim Cares Foundation",
+      "manufacturer": "Boehringer Ingelheim",
+      "medications": ["jardiance", "tradjenta", "spiriva"],
+      "url": "https://www.boehringer-ingelheim.com/us/patient-assistance",
+      "phone": "1-800-556-8317",
+      "fax": "1-888-654-8933",
+      "address": {
+        "street": "Boehringer Ingelheim Cares Foundation",
+        "line2": "P.O. Box 368",
+        "city": "Ridgefield",
+        "state": "CT",
+        "zip": "06877-0368"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Jardiance, Tradjenta, Spiriva and other Boehringer Ingelheim medications."
+    },
+    "astrazeneca-pap": {
+      "programId": "astrazeneca-pap",
+      "name": "AZ&Me Prescription Savings Program",
+      "manufacturer": "AstraZeneca",
+      "medications": ["farxiga", "symbicort", "crestor"],
+      "url": "https://www.azandmeapp.com/",
+      "phone": "1-800-292-6363",
+      "fax": "1-888-422-4680",
+      "address": {
+        "street": "AZ&Me Prescription Savings Program",
+        "line2": "P.O. Box 220181",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-0181"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Farxiga, Symbicort, Crestor and other AstraZeneca medications."
+    },
+    "janssen-pap": {
+      "programId": "janssen-pap",
+      "name": "J&J Patient Assistance Foundation",
+      "manufacturer": "Janssen",
+      "medications": ["rivaroxaban", "invokana", "xarelto"],
+      "url": "https://www.jnjwithme.com/",
+      "phone": "1-800-652-6227",
+      "fax": "1-888-526-5168",
+      "address": {
+        "street": "Johnson & Johnson Patient Assistance Foundation",
+        "line2": "P.O. Box 221857",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-1857"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Xarelto, Invokana and other Janssen medications."
+    },
+    "novo-nordisk-pap": {
+      "programId": "novo-nordisk-pap",
+      "name": "NovoCare Patient Assistance Program",
+      "manufacturer": "Novo Nordisk",
+      "medications": ["ozempic", "victoza", "novolog", "levemir"],
+      "url": "https://www.novocare.com/",
+      "phone": "1-866-310-7549",
+      "fax": "1-877-744-2579",
+      "address": {
+        "street": "Novo Nordisk PAP",
+        "line2": "P.O. Box 370",
+        "city": "Somerville",
+        "state": "NJ",
+        "zip": "08876-0370"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Ozempic, Victoza, NovoLog, Levemir and other Novo Nordisk insulins and medications."
+    },
+    "takeda-pap": {
+      "programId": "takeda-pap",
+      "name": "Takeda Patient Assistance Program",
+      "manufacturer": "Takeda",
+      "medications": ["gammagard", "adynovate", "entyvio"],
+      "url": "https://www.takeda.com/en-us/what-we-do/patient-services/",
+      "phone": "1-800-830-9159",
+      "fax": "1-800-830-9159",
+      "address": {
+        "street": "Takeda Patient Assistance Program",
+        "line2": "P.O. Box 420229",
+        "city": "Palm Coast",
+        "state": "FL",
+        "zip": "32142-0229"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Gammagard, Adynovate, Entyvio and other Takeda medications."
+    },
+    "gsk-pap": {
+      "programId": "gsk-pap",
+      "name": "GSK For You",
+      "manufacturer": "GlaxoSmithKline",
+      "medications": ["breo", "anoro", "trelegy", "nucala"],
+      "url": "https://www.gskforyou.com/",
+      "phone": "1-888-825-5249",
+      "fax": "1-866-475-3477",
+      "address": {
+        "street": "GSK Patient Assistance Program",
+        "line2": "P.O. Box 29038",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "85038-9038"
+      },
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "350% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Breo Ellipta, Anoro Ellipta, Trelegy, Nucala and other GSK medications."
+    },
+    "alexion-pap": {
+      "programId": "alexion-pap",
+      "name": "Alexion OneSource",
+      "manufacturer": "Alexion",
+      "medications": ["soliris", "ultomiris"],
+      "url": "https://alexiononesource.com/",
+      "phone": "1-888-765-4747",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Soliris, Ultomiris for complement-mediated diseases."
+    },
+    "madrigal-pap": {
+      "programId": "madrigal-pap",
+      "name": "Madrigal Patient Support",
+      "manufacturer": "Madrigal",
+      "medications": ["resmetirom"],
+      "url": "https://madrigalpatientsupport.com/",
+      "phone": "1-877-591-0871",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Rezdiffra for NASH/liver disease."
+    },
+    "united-therapeutics-pap": {
+      "programId": "united-therapeutics-pap",
+      "name": "United Therapeutics Cares",
+      "manufacturer": "United Therapeutics",
+      "medications": ["remodulin", "tyvaso", "orenitram"],
+      "url": "https://unitedtherapeuticscares.com/",
+      "phone": "1-877-864-8437",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Remodulin, Tyvaso, Orenitram for pulmonary arterial hypertension."
+    },
+    "amgen-pap": {
+      "programId": "amgen-pap",
+      "name": "Amgen Safety Net Foundation",
+      "manufacturer": "Amgen",
+      "medications": ["aranesp", "epogen", "sensipar", "parsabiv"],
+      "url": "https://www.amgensupportplus.com/",
+      "phone": "1-888-762-6436",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Aranesp, Epogen, Sensipar, Parsabiv and other Amgen medications."
+    },
+    "akebia-pap": {
+      "programId": "akebia-pap",
+      "name": "AkebiaCares",
+      "manufacturer": "Akebia",
+      "medications": ["auryxia"],
+      "url": "https://www.akebiacares.com/",
+      "phone": "1-844-445-3799",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Auryxia for iron deficiency anemia and hyperphosphatemia."
+    },
+    "bausch-pap": {
+      "programId": "bausch-pap",
+      "name": "Bausch Health Patient Assistance",
+      "manufacturer": "Bausch Health",
+      "medications": ["xifaxan"],
+      "url": "https://www.bauschhealthpap.com/",
+      "phone": "1-800-605-5333",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "300% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Xifaxan and other Bausch Health medications."
+    },
+    "organon-pap": {
+      "programId": "organon-pap",
+      "name": "Organon Helps",
+      "manufacturer": "Organon",
+      "medications": ["dulera", "nasonex"],
+      "url": "https://www.organonhelps.com/",
+      "phone": "1-866-621-8617",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Dulera, Nasonex and other Organon medications."
+    },
+    "sunovion-pap": {
+      "programId": "sunovion-pap",
+      "name": "Sunovion Patient Assistance",
+      "manufacturer": "Sunovion",
+      "medications": ["xopenex", "alvesco"],
+      "url": "https://www.sunovion.com/patient-support",
+      "phone": "1-877-850-0819",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Xopenex, Alvesco and other Sunovion respiratory medications."
+    },
+    "teva-pap": {
+      "programId": "teva-pap",
+      "name": "Teva Cares Foundation",
+      "manufacturer": "Teva",
+      "medications": ["qvar", "proair"],
+      "url": "https://www.tevacares.org/",
+      "phone": "1-877-832-7276",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers QVAR, ProAir and other Teva medications."
+    },
+    "grifols-pap": {
+      "programId": "grifols-pap",
+      "name": "Grifols Patient Care Programs",
+      "manufacturer": "Grifols",
+      "medications": ["hbig", "gamunex"],
+      "url": "https://www.grifols.com/en/supporting-patients",
+      "phone": "1-800-520-2807",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers HepaGam B, Gamunex and other Grifols biologics."
+    },
+    "vifor-pap": {
+      "programId": "vifor-pap",
+      "name": "CSL Vifor Patient Support",
+      "manufacturer": "CSL Vifor",
+      "medications": ["mircera", "ferinject"],
+      "url": "https://www.csl.com/patients-public-health/patient-support-and-organizations/csl-vifor-managed-access-programs",
+      "phone": "1-888-847-7477",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Mircera, Ferinject and other CSL Vifor iron/anemia medications."
+    },
+    "american-regent-pap": {
+      "programId": "american-regent-pap",
+      "name": "American Regent Patient Assistance",
+      "manufacturer": "American Regent",
+      "medications": ["venofer", "injectafer"],
+      "url": "https://www.venofer.com/venaccess",
+      "phone": "1-800-645-1706",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Venofer, Injectafer for iron deficiency anemia."
+    },
+    "bayer-pap": {
+      "programId": "bayer-pap",
+      "name": "Bayer Patient Assistance Foundation",
+      "manufacturer": "Bayer",
+      "medications": ["adempas"],
+      "url": "https://www.bayer.com/en/pharma/patients",
+      "phone": "1-855-423-3672",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Adempas for pulmonary hypertension."
+    },
+    "regeneron-pap": {
+      "programId": "regeneron-pap",
+      "name": "Regeneron Patient Assistance",
+      "manufacturer": "Regeneron",
+      "medications": ["dupixent", "eylea"],
+      "url": "https://www.dupixent.com/support-savings/dupixent-my-way",
+      "phone": "1-844-387-4936",
+      "eligibility": {
+        "commercial": false,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Free medication",
+      "notes": "Covers Dupixent and other Regeneron medications."
+    },
+    "drugs-com-search": {
+      "programId": "drugs-com-search",
+      "name": "Drugs.com",
+      "manufacturer": "Drugs.com",
+      "medications": [],
+      "url": "https://www.drugs.com/search.php?searchterm={query}",
+      "phone": "",
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": true,
+        "uninsured": true
+      },
+      "incomeLimit": "None",
+      "maxBenefit": "Drug information and PAP search",
+      "notes": "Search for drug facts and patient assistance programs."
+    },
+    "trumprx-gov": {
+      "programId": "trumprx-gov",
+      "name": "TrumpRx.gov",
+      "manufacturer": "U.S. Government",
+      "medications": [],
+      "url": "https://trumprx.gov",
+      "phone": "",
+      "eligibility": {
+        "commercial": true,
+        "medicare": false,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "None",
+      "maxBenefit": "Government-negotiated cash prices",
+      "notes": "Government discounted cash prices on select brand-name drugs."
+    }
+  },
+  "foundationPrograms": {
+    "healthwell": {
+      "programId": "healthwell",
+      "name": "HealthWell Foundation",
+      "url": "https://www.healthwellfoundation.org/",
+      "phone": "1-800-675-8416",
+      "fax": "1-800-282-7692",
+      "address": {
+        "street": "HealthWell Foundation",
+        "line2": "P.O. Box 489",
+        "city": "Buckeystown",
+        "state": "MD",
+        "zip": "21717-0489"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Varies by fund",
+      "notes": "Funds open/close based on availability - check website frequently."
+    },
+    "pan-foundation": {
+      "programId": "pan-foundation",
+      "name": "PAN Foundation",
+      "url": "https://www.panfoundation.org/",
+      "phone": "1-866-316-7263",
+      "fax": "1-866-316-7263",
+      "address": {
+        "street": "Patient Access Network Foundation",
+        "line2": "P.O. Box 221858",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "28222-1858"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Varies by fund",
+      "notes": "Funds open/close based on availability - sign up for alerts."
+    },
+    "patient-advocate-foundation": {
+      "programId": "patient-advocate-foundation",
+      "name": "Patient Advocate Foundation Co-Pay Relief",
+      "url": "https://www.patientadvocate.org/connect-with-services/copay-relief/",
+      "phone": "1-866-512-3861",
+      "fax": "1-757-952-0119",
+      "address": {
+        "street": "Patient Advocate Foundation",
+        "line2": "421 Butler Farm Road",
+        "city": "Hampton",
+        "state": "VA",
+        "zip": "23666"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "incomeLimit": "400% FPL",
+      "maxBenefit": "Up to $12,000/year",
+      "notes": "Disease-specific funds - check eligibility."
+    },
+    "american-kidney-fund": {
+      "programId": "american-kidney-fund",
+      "name": "American Kidney Fund",
+      "url": "https://www.kidneyfund.org/",
+      "phone": "1-800-638-8299",
+      "fax": "1-301-881-0898",
+      "address": {
+        "street": "American Kidney Fund",
+        "line2": "11921 Rockville Pike, Suite 300",
+        "city": "Rockville",
+        "state": "MD",
+        "zip": "20852"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": true,
+        "uninsured": true
+      },
+      "incomeLimit": "Based on need",
+      "maxBenefit": "Varies",
+      "notes": "Kidney patients only - includes HIPP for insurance premiums."
+    },
+    "nord": {
+      "programId": "nord",
+      "name": "NORD RareCare Patient Assistance",
+      "url": "https://rarediseases.org/patients-and-families/help-access-medications/",
+      "phone": "1-800-999-6673",
+      "fax": "1-203-349-9520",
+      "address": {
+        "street": "National Organization for Rare Disorders",
+        "line2": "1779 Massachusetts Avenue, Suite 500",
+        "city": "Washington",
+        "state": "DC",
+        "zip": "20036"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": true
+      },
+      "incomeLimit": "Varies",
+      "maxBenefit": "Varies by program",
+      "notes": "For rare disease patients."
+    },
+    "accessia-health": {
+      "programId": "accessia-health",
+      "name": "Accessia Health (formerly Patient Services Inc)",
+      "url": "https://www.accessiahealth.org/",
+      "phone": "1-800-366-7741",
+      "fax": "1-800-689-7741",
+      "address": {
+        "street": "Accessia Health",
+        "line2": "P.O. Box 1637",
+        "city": "Midlothian",
+        "state": "VA",
+        "zip": "23113-1637"
+      },
+      "eligibility": {
+        "commercial": true,
+        "medicare": true,
+        "medicaid": false,
+        "uninsured": false
+      },
+      "incomeLimit": "500% FPL",
+      "maxBenefit": "Varies by fund",
+      "notes": "Multiple disease-specific funds available."
+    }
+  }
+}

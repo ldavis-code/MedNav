@@ -1,0 +1,44 @@
+{
+  "terms": {
+    "deductible": {
+      "term": "deductible",
+      "definition": "The amount you pay before insurance starts helping"
+    },
+    "copay": {
+      "term": "copay",
+      "definition": "The amount you pay each time you get medicine"
+    },
+    "coinsurance": {
+      "term": "coinsurance",
+      "definition": "The percentage you pay after meeting your deductible"
+    },
+    "out-of-pocket-maximum": {
+      "term": "out-of-pocket maximum",
+      "definition": "The most you pay in one year"
+    },
+    "formulary": {
+      "term": "formulary",
+      "definition": "Your insurance's list of covered medicines"
+    },
+    "generic": {
+      "term": "generic",
+      "definition": "A medicine that works the same as the brand name but costs less"
+    },
+    "prior-authorization": {
+      "term": "prior authorization",
+      "definition": "When insurance makes your doctor ask permission before covering a medicine"
+    },
+    "specialty-pharmacy": {
+      "term": "specialty pharmacy",
+      "definition": "A mail-order pharmacy for expensive or special medicines"
+    },
+    "pap": {
+      "term": "PAP",
+      "definition": "Patient Assistance Program - free or low-cost medicine from drug companies"
+    },
+    "foundation-grant": {
+      "term": "foundation grant",
+      "definition": "Money from a charity to help pay for medicine"
+    }
+  }
+}

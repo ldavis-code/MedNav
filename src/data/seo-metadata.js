@@ -138,6 +138,50 @@ export const seoMetadata = {
     twitterDescription: 'Find medication assistance programs through your healthcare provider partnership.',
     breadcrumbName: 'Pilot Program',
   },
+
+  appeals: {
+    title: 'Insurance Appeals Guide | Medication Navigator™',
+    description: 'Step-by-step guide to appealing insurance medication denials. Over 50% of appeals succeed. Free letter templates and checklist included.',
+    canonical: `${BASE_URL}/appeals`,
+    ogTitle: 'Insurance Appeals Guide for Medication Denials',
+    ogDescription: 'Learn how to appeal insurance denials for your medications. Includes letter templates, checklists, and step-by-step instructions.',
+    twitterTitle: 'Insurance Appeals Guide',
+    twitterDescription: 'Step-by-step guide to appealing insurance medication denials. Over 50% of appeals succeed.',
+    breadcrumbName: 'Insurance Appeals',
+  },
+
+  privacyPolicy: {
+    title: 'Privacy Policy | Medication Navigator™',
+    description: 'Learn how Medication Navigator collects, uses, and protects your personal information. We do not sell your data to third parties.',
+    canonical: `${BASE_URL}/privacy-policy`,
+    ogTitle: 'Privacy Policy',
+    ogDescription: 'How we collect, use, and protect your information at Medication Navigator.',
+    twitterTitle: 'Privacy Policy',
+    twitterDescription: 'Learn how Medication Navigator protects your personal information.',
+    breadcrumbName: 'Privacy Policy',
+  },
+
+  termsAndConditions: {
+    title: 'Terms and Conditions | Medication Navigator™',
+    description: 'Terms and conditions for using the Medication Navigator website. Educational resource for medication assistance - not medical advice.',
+    canonical: `${BASE_URL}/terms-and-conditions`,
+    ogTitle: 'Terms and Conditions',
+    ogDescription: 'Terms governing use of the Medication Navigator website and its educational medication assistance resources.',
+    twitterTitle: 'Terms and Conditions',
+    twitterDescription: 'Terms and conditions for using Medication Navigator.',
+    breadcrumbName: 'Terms and Conditions',
+  },
+
+  copayReminders: {
+    title: 'Copay Card Reminders | Medication Navigator™',
+    description: 'Never miss a copay card renewal. Track expiration dates, set reminders, and manage all your copay assistance programs in one place.',
+    canonical: `${BASE_URL}/copay-reminders`,
+    ogTitle: 'Copay Card Renewal Reminders',
+    ogDescription: 'Track your copay card expiration dates and get reminders before they expire. Manage all your assistance programs in one place.',
+    twitterTitle: 'Copay Card Reminders',
+    twitterDescription: 'Never miss a copay card renewal. Track expiration dates and manage your assistance programs.',
+    breadcrumbName: 'Copay Card Reminders',
+  },
 };
 
 /**

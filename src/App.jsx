@@ -18,6 +18,10 @@ const LazySavingsTracker = lazy(() => import('./pages/SavingsTracker.jsx'));
 const LazySubscribe = lazy(() => import('./pages/Subscribe.jsx'));
 const LazySubscribeSuccess = lazy(() => import('./pages/SubscribeSuccess.jsx'));
 const LazySubscribeCancel = lazy(() => import('./pages/SubscribeCancel.jsx'));
+const LazyAppeals = lazy(() => import('./pages/Appeals.jsx'));
+const LazyPrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'));
+const LazyTermsAndConditions = lazy(() => import('./pages/TermsAndConditions.jsx'));
+const LazyCopayCardReminders = lazy(() => import('./pages/CopayCardReminders.jsx'));
 
 // Reporting admin pages (lazy loaded)
 const LazyReportingLogin = lazy(() => import('./pages/reporting/ReportingLogin.jsx'));
@@ -5254,6 +5258,10 @@ const MainSiteRoutes = () => (
                 <Route path="/subscribe/cancel" element={<LazySubscribeCancel />} />
                 <Route path="/pilot" element={<LazyPilot />} />
                 <Route path="/pilot/:partner" element={<LazyPilot />} />
+                <Route path="/appeals" element={<LazyAppeals />} />
+                <Route path="/privacy-policy" element={<LazyPrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<LazyTermsAndConditions />} />
+                <Route path="/copay-reminders" element={<LazyCopayCardReminders />} />
                 <Route path="*" element={<LazyNotFound />} />
             </Routes>
         </Suspense>
