@@ -448,6 +448,51 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* ========================================
+   SIMPLE VIEW MODE
+   Toggled via SimpleViewContext - adds 'simple-view' class to <html>
+   Provides enhanced readability with larger text and simpler layouts
+   ======================================== */
+
+.simple-view {
+    font-size: 18px !important;
+}
+
+.simple-view body {
+    line-height: 1.8 !important;
+}
+
+/* Increase all text sizes in simple view */
+.simple-view .text-xs {
+    font-size: 1rem !important;
+}
+
+.simple-view .text-sm {
+    font-size: 1.0625rem !important; /* 17px */
+}
+
+.simple-view .text-base {
+    font-size: 1.125rem !important; /* 18px */
+}
+
+.simple-view .text-lg {
+    font-size: 1.25rem !important; /* 20px */
+}
+
+/* Wider spacing in simple view */
+.simple-view p,
+.simple-view li {
+    margin-bottom: 0.75em;
+    letter-spacing: 0.01em;
+}
+
+/* Reduce visual complexity */
+.simple-view .shadow-sm,
+.simple-view .shadow-md,
+.simple-view .shadow-lg {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;

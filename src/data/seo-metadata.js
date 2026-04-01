@@ -182,6 +182,28 @@ export const seoMetadata = {
     twitterDescription: 'Never miss a copay card renewal. Track expiration dates and manage your assistance programs.',
     breadcrumbName: 'Copay Card Reminders',
   },
+
+  feedbackSurvey: {
+    title: 'Share Your Experience | Medication Navigator™',
+    description: 'Tell us about your experience using Medication Navigator. Your feedback helps us improve medication assistance resources for all patients.',
+    canonical: `${BASE_URL}/feedback`,
+    ogTitle: 'Share Your Experience',
+    ogDescription: 'Help us improve Medication Navigator by sharing your experience finding medication assistance programs.',
+    twitterTitle: 'Share Your Feedback',
+    twitterDescription: 'Tell us about your experience using Medication Navigator to find medication assistance programs.',
+    breadcrumbName: 'Feedback',
+  },
+
+  accessibility: {
+    title: 'Accessibility & Section 504 Compliance | Medication Navigator™',
+    description: 'Learn about our commitment to accessibility and Section 504 compliance. WCAG 2.1 Level AA conformance for all patients.',
+    canonical: `${BASE_URL}/accessibility`,
+    ogTitle: 'Accessibility Statement',
+    ogDescription: 'Medication Navigator is committed to WCAG 2.1 Level AA accessibility for all users, including people with disabilities.',
+    twitterTitle: 'Accessibility & Section 504',
+    twitterDescription: 'Our commitment to making medication assistance accessible to all patients.',
+    breadcrumbName: 'Accessibility',
+  },
 };
 
 /**
