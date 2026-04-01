@@ -1,7 +1,16 @@
 import { neon } from '@neondatabase/serverless';
 
-// Initialize Neon client
-const sql = neon(process.env.DATABASE_URL);
+// Lazy initialization for Neon client
+let sql = null;
+const getDb = () => {
+    if (!sql) {
+        if (!process.env.DATABASE_URL) {
+            throw new Error('DATABASE_URL environment variable is not set');
+        }
+        sql = neon(process.env.DATABASE_URL);
+    }
+    return sql;
+};
 
 // CORS headers for browser requests
 const headers = {
@@ -24,7 +33,7 @@ export async function handler(event) {
 
             // If specific medication/source requested
             if (medicationId && source) {
-                const reports = await sql`
+                const reports = await getDb()`
                     SELECT price, location, report_date, created_at
                     FROM price_reports
                     WHERE medication_id = ${medicationId}
@@ -63,7 +72,7 @@ export async function handler(event) {
             }
 
             // Fetch all stats (for bulk loading)
-            const stats = await sql`
+            const stats = await getDb()`
                 SELECT
                     medication_id,
                     source,
@@ -113,7 +122,7 @@ export async function handler(event) {
                 : null;
 
             // Insert the report
-            await sql`
+            await getDb()`
                 INSERT INTO price_reports (medication_id, source, price, location, report_date, ip_hash)
                 VALUES (${medicationId}, ${source}, ${priceNum}, ${location || null}, ${date || null}, ${ipHash})
             `;
