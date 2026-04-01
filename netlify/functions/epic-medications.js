@@ -2,6 +2,7 @@
  * Epic Medications API
  * Fetches a patient's medications from their health system via FHIR R4.
  * Matches against our medication database and finds assistance programs.
+ * Includes retry logic for token propagation delays.
  */
 
 import { neon } from '@neondatabase/serverless';
@@ -19,6 +20,27 @@ const headers = {
   'Content-Type': 'application/json',
 };
 
+const FHIR_HEADERS = (token) => ({
+  Authorization: `Bearer ${token}`,
+  Accept: 'application/fhir+json',
+});
+
+/**
+ * FHIR GET with retry on 403/401 (handles token propagation delays).
+ */
+async function fhirFetchWithRetry(url, accessToken, { retries = 1, delayMs = 1000 } = {}) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const res = await fetch(url, { headers: FHIR_HEADERS(accessToken) });
+    if (res.ok || (res.status !== 403 && res.status !== 401)) return res;
+    if (attempt < retries) {
+      console.log(`FHIR request returned ${res.status}, retrying in ${delayMs}ms (attempt ${attempt + 1}/${retries + 1})`);
+      await new Promise(r => setTimeout(r, delayMs));
+    } else {
+      return res;
+    }
+  }
+}
+
 export async function handler(event) {
   if (event.httpMethod === 'OPTIONS') return { statusCode: 204, headers };
   if (event.httpMethod !== 'POST') {
@@ -26,44 +48,85 @@ export async function handler(event) {
   }
 
   try {
-    const { access_token, fhir_base_url, patient_id } = JSON.parse(event.body || '{}');
+    const body = JSON.parse(event.body || '{}');
+    const accessToken = body.access_token || body.accessToken;
+    const patientId = body.patient_id || body.patientId || body.patient;
+    const fhirBaseUrl = body.fhir_base_url || process.env.EPIC_FHIR_BASE_URL;
 
-    if (!access_token || !fhir_base_url) {
-      return { statusCode: 400, headers, body: JSON.stringify({ error: 'access_token and fhir_base_url required' }) };
+    if (!accessToken) {
+      return { statusCode: 400, headers, body: JSON.stringify({ error: 'access_token is required' }) };
     }
 
-    // Fetch MedicationRequest resources from FHIR
-    const fhirUrl = patient_id
-      ? `${fhir_base_url}/MedicationRequest?patient=${patient_id}&status=active`
-      : `${fhir_base_url}/MedicationRequest?status=active`;
+    if (!fhirBaseUrl) {
+      return { statusCode: 400, headers, body: JSON.stringify({ error: 'fhir_base_url is required' }) };
+    }
 
-    const fhirRes = await fetch(fhirUrl, {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-        Accept: 'application/fhir+json',
-      },
-    });
+    // Step 1: Validate token with Patient endpoint (warms Epic's token cache)
+    if (patientId) {
+      const patientUrl = `${fhirBaseUrl}/Patient/${patientId}`;
+      const patientRes = await fetch(patientUrl, { headers: FHIR_HEADERS(accessToken) });
+      if (!patientRes.ok && (patientRes.status === 403 || patientRes.status === 401)) {
+        const wwwAuth = patientRes.headers.get('WWW-Authenticate') || 'none';
+        return {
+          statusCode: patientRes.status, headers,
+          body: JSON.stringify({
+            error: 'Your health system authorization does not have sufficient permissions. Please reconnect and approve all requested permissions.',
+            status: patientRes.status,
+            wwwAuthenticate: wwwAuth,
+          }),
+        };
+      }
+    }
+
+    // Step 2: Fetch MedicationRequests with retry logic
+    const fhirUrl = patientId
+      ? `${fhirBaseUrl}/MedicationRequest?patient=${patientId}&status=active`
+      : `${fhirBaseUrl}/MedicationRequest?status=active`;
+
+    const fhirRes = await fhirFetchWithRetry(fhirUrl, accessToken, { retries: 2, delayMs: 1500 });
 
     if (!fhirRes.ok) {
+      const wwwAuth = fhirRes.headers.get('WWW-Authenticate') || 'none';
       console.error('FHIR medication fetch failed:', fhirRes.status);
-      return { statusCode: fhirRes.status, headers, body: JSON.stringify({ error: 'Failed to fetch medications from health system' }) };
+
+      let userError = 'Failed to fetch medications from health system';
+      if (fhirRes.status === 403) {
+        userError = 'Your health system did not grant permission to read medication data. This may happen if required scopes were not approved during sign-in.';
+      } else if (fhirRes.status === 401) {
+        userError = 'Your authorization has expired. Please reconnect to your health system.';
+      }
+
+      return {
+        statusCode: fhirRes.status, headers,
+        body: JSON.stringify({ error: userError, status: fhirRes.status, wwwAuthenticate: wwwAuth }),
+      };
     }
 
     const bundle = await fhirRes.json();
     const entries = bundle.entry || [];
 
     // Extract medication names from FHIR resources
-    const fhirMedNames = [];
+    const fhirMedications = [];
     for (const entry of entries) {
       const resource = entry.resource;
       if (resource?.resourceType !== 'MedicationRequest') continue;
 
-      const display = resource.medicationCodeableConcept?.text
+      const name = resource.medicationCodeableConcept?.text
         || resource.medicationCodeableConcept?.coding?.[0]?.display
+        || resource.medicationReference?.display
         || null;
 
-      if (display) {
-        fhirMedNames.push(display);
+      if (name) {
+        fhirMedications.push({
+          name,
+          status: resource.status,
+          dosage: resource.dosageInstruction?.[0]?.text || '',
+          prescriber: resource.requester?.display || '',
+          dateWritten: resource.authoredOn || '',
+          rxNormCode: resource.medicationCodeableConcept?.coding?.find(
+            c => c.system === 'http://www.nlm.nih.gov/research/umls/rxnorm'
+          )?.code || '',
+        });
       }
     }
 
@@ -74,8 +137,8 @@ export async function handler(event) {
     const matched = [];
     const unmatched = [];
 
-    for (const fhirName of fhirMedNames) {
-      const lower = fhirName.toLowerCase();
+    for (const fhirMed of fhirMedications) {
+      const lower = fhirMed.name.toLowerCase();
       const match = allMeds.find(m =>
         lower.includes(m.name.toLowerCase()) ||
         (m.generic_name && lower.includes(m.generic_name.toLowerCase())) ||
@@ -87,7 +150,7 @@ export async function handler(event) {
           matched.push(match.id);
         }
       } else {
-        unmatched.push(fhirName);
+        unmatched.push(fhirMed.name);
       }
     }
 
@@ -105,9 +168,10 @@ export async function handler(event) {
       statusCode: 200,
       headers,
       body: JSON.stringify({
+        medications: fhirMedications,
         matched,
         unmatched,
-        fhirMedicationCount: fhirMedNames.length,
+        fhirMedicationCount: fhirMedications.length,
         assistancePrograms,
       }),
     };
