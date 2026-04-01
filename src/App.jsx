@@ -22,6 +22,8 @@ const LazyAppeals = lazy(() => import('./pages/Appeals.jsx'));
 const LazyPrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'));
 const LazyTermsAndConditions = lazy(() => import('./pages/TermsAndConditions.jsx'));
 const LazyCopayCardReminders = lazy(() => import('./pages/CopayCardReminders.jsx'));
+const LazyFeedbackSurvey = lazy(() => import('./pages/FeedbackSurvey.jsx'));
+const LazyAccessibility = lazy(() => import('./pages/Accessibility.jsx'));
 
 // Reporting admin pages (lazy loaded)
 const LazyReportingLogin = lazy(() => import('./pages/reporting/ReportingLogin.jsx'));
@@ -44,6 +46,10 @@ import { ChatQuizProvider } from './context/ChatQuizContext.jsx';
 import { MedicationsProvider, useMedicationsList } from './context/MedicationsContext.jsx';
 // Reporting Admin Auth Provider
 import { ReportingAuthProvider } from './context/ReportingAuthContext.jsx';
+// Simple View Context Provider - toggle for enhanced readability
+import { SimpleViewProvider } from './contexts/SimpleViewContext.jsx';
+// Route Announcer - screen reader navigation announcements
+import RouteAnnouncer from './components/RouteAnnouncer.jsx';
 import {
     Map, Search, BookOpen, ShieldCheck, ArrowRight, Heart, Anchor, Lock, UserCheck,
     Menu, X, ShieldAlert, HeartHandshake, CheckCircle, ChevronLeft, DollarSign,
@@ -5262,6 +5268,8 @@ const MainSiteRoutes = () => (
                 <Route path="/privacy-policy" element={<LazyPrivacyPolicy />} />
                 <Route path="/terms-and-conditions" element={<LazyTermsAndConditions />} />
                 <Route path="/copay-reminders" element={<LazyCopayCardReminders />} />
+                <Route path="/feedback" element={<LazyFeedbackSurvey />} />
+                <Route path="/accessibility" element={<LazyAccessibility />} />
                 <Route path="*" element={<LazyNotFound />} />
             </Routes>
         </Suspense>
@@ -5312,15 +5320,18 @@ const AppRoutes = () => {
 // App Component
 const App = () => {
     return (
-        <MedicationsProvider>
-            <ChatQuizProvider>
-                <BrowserRouter>
-                    <GoogleAnalytics />
-                    <ScrollToTop />
-                    <AppRoutes />
-                </BrowserRouter>
-            </ChatQuizProvider>
-        </MedicationsProvider>
+        <SimpleViewProvider>
+            <MedicationsProvider>
+                <ChatQuizProvider>
+                    <BrowserRouter>
+                        <GoogleAnalytics />
+                        <ScrollToTop />
+                        <RouteAnnouncer />
+                        <AppRoutes />
+                    </BrowserRouter>
+                </ChatQuizProvider>
+            </MedicationsProvider>
+        </SimpleViewProvider>
     );
 };
 
