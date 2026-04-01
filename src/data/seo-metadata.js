@@ -204,6 +204,50 @@ export const seoMetadata = {
     twitterDescription: 'Our commitment to making medication assistance accessible to all patients.',
     breadcrumbName: 'Accessibility',
   },
+
+  account: {
+    title: 'My Account | Medication Navigator™',
+    description: 'Manage your Medication Navigator account, subscription, and synced data.',
+    canonical: `${BASE_URL}/account`,
+    ogTitle: 'My Account',
+    ogDescription: 'Manage your Medication Navigator account and subscription.',
+    twitterTitle: 'My Account',
+    twitterDescription: 'Manage your Medication Navigator account and subscription.',
+    breadcrumbName: 'Account',
+  },
+
+  demo: {
+    title: 'Interactive Demo | Medication Navigator™',
+    description: 'Try Medication Navigator with a full interactive demo. Explore medication assistance programs, savings calculator, and AI assistant with Pro features unlocked.',
+    canonical: `${BASE_URL}/demo`,
+    ogTitle: 'Interactive Product Demo',
+    ogDescription: 'Try Medication Navigator with all Pro features unlocked. See how patients find copay cards, PAPs, and foundation grants.',
+    twitterTitle: 'Try the Interactive Demo',
+    twitterDescription: 'Explore Medication Navigator with a full 4-hour interactive demo.',
+    breadcrumbName: 'Demo',
+  },
+
+  epicCallback: {
+    title: 'Connecting to Health System | Medication Navigator™',
+    description: 'Securely importing your medications from your health system.',
+    canonical: `${BASE_URL}/epic-callback`,
+    ogTitle: 'Health System Connection',
+    ogDescription: 'Securely importing medications from your health system via Epic FHIR.',
+    twitterTitle: 'Health System Connection',
+    twitterDescription: 'Securely importing medications from your health system.',
+    breadcrumbName: 'Health System Connection',
+  },
+
+  notLicensed: {
+    title: 'Health System Not Activated | Medication Navigator™',
+    description: 'Your health system has not yet activated Medication Navigator. Contact us to get started.',
+    canonical: `${BASE_URL}/not-licensed`,
+    ogTitle: 'Health System Not Activated',
+    ogDescription: 'Contact us to activate Medication Navigator for your health system.',
+    twitterTitle: 'Health System Not Activated',
+    twitterDescription: 'Contact us to activate Medication Navigator for your health system.',
+    breadcrumbName: 'Not Licensed',
+  },
 };
 
 /**

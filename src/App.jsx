@@ -24,6 +24,10 @@ const LazyTermsAndConditions = lazy(() => import('./pages/TermsAndConditions.jsx
 const LazyCopayCardReminders = lazy(() => import('./pages/CopayCardReminders.jsx'));
 const LazyFeedbackSurvey = lazy(() => import('./pages/FeedbackSurvey.jsx'));
 const LazyAccessibility = lazy(() => import('./pages/Accessibility.jsx'));
+const LazyAccount = lazy(() => import('./pages/Account.jsx'));
+const LazyDemo = lazy(() => import('./pages/Demo.jsx'));
+const LazyEpicCallback = lazy(() => import('./pages/EpicCallback.jsx'));
+const LazyNotLicensed = lazy(() => import('./pages/NotLicensed.jsx'));
 
 // Reporting admin pages (lazy loaded)
 const LazyReportingLogin = lazy(() => import('./pages/reporting/ReportingLogin.jsx'));
@@ -50,6 +54,12 @@ import { ReportingAuthProvider } from './context/ReportingAuthContext.jsx';
 import { SimpleViewProvider } from './contexts/SimpleViewContext.jsx';
 // Route Announcer - screen reader navigation announcements
 import RouteAnnouncer from './components/RouteAnnouncer.jsx';
+// Subscriber Auth Context Provider
+import { SubscriberAuthProvider } from './context/SubscriberAuthContext.jsx';
+// Demo Mode Context Provider
+import { DemoModeProvider } from './context/DemoModeContext.jsx';
+// Demo Banner component
+import DemoBanner from './components/DemoBanner.jsx';
 import {
     Map, Search, BookOpen, ShieldCheck, ArrowRight, Heart, Anchor, Lock, UserCheck,
     Menu, X, ShieldAlert, HeartHandshake, CheckCircle, ChevronLeft, DollarSign,
@@ -5270,6 +5280,10 @@ const MainSiteRoutes = () => (
                 <Route path="/copay-reminders" element={<LazyCopayCardReminders />} />
                 <Route path="/feedback" element={<LazyFeedbackSurvey />} />
                 <Route path="/accessibility" element={<LazyAccessibility />} />
+                <Route path="/account" element={<LazyAccount />} />
+                <Route path="/demo" element={<LazyDemo />} />
+                <Route path="/epic-callback" element={<LazyEpicCallback />} />
+                <Route path="/not-licensed" element={<LazyNotLicensed />} />
                 <Route path="*" element={<LazyNotFound />} />
             </Routes>
         </Suspense>
@@ -5311,6 +5325,7 @@ const AppRoutes = () => {
 
     return (
         <>
+            <DemoBanner />
             <DisclaimerModal />
             <MainSiteRoutes />
         </>
@@ -5321,16 +5336,20 @@ const AppRoutes = () => {
 const App = () => {
     return (
         <SimpleViewProvider>
-            <MedicationsProvider>
-                <ChatQuizProvider>
-                    <BrowserRouter>
-                        <GoogleAnalytics />
-                        <ScrollToTop />
-                        <RouteAnnouncer />
-                        <AppRoutes />
-                    </BrowserRouter>
-                </ChatQuizProvider>
-            </MedicationsProvider>
+            <SubscriberAuthProvider>
+                <MedicationsProvider>
+                    <ChatQuizProvider>
+                        <BrowserRouter>
+                            <DemoModeProvider>
+                                <GoogleAnalytics />
+                                <ScrollToTop />
+                                <RouteAnnouncer />
+                                <AppRoutes />
+                            </DemoModeProvider>
+                        </BrowserRouter>
+                    </ChatQuizProvider>
+                </MedicationsProvider>
+            </SubscriberAuthProvider>
         </SimpleViewProvider>
     );
 };
