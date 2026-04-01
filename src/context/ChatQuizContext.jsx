@@ -14,46 +14,22 @@ const STORAGE_KEY = 'medication_navigator_progress';
 // Maximum number of medication searches allowed in free tier
 const MAX_FREE_SEARCHES = 4;
 
-// Question definitions for the quiz mode
+// Question definitions for the streamlined quiz
+// Focused on the 3 factors that determine program eligibility:
+// medications, insurance type, and affordability
 const QUIZ_QUESTIONS = [
   {
-    id: 'role',
-    question: "Who am I helping today?",
-    type: 'single',
-    options: [
-      { value: 'patient', label: 'Patient', description: "I'm the patient" },
-      { value: 'carepartner', label: 'Carepartner / Family', description: "I'm helping a loved one" },
-      { value: 'social_worker', label: 'Social Worker / Coordinator', description: "I'm a healthcare professional" },
-    ],
-  },
-  {
-    id: 'medication_stage',
-    question: "Where are you in the medication process?",
-    type: 'single',
-    options: [
-      { value: 'pre', label: 'Pre-medication', description: 'On the waitlist or in evaluation' },
-      { value: 'post_1yr', label: 'Post-medication (< 1 year)', description: 'Within the first year' },
-      { value: 'post_1yr_plus', label: 'Post-medication (1+ years)', description: 'More than a year post-medication' },
-    ],
-  },
-  {
-    id: 'organ_type',
-    question: "What type of medication?",
-    type: 'single',
-    options: [
-      { value: 'kidney', label: 'Kidney' },
-      { value: 'liver', label: 'Liver' },
-      { value: 'heart', label: 'Heart' },
-      { value: 'lung', label: 'Lung' },
-      { value: 'pancreas', label: 'Pancreas' },
-      { value: 'multi', label: 'Multi-organ' },
-      { value: 'other', label: 'Other' },
-    ],
+    id: 'medication',
+    question: "What medications do you need help affording?",
+    helpText: "Search by brand or generic name. You can add multiple medications.",
+    type: 'medication_search',
+    allowSkip: true,
+    skipLabel: "I'm not sure yet / Show all options",
   },
   {
     id: 'insurance_type',
-    question: "What's your primary insurance?",
-    helpText: "This determines which assistance programs you're eligible for.",
+    question: "What type of insurance do you have?",
+    helpText: "Your insurance determines which assistance programs you qualify for.",
     type: 'single',
     options: [
       { value: 'commercial', label: 'Commercial / Employer', description: 'Private insurance through work or marketplace', hint: 'Copay cards available!' },
@@ -65,15 +41,9 @@ const QUIZ_QUESTIONS = [
     ],
   },
   {
-    id: 'medication',
-    question: "Which medication do you need help with?",
-    type: 'medication_search',
-    allowSkip: true,
-    skipLabel: "I'm not sure / Show all options",
-  },
-  {
     id: 'cost_burden',
     question: "How would you describe your current medication costs?",
+    helpText: "This helps us prioritize the most urgent assistance options for you.",
     type: 'single',
     options: [
       { value: 'manageable', label: 'Manageable', description: "I can afford my medications" },
@@ -392,13 +362,10 @@ export function ChatQuizProvider({ children }) {
   const profileSummary = useMemo(() => {
     const { answers, selectedMedications } = state;
     return {
-      role: answers.role,
-      medicationStage: answers.medication_stage,
-      organType: answers.organ_type,
       insuranceType: answers.insurance_type,
       costBurden: answers.cost_burden,
       medications: selectedMedications,
-      isComplete: Object.keys(answers).length >= QUIZ_QUESTIONS.length - 1, // -1 for optional medication
+      isComplete: Object.keys(answers).length >= QUIZ_QUESTIONS.length - 1, // -1 for optional medication search
     };
   }, [state.answers, state.selectedMedications]);
 

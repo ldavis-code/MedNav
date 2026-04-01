@@ -232,7 +232,7 @@
     "questions": [
       {
         "q": "How does the \"My Path\" quiz work?",
-        "a": "The quiz asks about your role, medication status, organ type, insurance, and medications. Based on your answers, it provides personalized recommendations for assistance programs that match your situation."
+        "a": "The quiz asks about your medications, insurance type, and affordability needs. Based on your answers, it finds copay cards, patient assistance programs, and foundation grants that match your situation."
       },
       {
         "q": "Can I search for a specific medication?",

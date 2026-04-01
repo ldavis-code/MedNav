@@ -395,9 +395,6 @@ const generateClaudeResponse = async (userContext, programs, costPlusAvailable =
 
     const userMessage = `
 **Patient Profile:**
-- Role: ${userContext.role || 'Patient'}
-- medication Stage: ${userContext.medication_stage || 'Not specified'}
-- Organ Type: ${userContext.organ_type || 'Not specified'}
 - Insurance: ${userContext.insurance_type || 'Not specified'}
 - Medication: ${userContext.medication_name || 'Not specified'}
 - Cost Burden: ${userContext.cost_burden || 'Not specified'}
@@ -466,7 +463,7 @@ const handleAction = async (action, body) => {
       const conversationId = generateConversationId();
       return {
         conversationId,
-        message: "Hi! I'm your Medication Navigator. I'll help you find the best assistance programs for your medications—whether that's copay cards, foundations, or free medication programs.\n\nLet's get started! **Who am I helping today?**",
+        message: "Hi! I'm your Medication Navigator. I'll help you find the best assistance programs to reduce your medication costs—whether that's copay cards, foundations, or free medication programs.\n\n**What medications do you need help affording?** Search below, or skip to see all options.",
       };
     }
 
@@ -477,38 +474,28 @@ const handleAction = async (action, body) => {
       let message = '';
 
       switch (questionId) {
-        case 'role':
-          if (answer === 'patient') {
-            message = "Thank you! I'm glad you're taking steps to manage your medication costs. **Where are you in the medication process?**";
-          } else if (answer === 'carepartner') {
-            message = "It's wonderful that you're helping your loved one. **Where are they in the medication process?**";
+        case 'medication':
+          if (answer === 'general' || !answer) {
+            message = "No problem! I can show you all available options. Now, this is important—**what type of insurance do you have?**";
           } else {
-            message = "Thank you for the important work you do helping patients! **Where is your patient in the medication process?**";
+            message = "Great choice! I'll find the best programs for that medication. Now, **what type of insurance do you have?**";
           }
-          break;
-
-        case 'medication_stage':
-          message = "Got it! Different stages have different medication needs. **What type of medication?**";
-          break;
-
-        case 'organ_type':
-          message = "Thank you! Now, this is important—your insurance type determines which assistance programs you're eligible for. **What's your primary insurance?**";
           break;
 
         case 'insurance_type':
           if (answer === 'commercial') {
-            message = "Great news! With commercial insurance, you're eligible for **manufacturer copay cards** that can reduce your costs to as little as $0-$50 per month. Let's find the right programs.\n\n**Which medication do you need help with?**";
+            message = "Great news! With commercial insurance, you're eligible for **manufacturer copay cards** that can reduce your costs to as little as $0-$50 per month.\n\nLast question: **How would you describe your current medication costs?**";
           } else if (answer === 'medicare') {
-            message = "Important to know: Medicare patients **cannot use copay cards** (it's a legal thing), but there are still great options! Foundations like HealthWell and PAN, plus Patient Assistance Programs, can help significantly.\n\n**Which medication do you need help with?**";
+            message = "Important to know: Medicare patients **cannot use copay cards** (it's a legal thing), but there are still great options! Foundations like HealthWell and PAN, plus Patient Assistance Programs, can help significantly.\n\n**How would you describe your current medication costs?**";
           } else if (answer === 'uninsured') {
-            message = "I understand—being uninsured is challenging. The good news is that **Patient Assistance Programs (PAPs) can provide your medications completely FREE**. Let's find the right programs.\n\n**Which medication do you need help with?**";
+            message = "I understand—being uninsured is challenging. The good news is that **Patient Assistance Programs (PAPs) can provide your medications completely FREE**.\n\n**How would you describe your current medication costs?**";
           } else {
-            message = "Let's find the best options for your situation.\n\n**Which medication do you need help with?**";
+            message = "Let's find the best options for your situation.\n\n**How would you describe your current medication costs?**";
           }
           break;
 
-        case 'medication':
-          message = "Almost done! One last question to help me prioritize your options.\n\n**How would you describe your current medication costs?**";
+        case 'cost_burden':
+          message = "Thank you! I'm now finding the best assistance programs for you...";
           break;
 
         default:
@@ -526,7 +513,7 @@ const handleAction = async (action, body) => {
 
     case 'generateResults': {
       const { answers } = body;
-      const { insurance_type, medication, cost_burden, role, medication_stage, organ_type } = answers;
+      const { insurance_type, medication, cost_burden } = answers;
 
       // Handle medication - could be a single ID, array of IDs, typed name, or "general"
       let medicationDetailsList = [];
@@ -632,9 +619,6 @@ const handleAction = async (action, body) => {
       // Build context for Claude
       const anyCostPlusAvailable = costPlusMedications.length > 0;
       const userContext = {
-        role,
-        medication_stage,
-        organ_type,
         insurance_type,
         medication_ids: medicationIds,
         medication_name: medicationName,
