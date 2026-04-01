@@ -87,6 +87,78 @@ export async function handler(event) {
       return { statusCode: 200, headers, body: JSON.stringify({ user: rows[0] }) };
     }
 
+    // POST /forgot-password
+    if (event.httpMethod === 'POST' && path === '/forgot-password') {
+      const { email } = JSON.parse(event.body || '{}');
+      if (!email) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: 'Email is required' }) };
+      }
+
+      const rows = await db`SELECT id, email FROM subscribers WHERE email = ${email.toLowerCase()}`;
+
+      // Always return success to prevent email enumeration
+      if (rows.length === 0) {
+        return { statusCode: 200, headers, body: JSON.stringify({ message: 'If an account exists, a reset link will be sent' }) };
+      }
+
+      const resetToken = crypto.randomBytes(32).toString('hex');
+      const resetExpires = new Date(Date.now() + 60 * 60 * 1000).toISOString(); // 1 hour
+
+      await db`
+        UPDATE subscribers SET reset_token = ${resetToken}, reset_token_expires = ${resetExpires}
+        WHERE id = ${rows[0].id}
+      `;
+
+      const siteUrl = process.env.URL || 'https://medicationnavigator.com';
+      const resetUrl = `${siteUrl}/login/reset-password?token=${resetToken}`;
+      console.log(`Password reset requested for ${email}. Reset URL: ${resetUrl}`);
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({
+          message: 'If an account exists, a reset link will be sent',
+          ...(process.env.NODE_ENV !== 'production' && { resetUrl }),
+        }),
+      };
+    }
+
+    // POST /reset-password
+    if (event.httpMethod === 'POST' && path === '/reset-password') {
+      const { token, password } = JSON.parse(event.body || '{}');
+      if (!token || !password) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: 'Token and password are required' }) };
+      }
+      if (password.length < 8) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: 'Password must be at least 8 characters' }) };
+      }
+
+      const rows = await db`SELECT id, reset_token_expires FROM subscribers WHERE reset_token = ${token}`;
+      if (rows.length === 0 || new Date(rows[0].reset_token_expires) < new Date()) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: 'Invalid or expired reset token' }) };
+      }
+
+      const { hash, salt } = hashPassword(password);
+      await db`
+        UPDATE subscribers SET password_hash = ${hash}, password_salt = ${salt}, reset_token = NULL, reset_token_expires = NULL
+        WHERE id = ${rows[0].id}
+      `;
+
+      return { statusCode: 200, headers, body: JSON.stringify({ message: 'Password reset successful' }) };
+    }
+
+    // GET /validate-reset-token
+    if (event.httpMethod === 'GET' && path === '/validate-reset-token') {
+      const resetToken = (event.queryStringParameters || {}).token;
+      if (!resetToken) {
+        return { statusCode: 200, headers, body: JSON.stringify({ valid: false }) };
+      }
+
+      const rows = await db`SELECT reset_token_expires FROM subscribers WHERE reset_token = ${resetToken}`;
+      const valid = rows.length > 0 && new Date(rows[0].reset_token_expires) > new Date();
+      return { statusCode: 200, headers, body: JSON.stringify({ valid }) };
+    }
+
     return { statusCode: 404, headers, body: JSON.stringify({ error: 'Not found' }) };
   } catch (err) {
     console.error('Subscriber auth error:', err);

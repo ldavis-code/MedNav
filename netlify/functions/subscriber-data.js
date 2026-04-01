@@ -169,6 +169,14 @@ export async function handler(event) {
       return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };
     }
 
+    // DELETE /account — Delete all user data and account
+    if (event.httpMethod === 'DELETE' && path === '/account') {
+      await db`DELETE FROM subscriber_quiz_data WHERE subscriber_id = ${user.userId}`;
+      await db`DELETE FROM subscriber_medications WHERE subscriber_id = ${user.userId}`;
+      await db`DELETE FROM subscribers WHERE id = ${user.userId}`;
+      return { statusCode: 200, headers, body: JSON.stringify({ success: true, message: 'Account and all data deleted' }) };
+    }
+
     return { statusCode: 404, headers, body: JSON.stringify({ error: 'Not found' }) };
   } catch (err) {
     console.error('Subscriber data error:', err);
