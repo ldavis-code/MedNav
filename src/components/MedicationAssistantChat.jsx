@@ -138,7 +138,7 @@ const MedicationAssistantChat = () => {
       setMessages([{
         id: Date.now(),
         role: 'assistant',
-        content: "Hi! I'm your Medication Navigator. I'll help you find assistance programs to reduce your medication costs.\n\n**What health condition are you managing?** Select an option below to get started.",
+        content: "Hi! I'm your Medication Navigator. I'll help you find assistance programs to reduce your medication costs.\n\n**What medications do you need help affording?** Search by brand or generic name below to get started.",
         timestamp: new Date(),
       }]);
     } finally {
@@ -758,8 +758,8 @@ const MedicationAssistantChat = () => {
     );
   };
 
-  // Step labels for the progress indicator (4 quiz steps + results)
-  const STEP_LABELS = ['Condition', 'Medication', 'Insurance', 'Cost', 'Results'];
+  // Step labels for the progress indicator (3 quiz steps + results)
+  const STEP_LABELS = ['Medication', 'Insurance', 'Cost', 'Results'];
   const TOTAL_STEPS = STEP_LABELS.length;
 
   // Render quiz progress indicator
@@ -893,9 +893,6 @@ const MedicationAssistantChat = () => {
             Your Profile
           </h4>
           <div className="grid grid-cols-2 gap-2 text-sm">
-            {answers.condition && (
-              <div><span className="text-slate-500">Condition:</span> <span className="font-medium">{answers.condition}</span></div>
-            )}
             <div><span className="text-slate-500">Insurance:</span> <span className="font-medium">{answers.insurance_type || '-'}</span></div>
             <div><span className="text-slate-500">Cost:</span> <span className="font-medium">{answers.cost_burden || '-'}</span></div>
             {selectedMedications.length > 0 && (
