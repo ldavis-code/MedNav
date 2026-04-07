@@ -138,7 +138,7 @@ const MedicationAssistantChat = () => {
       setMessages([{
         id: Date.now(),
         role: 'assistant',
-        content: "Hi! I'm your Medication Navigator. I'll help you find assistance programs to reduce your medication costs.\n\n**What medications do you need help affording?** Search below, or skip to see all options.",
+        content: "Hi! I'm your Medication Navigator. I'll help you find assistance programs to reduce your medication costs.\n\n**What health condition are you managing?** Select an option below to get started.",
         timestamp: new Date(),
       }]);
     } finally {
@@ -758,19 +758,36 @@ const MedicationAssistantChat = () => {
     );
   };
 
+  // Step labels for the progress indicator (4 quiz steps + results)
+  const STEP_LABELS = ['Condition', 'Medication', 'Insurance', 'Cost', 'Results'];
+  const TOTAL_STEPS = STEP_LABELS.length;
+
   // Render quiz progress indicator
   const renderQuizProgress = () => {
+    const isResults = quizProgress.isComplete || hasSeenResults;
+    const currentStep = isResults ? TOTAL_STEPS - 1 : quizProgress.currentQuestionIndex;
+
     return (
       <div className="px-4 py-2 bg-slate-50 border-b border-slate-200">
         <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-          <span>Question {quizProgress.currentQuestionIndex + 1} of {QUIZ_QUESTIONS.length}</span>
-          <span>{quizCompletionPercent}% complete</span>
+          <span>Step {currentStep + 1} of {TOTAL_STEPS}</span>
+          <span>{isResults ? 100 : Math.round((currentStep / TOTAL_STEPS) * 100)}% complete</span>
         </div>
-        <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-emerald-500 transition-all duration-300"
-            style={{ width: `${((quizProgress.currentQuestionIndex) / QUIZ_QUESTIONS.length) * 100}%` }}
-          />
+        <div className="flex gap-1 mb-1">
+          {STEP_LABELS.map((label, idx) => (
+            <div key={label} className="flex-1 flex flex-col items-center">
+              <div
+                className={`h-1.5 w-full rounded-full transition-all duration-300 ${
+                  idx <= currentStep ? 'bg-emerald-500' : 'bg-slate-200'
+                }`}
+              />
+              <span className={`text-[10px] mt-0.5 ${
+                idx === currentStep ? 'text-emerald-700 font-semibold' : 'text-slate-400'
+              }`}>
+                {label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     );
@@ -876,6 +893,9 @@ const MedicationAssistantChat = () => {
             Your Profile
           </h4>
           <div className="grid grid-cols-2 gap-2 text-sm">
+            {answers.condition && (
+              <div><span className="text-slate-500">Condition:</span> <span className="font-medium">{answers.condition}</span></div>
+            )}
             <div><span className="text-slate-500">Insurance:</span> <span className="font-medium">{answers.insurance_type || '-'}</span></div>
             <div><span className="text-slate-500">Cost:</span> <span className="font-medium">{answers.cost_burden || '-'}</span></div>
             {selectedMedications.length > 0 && (
@@ -1171,7 +1191,7 @@ const MedicationAssistantChat = () => {
           </div>
 
           {/* Quiz Progress Bar */}
-          {mode === 'quiz' && !quizProgress.isComplete && !hasSeenResults && renderQuizProgress()}
+          {mode === 'quiz' && renderQuizProgress()}
 
           {/* Content Area */}
           {mode === 'quiz' ? (
