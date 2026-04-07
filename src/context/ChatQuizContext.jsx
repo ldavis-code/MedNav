@@ -15,9 +15,24 @@ const STORAGE_KEY = 'medication_navigator_progress';
 const MAX_FREE_SEARCHES = 4;
 
 // Question definitions for the streamlined quiz
-// Focused on the 3 factors that determine program eligibility:
-// medications, insurance type, and affordability
+// 5-step flow: Condition → Medication → Insurance → Cost → Results
 const QUIZ_QUESTIONS = [
+  {
+    id: 'condition',
+    question: "What health condition are you managing?",
+    helpText: "Select the condition you need medication assistance for.",
+    type: 'single',
+    options: [
+      { value: 'transplant', label: 'Organ Transplant', description: 'Post-transplant immunosuppression' },
+      { value: 'kidney_disease', label: 'Kidney Disease / ESRD', description: 'Chronic kidney disease or dialysis' },
+      { value: 'heart_disease', label: 'Heart Disease', description: 'Heart failure, hypertension, or related conditions' },
+      { value: 'diabetes', label: 'Diabetes', description: 'Type 1 or Type 2 diabetes' },
+      { value: 'respiratory', label: 'Asthma / COPD / Lung Disease', description: 'Respiratory or pulmonary conditions' },
+      { value: 'mental_health', label: 'Mental Health', description: 'Depression, anxiety, or related conditions' },
+      { value: 'liver_disease', label: 'Liver Disease', description: 'Hepatitis, fatty liver, or related conditions' },
+      { value: 'other', label: 'Other', description: 'Another condition not listed above' },
+    ],
+  },
   {
     id: 'medication',
     question: "What medications do you need help affording?",
@@ -362,6 +377,7 @@ export function ChatQuizProvider({ children }) {
   const profileSummary = useMemo(() => {
     const { answers, selectedMedications } = state;
     return {
+      condition: answers.condition,
       insuranceType: answers.insurance_type,
       costBurden: answers.cost_burden,
       medications: selectedMedications,
